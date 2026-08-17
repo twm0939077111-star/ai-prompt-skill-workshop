@@ -1,0 +1,382 @@
+{
+  "title": "Prompt 與 Skill 入門工作坊",
+  "goal": "讓第一次接觸 AI 的職場工作者理解 Prompt 與 Skill，並能把一項真實工作交給 AI 完成",
+  "audience": "第一次接觸 AI 的職場工作者與企業主管",
+  "owner": "AI 公開教學工作坊",
+  "randomSeed": "prompt-skill-20260805-clear",
+  "themePack": "theme01",
+  "pageCount": 10,
+  "slides": [
+    {
+      "layout": "theme01_page001",
+      "props": {
+        "kicker": "AI 公開教學｜明亮專業工作坊",
+        "titleTop": "會問，只是開始",
+        "titleBottom": "Prompt × Skill",
+        "en": "FROM ASKING TO WORKING",
+        "lead": "把模糊需求說清楚，把成功做法留下來，讓 AI 真正成為工作夥伴。",
+        "chips": [
+          "Prompt｜說清楚",
+          "Skill｜做穩定",
+          "Work｜帶回職場"
+        ],
+        "panelIndex": "01",
+        "panelEn": "WORKSHOP",
+        "meta": [
+          {
+            "label": "這一次要做什麼",
+            "value": "Prompt"
+          },
+          {
+            "label": "每一次怎麼做好",
+            "value": "Skill"
+          },
+          {
+            "label": "最後帶走什麼",
+            "value": "工作方法"
+          }
+        ],
+        "footnote": "不需要程式背景｜真實案例 × 現場實作 × 工作應用",
+        "chipCount": 3,
+        "metaCount": 3,
+        "showLead": true,
+        "showBokeh": true,
+        "accentColor": "#5b8def",
+        "showCaption": true
+      }
+    },
+    {
+      "layout": "theme01_page009",
+      "props": {
+        "kicker": "TODAY'S AGENDA",
+        "title": "今天會學什麼",
+        "en": "LEARNING PATH",
+        "cn": "從理解到實作",
+        "chapterCount": 4,
+        "chapters": [
+          {
+            "no": "01",
+            "label": "為什麼 AI 會猜錯",
+            "en": "THE PROBLEM",
+            "desc": "先看懂答案不穩定的真正原因"
+          },
+          {
+            "no": "02",
+            "label": "Prompt 怎麼寫",
+            "en": "CLEAR REQUEST",
+            "desc": "用四項資訊把任務交代清楚"
+          },
+          {
+            "no": "03",
+            "label": "Skill 是什麼",
+            "en": "SAVE THE METHOD",
+            "desc": "把成功流程保存成可重複方法"
+          },
+          {
+            "no": "04",
+            "label": "如何用在工作",
+            "en": "APPLY AT WORK",
+            "desc": "從會議、內容、簡報與資料整理開始"
+          }
+        ],
+        "caption": "先理解，再練習，最後帶回自己的工作"
+      }
+    },
+    {
+      "layout": "theme01_page047",
+      "props": {
+        "kicker": "先解決一個誤會",
+        "quote": "AI 回答普通，常常不是能力不足，而是它只能猜你的期待。",
+        "contrastWord": "不是 AI 不夠聰明",
+        "highlightWord": "是資訊不夠清楚",
+        "attribution": "理解 Prompt 的起點",
+        "caption": "沒有對象、用途與標準，AI 只能自行補空白",
+        "notes": [
+          {
+            "label": "你腦中知道，不代表 AI 知道"
+          },
+          {
+            "label": "先補資訊，再評價答案"
+          }
+        ],
+        "noteCount": 2
+      }
+    },
+    {
+      "layout": "theme01_page027",
+      "props": {
+        "kicker": "PROMPT｜一句話理解",
+        "quote": "Prompt，就是交給 AI 的工作說明。",
+        "contrastWord": "不是搜尋關鍵字",
+        "highlightWord": "是完整工作交辦",
+        "attribution": "目的＋背景＋要求＋交付",
+        "caption": "說得越清楚，AI 越不需要猜",
+        "notes": [
+          {
+            "label": "告訴 AI 要做什麼"
+          },
+          {
+            "label": "也要說什麼才算完成"
+          }
+        ],
+        "noteCount": 2
+      }
+    },
+    {
+      "layout": "theme01_page040",
+      "props": {
+        "kicker": "PROMPT｜四項公式",
+        "title": "一份清楚 Prompt 的組成",
+        "en": "THE 4-PART BRIEF",
+        "cn": "每一項都在減少猜測",
+        "itemCount": 4,
+        "phases": [
+          {
+            "period": "WHO",
+            "step": "01",
+            "heading": "對象與情境",
+            "points": [
+              "為誰製作？",
+              "會用在哪裡？"
+            ],
+            "verdict": "先說背景"
+          },
+          {
+            "period": "WHAT",
+            "step": "02",
+            "heading": "要完成的任務",
+            "points": [
+              "要產出什麼？",
+              "核心目的為何？"
+            ],
+            "verdict": "明確成果"
+          },
+          {
+            "period": "HOW",
+            "step": "03",
+            "heading": "要求與限制",
+            "points": [
+              "語氣與重點？",
+              "必須避免什麼？"
+            ],
+            "verdict": "設定標準"
+          },
+          {
+            "period": "FORMAT",
+            "step": "04",
+            "heading": "交付格式",
+            "points": [
+              "表格、簡報或清單？",
+              "需要多少長度？"
+            ],
+            "verdict": "可以直接用"
+          }
+        ],
+        "caption": "好 Prompt 不一定很長，但重要條件不能缺席"
+      }
+    },
+    {
+      "layout": "theme01_page066",
+      "props": {
+        "kicker": "同一個 AI，三種結果",
+        "title": "交代方式決定成果穩定度",
+        "en": "THREE WAYS TO WORK",
+        "cn": "從猜測走向可重複",
+        "cornerLabel": "使用方式",
+        "dimCount": 5,
+        "rowCount": 3,
+        "dims": [
+          "目的清楚",
+          "背景完整",
+          "格式明確",
+          "成果可驗收",
+          "下次可重複"
+        ],
+        "rows": [
+          {
+            "name": "一句話需求",
+            "tag": "AI 靠猜",
+            "scores": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "完整 Prompt",
+            "tag": "這次做好",
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              2
+            ]
+          },
+          {
+            "name": "Prompt＋Skill",
+            "tag": "每次穩定",
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        ],
+        "legend": [
+          "1｜資訊不足",
+          "2｜部分明確",
+          "3｜可以執行",
+          "重點｜減少猜測"
+        ],
+        "caption": "Prompt 提升單次品質；Skill 讓同類工作維持同一套方法"
+      }
+    },
+    {
+      "layout": "theme01_page082",
+      "props": {
+        "kicker": "SKILL｜一句話理解",
+        "lines": [
+          [
+            {
+              "t": "把一次成功"
+            },
+            {
+              "t": "保存成方法",
+              "mark": "highlight"
+            },
+            {
+              "t": "，"
+            }
+          ],
+          [
+            {
+              "t": "讓下一次"
+            },
+            {
+              "t": "照標準完成",
+              "mark": "highlight"
+            },
+            {
+              "t": "。"
+            }
+          ]
+        ],
+        "sub": "Skill 不是更長的 Prompt，而是把專業知識、工作步驟、品質標準與例外處理整理成 AI 可以反覆遵循的方法。",
+        "stats": [
+          {
+            "value": "知識",
+            "label": "知道怎麼判斷"
+          },
+          {
+            "value": "流程",
+            "label": "知道先後順序"
+          },
+          {
+            "value": "標準",
+            "label": "知道何時算完成"
+          }
+        ],
+        "caption": "從一次做對，進步到每次都做得穩定",
+        "statCount": 3
+      }
+    },
+    {
+      "layout": "theme01_page029",
+      "props": {
+        "kicker": "PROMPT × SKILL",
+        "title": "兩者負責不同的事",
+        "en": "TASK + METHOD",
+        "cn": "一次交辦，加上長期方法",
+        "pointCount": 3,
+        "imageSlotCount": 0,
+        "points": [
+          {
+            "h": "Prompt｜這一次",
+            "d": "指定眼前任務的目的、背景、要求與交付格式。"
+          },
+          {
+            "h": "Skill｜每一次",
+            "d": "保存同類工作的步驟、判斷原則與品質標準。"
+          },
+          {
+            "h": "搭配使用｜更穩定",
+            "d": "Prompt 告訴 AI 現在做什麼；Skill 告訴 AI 應該怎麼做好。"
+          }
+        ],
+        "caption": "一次做對靠 Prompt；每次做好靠 Skill"
+      }
+    },
+    {
+      "layout": "theme01_page007",
+      "props": {
+        "kicker": "WORK APPLICATIONS",
+        "title": "先從這些工作開始",
+        "en": "START SMALL",
+        "cn": "重複、耗時、成果可檢查",
+        "itemCount": 4,
+        "stats": [
+          {
+            "value": "01",
+            "unit": "會議整理",
+            "label": "逐字稿變行動紀錄",
+            "sub": "摘要決策、負責人與追蹤事項"
+          },
+          {
+            "value": "02",
+            "unit": "內容製作",
+            "label": "維持一致品牌語氣",
+            "sub": "套用結構、語氣與禁用表達"
+          },
+          {
+            "value": "03",
+            "unit": "簡報製作",
+            "label": "資訊變成清楚故事線",
+            "sub": "規劃章節、頁面角色與重點"
+          },
+          {
+            "value": "04",
+            "unit": "資料整理",
+            "label": "把雜亂資訊變可用成果",
+            "sub": "分類、摘要、比較並找出重點"
+          }
+        ],
+        "caption": "最好的第一個場景，是你已經重複做過很多次的工作"
+      }
+    },
+    {
+      "layout": "theme01_page083",
+      "props": {
+        "kicker": "明天就能開始",
+        "title": "完成第一個 AI 工作實驗",
+        "en": "START WITH ONE TASK",
+        "cn": "不要一次改變全部工作",
+        "takeawayCount": 3,
+        "takeaways": [
+          {
+            "tag": "STEP 01",
+            "en": "WRITE",
+            "text": "挑一項真實工作，寫出包含四項資訊的 Prompt。"
+          },
+          {
+            "tag": "STEP 02",
+            "en": "CHECK",
+            "text": "檢查成果能不能使用，補上缺少的條件。"
+          },
+          {
+            "tag": "STEP 03",
+            "en": "SAVE",
+            "text": "成功後保存做法，逐步整理成自己的 Skill。"
+          }
+        ],
+        "summary": "會問只是開始；真正的能力，是把好結果整理成下一次仍能使用的方法。",
+        "bandLabel": "選一項工作，今天開始",
+        "caption": "Prompt 讓 AI 聽懂；Skill 讓好方法留下來"
+      }
+    }
+  ]
+}
