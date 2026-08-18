@@ -5,7 +5,7 @@
   "owner": "AI 公開教學工作坊",
   "randomSeed": "prompt-skill-cover-compare-20260818-editorial",
   "themePack": "theme01",
-  "pageCount": 13,
+  "pageCount": 12,
   "slides": [
     {
       "layout": "theme01_page004",
@@ -97,36 +97,6 @@
       }
     },
     {
-      "layout": "theme01_page010",
-      "props": {
-        "kicker": "PROMPT｜先建立正確概念",
-        "title": "Prompt 是工作交辦",
-        "en": "INTENT × INSTRUCTION",
-        "cn": "不是關鍵字，而是把期待翻譯給 AI",
-        "axisA": {
-          "tag": "你的腦中",
-          "title": "目的與期待",
-          "en": "WHAT YOU MEAN",
-          "desc": "你知道使用情境、對象、品牌感受與真正想解決的問題。"
-        },
-        "axisB": {
-          "tag": "AI 收到的",
-          "title": "清楚的指令",
-          "en": "WHAT YOU SAY",
-          "desc": "把任務、背景、要求與交付格式說出來，AI 才能照標準執行。"
-        },
-        "result": "兩者交會＝可用的成果",
-        "crossLabel": "PROMPT",
-        "caption": "Prompt 的功能，是縮小你心裡想的與 AI 實際做的落差",
-        "colorA": "#5b8def",
-        "colorB": "#46b083",
-        "accentColor": "#e8503a",
-        "operator": "×",
-        "tiltAngle": 8,
-        "showCaption": true
-      }
-    },
-    {
       "layout": "theme01_page040",
       "props": {
         "kicker": "PROMPT｜照順序寫就好",
@@ -189,37 +159,12 @@
       "layout": "theme01_page026",
       "props": {
         "kicker": "真實案例｜醫美廣告",
-        "title": "同樣有圖有字，為什麼感覺不同？",
-        "en": "GENERIC OUTPUT VS. DIRECTED DESIGN",
-        "intro": "先完整觀看兩張作品，再從四個設計決定找出差異；比較的不是美醜，而是畫面是否服務品牌與商業目的。",
-        "milestones": [
-          {
-            "date": "01｜POSITION",
-            "round": "品牌定位",
-            "amount": "模糊→清楚",
-            "note": "右圖一眼建立科技專業的醫美印象"
-          },
-          {
-            "date": "02｜FOCUS",
-            "round": "視覺焦點",
-            "amount": "分散→集中",
-            "note": "人物、掃描介面與主標形成閱讀順序"
-          },
-          {
-            "date": "03｜ORDER",
-            "round": "資訊層級",
-            "amount": "平均→分級",
-            "note": "主張、證據與價格不再同時搶注意力"
-          },
-          {
-            "date": "04｜SYSTEM",
-            "round": "視覺一致",
-            "amount": "拼貼→系統",
-            "note": "色彩、材質與介面語言共同支援定位"
-          }
-        ],
-        "quote": "好 Prompt 的價值，是先替畫面做出重要決定。",
-        "quoteBy": "比較後的結論",
+        "title": "同一個 AI，兩種結果",
+        "en": "VAGUE REQUEST VS. CLEAR PROMPT",
+        "intro": "左｜隨口描述　　右｜完整 Prompt",
+        "milestones": [],
+        "quote": "看得出差異，就知道 Prompt 為什麼重要。",
+        "quoteBy": "左：普通　右：完整",
         "images": [
           "assets/user-media/1.png",
           "assets/user-media/2.png"
@@ -227,9 +172,9 @@
         "imageSlotCount": 2,
         "imageFit": "contain",
         "imageLayout": "normal",
-        "milestoneCount": 4,
-        "highlight": true,
-        "highlightIndex": 3,
+        "milestoneCount": 0,
+        "highlight": false,
+        "highlightIndex": 0,
         "showQuote": true
       }
     },
