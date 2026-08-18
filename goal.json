@@ -156,26 +156,39 @@
       }
     },
     {
-      "layout": "theme01_page026",
+      "layout": "theme01_page043",
       "props": {
         "kicker": "真實案例｜醫美廣告",
         "title": "同一個 AI，兩種結果",
-        "en": "VAGUE REQUEST VS. CLEAR PROMPT",
-        "intro": "左｜隨口描述　　右｜完整 Prompt",
-        "milestones": [],
-        "quote": "看得出差異，就知道 Prompt 為什麼重要。",
-        "quoteBy": "左：普通　右：完整",
+        "en": "VAGUE REQUEST  VS  CLEAR PROMPT",
+        "left": {
+          "tag": "隨口描述",
+          "en": "BEFORE",
+          "stat": "普通",
+          "unit": "AI 自己猜",
+          "statLabel": "通用感"
+        },
+        "right": {
+          "tag": "完整 Prompt",
+          "en": "AFTER",
+          "stat": "清楚",
+          "unit": "你決定方向",
+          "statLabel": "品牌感"
+        },
+        "verdict": "VS",
+        "caption": "Prompt 的差異，會直接反映在品牌感與完成度。",
         "images": [
           "assets/user-media/1.png",
           "assets/user-media/2.png"
         ],
         "imageSlotCount": 2,
         "imageFit": "contain",
-        "imageLayout": "normal",
-        "milestoneCount": 0,
-        "highlight": false,
-        "highlightIndex": 0,
-        "showQuote": true
+        "showTags": true,
+        "showPlate": true,
+        "showStats": false,
+        "highlightSide": "right",
+        "accentColor": "#5b8def",
+        "showCaption": true
       }
     },
     {
