@@ -3,39 +3,39 @@
   "goal": "讓第一次接觸 AI 的職場工作者理解 Prompt 與 Skill，並透過同頁 A/B 真實廣告對照，一眼看懂隨口描述與完整 Prompt 在品牌定位、視覺焦點與商業完成度上的差異",
   "audience": "第一次接觸 AI 的職場工作者與企業主管",
   "owner": "AI 公開教學工作坊",
-  "randomSeed": "prompt-skill-pages-1456-20260818-bright",
+  "randomSeed": "prompt-skill-cover-compare-20260818-editorial",
   "themePack": "theme01",
   "pageCount": 13,
   "slides": [
     {
-      "layout": "theme01_page005",
+      "layout": "theme01_page004",
       "props": {
-        "eyebrow": "AI 公開教學｜企業實務入門工作坊",
-        "titleTop": "讓 AI 聽懂你",
-        "titleBottom": "Prompt × Skill",
-        "enSubtitle": "TURN IDEAS INTO REPEATABLE WORK",
+        "kicker": "AI 公開教學工作坊",
+        "issue": "WORKSHOP · 01",
+        "overline": "PROMPT × SKILL",
+        "titleTop": "讓 AI 聽懂",
+        "titleBottom": "也讓好方法留下來",
+        "subtitle": "從清楚交辦到穩定工作，學會真正能帶回職場的 AI 使用方法。",
+        "sticker": "真實案例教學",
         "stats": [
           {
             "value": "01",
-            "unit": "Prompt",
-            "caption": "把需求交代清楚，減少 AI 猜測"
+            "label": "看懂 Prompt"
           },
           {
             "value": "02",
-            "unit": "Skill",
-            "caption": "把成功方法保存，讓成果能重複"
+            "label": "比較真實成果"
           },
           {
             "value": "03",
-            "unit": "Work",
-            "caption": "把 AI 真正帶回每天的工作流程"
+            "label": "建立自己的 Skill"
           }
         ],
-        "footnote": "不需要程式背景｜用真實廣告案例，看懂普通要求與完整 Prompt 的差異",
+        "footnote": "不需要程式背景｜適合企業公開教學",
         "statCount": 3,
-        "highlight": true,
-        "highlightIndex": 0,
-        "accentColor": "#5b8def",
+        "showSticker": true,
+        "showBokeh": true,
+        "accentColor": "#7a5ae0",
         "showCaption": true
       }
     },
@@ -186,39 +186,51 @@
       }
     },
     {
-      "layout": "theme01_page043",
+      "layout": "theme01_page026",
       "props": {
-        "kicker": "真實圖片實驗｜醫美廣告",
-        "title": "請先看圖，哪張更像品牌？",
-        "en": "SAME AI · DIFFERENT BRIEF",
-        "left": {
-          "tag": "A｜隨口描述",
-          "en": "MAKE AN AD",
-          "stat": "看得到內容",
-          "unit": "但沒有取捨",
-          "statLabel": "像通用宣傳單"
-        },
-        "right": {
-          "tag": "B｜完整 Prompt",
-          "en": "DESIGN A SYSTEM",
-          "stat": "先看到定位",
-          "unit": "再讀服務資訊",
-          "statLabel": "像品牌 Campaign"
-        },
-        "verdict": "差異不在 AI，而在你有沒有指定受眾、焦點與視覺規則",
-        "caption": "現場請觀察：視線先去哪裡？能否一眼說出品牌定位？",
+        "kicker": "真實案例｜醫美廣告",
+        "title": "同樣有圖有字，為什麼感覺不同？",
+        "en": "GENERIC OUTPUT VS. DIRECTED DESIGN",
+        "intro": "先完整觀看兩張作品，再從四個設計決定找出差異；比較的不是美醜，而是畫面是否服務品牌與商業目的。",
+        "milestones": [
+          {
+            "date": "01｜POSITION",
+            "round": "品牌定位",
+            "amount": "模糊→清楚",
+            "note": "右圖一眼建立科技專業的醫美印象"
+          },
+          {
+            "date": "02｜FOCUS",
+            "round": "視覺焦點",
+            "amount": "分散→集中",
+            "note": "人物、掃描介面與主標形成閱讀順序"
+          },
+          {
+            "date": "03｜ORDER",
+            "round": "資訊層級",
+            "amount": "平均→分級",
+            "note": "主張、證據與價格不再同時搶注意力"
+          },
+          {
+            "date": "04｜SYSTEM",
+            "round": "視覺一致",
+            "amount": "拼貼→系統",
+            "note": "色彩、材質與介面語言共同支援定位"
+          }
+        ],
+        "quote": "好 Prompt 的價值，是先替畫面做出重要決定。",
+        "quoteBy": "比較後的結論",
         "images": [
           "assets/user-media/1.png",
           "assets/user-media/2.png"
         ],
         "imageSlotCount": 2,
-        "imageFit": "cover",
-        "showTags": true,
-        "showPlate": true,
-        "showStats": true,
-        "highlightSide": "right",
-        "accentColor": "#5b8def",
-        "showCaption": true
+        "imageFit": "contain",
+        "imageLayout": "normal",
+        "milestoneCount": 4,
+        "highlight": true,
+        "highlightIndex": 3,
+        "showQuote": true
       }
     },
     {
