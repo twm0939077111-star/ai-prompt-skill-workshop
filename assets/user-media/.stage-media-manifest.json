@@ -2,8 +2,8 @@
   "version": 1,
   "items": [
     {
-      "sourceId": "cba607322c88",
-      "relative": "assets/user-media/beauty-campaign1.png",
+      "sourceId": "ea1dfc7d5539",
+      "relative": "assets/user-media/1.png",
       "kind": "image",
       "mime": "image/png"
     },
@@ -14,8 +14,14 @@
       "mime": "image/png"
     },
     {
+      "sourceId": "cba607322c88",
+      "relative": "assets/user-media/beauty-campaign1.png",
+      "kind": "image",
+      "mime": "image/png"
+    },
+    {
       "sourceId": "6b17e25a016a",
-      "relative": "assets/user-media/1.png",
+      "relative": "assets/user-media/1-6b17e25a016a.png",
       "kind": "image",
       "mime": "image/png"
     },

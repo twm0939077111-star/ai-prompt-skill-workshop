@@ -1,11 +1,11 @@
 {
   "title": "Prompt 與 Skill 入門工作坊",
-  "goal": "讓第一次接觸 AI 的職場工作者理解 Prompt 與 Skill，並透過醫美業與眼鏡業真實廣告案例看懂優良 Prompt 如何控制圖片風格與商業成果",
+  "goal": "讓第一次接觸 AI 的職場工作者理解 Prompt 與 Skill，並透過同頁 A/B 真實廣告對照，一眼看懂隨口描述與完整 Prompt 在品牌定位、視覺焦點與商業完成度上的差異",
   "audience": "第一次接觸 AI 的職場工作者與企業主管",
   "owner": "AI 公開教學工作坊",
-  "randomSeed": "prompt-skill-industry-20260818-viz",
+  "randomSeed": "prompt-skill-comparison-20260818-ab",
   "themePack": "theme01",
-  "pageCount": 12,
+  "pageCount": 13,
   "slides": [
     {
       "layout": "theme01_page001",
@@ -176,55 +176,86 @@
       }
     },
     {
-      "layout": "theme01_page020",
+      "layout": "theme01_page043",
       "props": {
-        "kicker": "產業案例 01｜醫美業",
-        "title": "同一產業，五種成熟風格",
-        "en": "BEAUTY CAMPAIGNS",
-        "cn": "定位不同，Prompt 的視覺決策也不同",
-        "items": [
+        "kicker": "真實 A/B 對照｜醫美業",
+        "title": "同一個 AI，差在怎麼說",
+        "en": "VAGUE REQUEST VS. CLEAR PROMPT",
+        "left": {
+          "tag": "只說一句話",
+          "en": "AI 自己猜",
+          "stat": "平均",
+          "unit": "資訊都很大聲",
+          "statLabel": "焦點不明"
+        },
+        "right": {
+          "tag": "完整 Prompt",
+          "en": "設計被控制",
+          "stat": "明確",
+          "unit": "品牌與主視覺",
+          "statLabel": "一眼看懂"
+        },
+        "verdict": "好 Prompt 不是把字寫長，而是把視覺決策說清楚",
+        "caption": "比較定位、焦點、層級與品牌一致性",
+        "images": [
+          "assets/user-media/1.png",
+          "assets/user-media/2.png"
+        ],
+        "imageSlotCount": 2,
+        "imageFit": "contain",
+        "showTags": true,
+        "showPlate": true,
+        "showStats": true,
+        "highlightSide": "right",
+        "accentColor": "#e8503a",
+        "showCaption": true
+      }
+    },
+    {
+      "layout": "theme01_page052",
+      "props": {
+        "eyebrow": "完整 PROMPT｜醫美業",
+        "titleLines": [
           {
-            "label": "韓系精品",
-            "sub": "柔光人像、留白與自然精緻",
-            "amount": "K-BEAUTY"
+            "text": "不是同一種漂亮"
           },
           {
-            "label": "醫美實驗室",
-            "sub": "掃描介面、冰藍玻璃與專業數據",
-            "amount": "LAB"
+            "text": "而是不同品牌定位"
           },
           {
-            "label": "精品香水",
-            "sub": "把療程包裝成高級美妝 Campaign",
-            "amount": "LUXE"
-          },
-          {
-            "label": "時尚雜誌 A",
-            "sub": "巨型字體、人像穿插與桃紅焦點",
-            "amount": "EDITORIAL"
-          },
-          {
-            "label": "時尚雜誌 B",
-            "sub": "同方向也能控制促銷層級與構圖",
-            "amount": "VARIANT"
+            "text": "都能被準確執行"
           }
         ],
+        "lead": "當 Prompt 指定受眾、品牌氣質、主視覺、版面層級與行動目標，AI 才能從通用模板進入可用的商業設計。",
+        "tags": [
+          {
+            "label": "韓系精品"
+          },
+          {
+            "label": "高級美妝"
+          },
+          {
+            "label": "潮流雜誌"
+          },
+          {
+            "label": "促銷變體"
+          }
+        ],
+        "caption": "同一產業，也能穩定控制四種清楚而不同的方向",
         "images": [
           "assets/user-media/beauty-campaign1.png",
-          "assets/user-media/2.png",
-          "assets/user-media/1.png",
+          "assets/user-media/1-6b17e25a016a.png",
           "assets/user-media/1-f37a8aad782b.png",
           "assets/user-media/2-6f214ef105d2.png"
         ],
-        "imageSlotCount": 5,
+        "imageSlotCount": 4,
         "imageFit": "contain",
-        "imageLayout": "normal",
-        "showCaptions": true,
+        "tagCount": 4,
         "highlight": true,
-        "highlightIndex": 1,
-        "accentColor": "#5b8def",
-        "showCaption": true,
-        "caption": "好 Prompt 能把品牌定位直接轉成可辨識的視覺系統"
+        "highlightIndex": 0,
+        "showLead": true,
+        "accentColor": "#7a5ae0",
+        "showCaption": true
       }
     },
     {
