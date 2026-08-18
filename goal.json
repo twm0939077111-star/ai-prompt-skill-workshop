@@ -1,11 +1,11 @@
 {
   "title": "Prompt 與 Skill 入門工作坊",
-  "goal": "讓第一次接觸 AI 的職場工作者理解 Prompt 與 Skill，並能把一項真實工作交給 AI 完成",
+  "goal": "讓第一次接觸 AI 的職場工作者理解 Prompt 與 Skill，並透過醫美業與眼鏡業真實廣告案例看懂優良 Prompt 如何控制圖片風格與商業成果",
   "audience": "第一次接觸 AI 的職場工作者與企業主管",
   "owner": "AI 公開教學工作坊",
-  "randomSeed": "prompt-skill-20260805-clear",
+  "randomSeed": "prompt-skill-industry-20260818-viz",
   "themePack": "theme01",
-  "pageCount": 10,
+  "pageCount": 12,
   "slides": [
     {
       "layout": "theme01_page001",
@@ -58,13 +58,13 @@
             "no": "01",
             "label": "為什麼 AI 會猜錯",
             "en": "THE PROBLEM",
-            "desc": "先看懂答案不穩定的真正原因"
+            "desc": "看懂答案不穩定的真正原因"
           },
           {
             "no": "02",
             "label": "Prompt 怎麼寫",
             "en": "CLEAR REQUEST",
-            "desc": "用四項資訊把任務交代清楚"
+            "desc": "用真實產業圖片拆解完整指令"
           },
           {
             "no": "03",
@@ -76,10 +76,10 @@
             "no": "04",
             "label": "如何用在工作",
             "en": "APPLY AT WORK",
-            "desc": "從會議、內容、簡報與資料整理開始"
+            "desc": "從內容、簡報與資料整理開始"
           }
         ],
-        "caption": "先理解，再練習，最後帶回自己的工作"
+        "caption": "先理解，再看成果，最後帶回自己的工作"
       }
     },
     {
@@ -156,7 +156,7 @@
             "step": "03",
             "heading": "要求與限制",
             "points": [
-              "語氣與重點？",
+              "語氣、風格與重點？",
               "必須避免什麼？"
             ],
             "verdict": "設定標準"
@@ -166,13 +166,107 @@
             "step": "04",
             "heading": "交付格式",
             "points": [
-              "表格、簡報或清單？",
-              "需要多少長度？"
+              "尺寸、版型或檔案？",
+              "需要多少內容？"
             ],
             "verdict": "可以直接用"
           }
         ],
-        "caption": "好 Prompt 不一定很長，但重要條件不能缺席"
+        "caption": "接下來用兩個產業的真實生成成果驗證這套公式"
+      }
+    },
+    {
+      "layout": "theme01_page020",
+      "props": {
+        "kicker": "產業案例 01｜醫美業",
+        "title": "同一產業，五種成熟風格",
+        "en": "BEAUTY CAMPAIGNS",
+        "cn": "定位不同，Prompt 的視覺決策也不同",
+        "items": [
+          {
+            "label": "韓系精品",
+            "sub": "柔光人像、留白與自然精緻",
+            "amount": "K-BEAUTY"
+          },
+          {
+            "label": "醫美實驗室",
+            "sub": "掃描介面、冰藍玻璃與專業數據",
+            "amount": "LAB"
+          },
+          {
+            "label": "精品香水",
+            "sub": "把療程包裝成高級美妝 Campaign",
+            "amount": "LUXE"
+          },
+          {
+            "label": "時尚雜誌 A",
+            "sub": "巨型字體、人像穿插與桃紅焦點",
+            "amount": "EDITORIAL"
+          },
+          {
+            "label": "時尚雜誌 B",
+            "sub": "同方向也能控制促銷層級與構圖",
+            "amount": "VARIANT"
+          }
+        ],
+        "images": [
+          "assets/user-media/beauty-campaign1.png",
+          "assets/user-media/2.png",
+          "assets/user-media/1.png",
+          "assets/user-media/1-f37a8aad782b.png",
+          "assets/user-media/2-6f214ef105d2.png"
+        ],
+        "imageSlotCount": 5,
+        "imageFit": "contain",
+        "imageLayout": "normal",
+        "showCaptions": true,
+        "highlight": true,
+        "highlightIndex": 1,
+        "accentColor": "#5b8def",
+        "showCaption": true,
+        "caption": "好 Prompt 能把品牌定位直接轉成可辨識的視覺系統"
+      }
+    },
+    {
+      "layout": "theme01_page076",
+      "props": {
+        "kicker": "產業案例 02｜眼鏡業",
+        "title": "從產品展示到功能敘事",
+        "en": "EYEWEAR CAMPAIGNS",
+        "cn": "Prompt 決定觀眾第一眼先看到商品、服務或效果",
+        "frames": [
+          {
+            "tag": "STYLE",
+            "caption": "漂浮鏡框｜以材質與多元風格吸引目光"
+          },
+          {
+            "tag": "MATCH",
+            "caption": "選框實驗室｜用臉型分析呈現服務價值"
+          },
+          {
+            "tag": "CLARITY",
+            "caption": "兩種世界｜用鏡片內外直接解釋功能"
+          },
+          {
+            "tag": "DETAIL",
+            "caption": "眼神特寫｜放大鏡框質感與配戴效果"
+          }
+        ],
+        "images": [
+          "assets/user-media/1-26ed84d16a78.png",
+          "assets/user-media/1-63830b5b3da8.png",
+          "assets/user-media/1-78c91220f84a.png",
+          "assets/user-media/1-bd87144071ad.png"
+        ],
+        "imageSlotCount": 4,
+        "imageFit": "contain",
+        "highlight": true,
+        "highlightIndex": 2,
+        "showIndex": true,
+        "showFrameCaption": true,
+        "accentColor": "#46b083",
+        "showCaption": true,
+        "caption": "優良 Prompt 不只生成漂亮圖片，也讓圖片自己說明產品價值"
       }
     },
     {

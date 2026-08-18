@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "sourceId": "cba607322c88",
+      "relative": "assets/user-media/beauty-campaign1.png",
+      "kind": "image",
+      "mime": "image/png"
+    },
+    {
+      "sourceId": "62c17851e9e3",
+      "relative": "assets/user-media/2.png",
+      "kind": "image",
+      "mime": "image/png"
+    },
+    {
+      "sourceId": "6b17e25a016a",
+      "relative": "assets/user-media/1.png",
+      "kind": "image",
+      "mime": "image/png"
+    },
+    {
+      "sourceId": "f37a8aad782b",
+      "relative": "assets/user-media/1-f37a8aad782b.png",
+      "kind": "image",
+      "mime": "image/png"
+    },
+    {
+      "sourceId": "6f214ef105d2",
+      "relative": "assets/user-media/2-6f214ef105d2.png",
+      "kind": "image",
+      "mime": "image/png"
+    },
+    {
+      "sourceId": "26ed84d16a78",
+      "relative": "assets/user-media/1-26ed84d16a78.png",
+      "kind": "image",
+      "mime": "image/png"
+    },
+    {
+      "sourceId": "63830b5b3da8",
+      "relative": "assets/user-media/1-63830b5b3da8.png",
+      "kind": "image",
+      "mime": "image/png"
+    },
+    {
+      "sourceId": "78c91220f84a",
+      "relative": "assets/user-media/1-78c91220f84a.png",
+      "kind": "image",
+      "mime": "image/png"
+    },
+    {
+      "sourceId": "bd87144071ad",
+      "relative": "assets/user-media/1-bd87144071ad.png",
+      "kind": "image",
+      "mime": "image/png"
+    }
+  ]
+}
