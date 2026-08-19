@@ -44,11 +44,11 @@
       "layout": "theme01_page027",
       "props": {
         "kicker": "OPENING TEST｜開場測試",
-        "quote": "請用 AI 做一張醫美 Facebook 廣告圖",
+        "quote": "請幫我做一張醫美臉書廣告圖",
         "contrastWord": "限時 3 分鐘",
         "highlightWord": "現在開始",
         "attribution": "不要補充任何條件",
-        "caption": "需求：皮膚管理，吸引客人預約",
+        "caption": "主題是皮膚管理，要吸引客人預約",
         "notes": [
           {"label": "直接生成"},
           {"label": "保存第一版"}
