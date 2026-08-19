@@ -181,36 +181,36 @@
     {
       "layout": "theme01_page083",
       "props": {
-        "kicker": "GOOD PROMPT｜固定格式",
-        "title": "好指令要寫出四件事",
-        "en": "PROMPT STRUCTURE",
-        "cn": "讓 AI 不必猜你的期待",
+        "kicker": "GOOD PROMPT｜醫美案例",
+        "title": "四個可以直接參考的指令",
+        "en": "4 PROMPT EXAMPLES",
+        "cn": "同一產業，做出四種品牌方向",
         "takeawayCount": 4,
         "takeaways": [
           {
-            "tag": "01｜定位",
-            "en": "CONTEXT",
-            "text": "產業、品牌個性、受眾與圖片使用情境。"
+            "tag": "01｜未來實驗室",
+            "en": "FUTURE LAB",
+            "text": "專業科技醫美廣告；女性正臉＋掃描 UI；銀白冰藍玻璃；避免電競風。"
           },
           {
-            "tag": "02｜主視覺",
-            "en": "SUBJECT",
-            "text": "畫面主角、姿勢、視角與視覺焦點。"
+            "tag": "02｜精品香水感",
+            "en": "LUXURY BEAUTY",
+            "text": "人物＋透明玻璃與水波；奶油白銀淡粉；主標 TIMELESS GLOW。"
           },
           {
-            "tag": "03｜設計規格",
-            "en": "ART DIRECTION",
-            "text": "色系、材質、光線、構圖與版面語言。"
+            "tag": "03｜韓系雜誌",
+            "en": "EDITORIAL",
+            "text": "人物超出版面＋巨型字；白黑桃紅；加入貼紙、編號與細線。"
           },
           {
-            "tag": "04｜文字與限制",
-            "en": "COPY + LIMITS",
-            "text": "主標、小標、必要資訊，以及不要出現的風格。"
+            "tag": "04｜液態水光肌",
+            "en": "LIQUID BEAUTY",
+            "text": "液態玻璃、水滴與珍珠漂浮；銀白透明淡粉；主標 GLOW FROM WITHIN。"
           }
         ],
-        "summary": "好 Prompt 不是堆很多形容詞，而是把定位、畫面、設計規格與限制寫成可以執行的條件。",
-        "bandLabel": "照順序填，就能直接使用",
-        "caption": "先決定方向，再要求 AI 生成畫面",
+        "summary": "先看四個指令，不用背。下一頁再一起找出：它們為什麼都能讓 AI 做出清楚、有品牌感的畫面。",
+        "bandLabel": "先看案例，再找共同結構",
+        "caption": "四個方向都來自你提供的醫美指令文件",
         "colorMode": "series",
         "accentColor": "#7a5ae0",
         "showEn": true,
@@ -223,31 +223,31 @@
     {
       "layout": "theme01_page029",
       "props": {
-        "kicker": "完整範例｜醫美產業",
-        "title": "未來感醫美實驗室",
-        "en": "PROMPT EXAMPLE",
-        "cn": "從定位寫到限制條件",
+        "kicker": "ANALYSIS｜找出共同點",
+        "title": "好指令都交代了什麼？",
+        "en": "COMMON STRUCTURE",
+        "cn": "內容不同，骨架其實相同",
         "pointCount": 4,
         "points": [
           {
-            "h": "定位與目標",
-            "d": "製作醫美診所 Facebook 廣告，呈現專業科技與高級醫療感。"
+            "h": "① 先定品牌方向",
+            "d": "科技、精品、潮流或超現實；先讓 AI 知道要呈現哪種品牌感。"
           },
           {
-            "h": "主視覺",
-            "d": "女性正面臉部，周圍加入細緻掃描線與肌膚分析 UI。"
+            "h": "② 指定畫面主角",
+            "d": "人物大小、臉部角度、玻璃、水滴或 UI，主視覺都說得很清楚。"
           },
           {
-            "h": "場景與材質",
-            "d": "銀白、冰藍、半透明玻璃，加入 3D 球體與光線折射。"
+            "h": "③ 給完整藝術指導",
+            "d": "色系、材質、光線與排版語言一起指定，畫面才會形成完整風格。"
           },
           {
-            "h": "文字與限制",
-            "d": "主標 SKIN RE:START；資訊做成數據卡，避免電競科技風。"
+            "h": "④ 寫文字與禁區",
+            "d": "主標、資訊層級與不要出現的風格，能避免 AI 自己亂猜。"
           }
         ],
-        "images": ["assets/user-media/2-04d82a505191.png"],
-        "imageSlotCount": 1,
+        "images": [],
+        "imageSlotCount": 0,
         "imageFit": "contain",
         "imageSide": "left",
         "imageLayout": "normal",
@@ -255,7 +255,7 @@
         "highlightIndex": 3,
         "accentColor": "#5b8def",
         "showCaption": true,
-        "caption": "可直接複製，再替換品牌、療程與文字內容"
+        "caption": "共同公式：定位＋主視覺＋藝術指導＋文字與限制"
       }
     },
     {
