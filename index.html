@@ -1839,6 +1839,12 @@
   }
 
 </style>
+
+<style id="interactive-prompt-style">
+.prompt-stage{position:absolute;inset:0;z-index:8;box-sizing:border-box;padding:54px 68px 42px;background:radial-gradient(circle at 88% 8%,rgba(122,90,224,.14),transparent 32%),linear-gradient(135deg,#fbfcff 0%,#f4f1ff 100%);font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif;color:#171527;overflow:hidden}
+.prompt-stage *{box-sizing:border-box}.prompt-stage__top{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:22px}.prompt-stage__kicker{font-size:17px;font-weight:800;letter-spacing:.13em;color:#7457d6}.prompt-stage__title{margin:5px 0 0;font-size:39px;line-height:1.08;letter-spacing:-.025em}.prompt-stage__hint{font-size:17px;color:#77728a}.prompt-stage__main{height:618px;display:grid;grid-template-columns:43% 57%;background:rgba(255,255,255,.9);border:1px solid rgba(85,67,140,.16);border-radius:30px;box-shadow:0 22px 60px rgba(67,51,117,.15);overflow:hidden}.prompt-stage__visual{position:relative;background:#ece8fa;overflow:hidden}.prompt-stage__visual img{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .25s ease,transform .38s cubic-bezier(.2,.8,.2,1)}.prompt-stage__visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 62%,rgba(17,13,31,.76))}.prompt-stage__number{position:absolute;top:26px;left:28px;z-index:2;padding:8px 13px;border-radius:99px;background:rgba(255,255,255,.9);font-size:15px;font-weight:900;color:#5f45be}.prompt-stage__visual-title{position:absolute;z-index:2;left:30px;right:30px;bottom:28px;color:#fff}.prompt-stage__visual-title b{display:block;font-size:32px;line-height:1.18}.prompt-stage__visual-title span{display:block;margin-top:7px;font-size:15px;letter-spacing:.12em;opacity:.84}.prompt-stage__copy{position:relative;padding:31px 36px 116px;overflow:hidden}.prompt-stage__label{display:flex;align-items:center;gap:10px;margin-bottom:16px;font-size:15px;font-weight:900;color:#6850c4;letter-spacing:.08em}.prompt-stage__label:before{content:"";width:30px;height:4px;border-radius:4px;background:#7a5ae0}.prompt-stage__text{font-size:22px;line-height:1.67;letter-spacing:.012em;color:#302d3b;max-height:432px;overflow:auto;padding-right:12px;scrollbar-width:thin;transition:opacity .22s ease,transform .32s ease}.prompt-stage__text b{color:#694bc8;background:linear-gradient(transparent 64%,rgba(122,90,224,.17) 0)}.prompt-stage__tabs{position:absolute;left:34px;right:34px;bottom:25px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.prompt-stage__tab{height:69px;border:1px solid #ddd6f4;border-radius:15px;background:#fff;padding:7px;display:flex;align-items:center;gap:9px;text-align:left;cursor:pointer;color:#3c374b;transition:.2s ease;font:inherit}.prompt-stage__tab:hover{transform:translateY(-2px);border-color:#9a85de}.prompt-stage__tab.is-active{background:#6f52cc;color:#fff;border-color:#6f52cc;box-shadow:0 8px 20px rgba(111,82,204,.27)}.prompt-stage__tab img{width:47px;height:53px;object-fit:cover;border-radius:9px}.prompt-stage__tab strong{font-size:14px;line-height:1.25}.prompt-stage__tab small{display:block;margin-top:3px;font-size:11px;opacity:.75}.prompt-stage.is-switching .prompt-stage__visual img{opacity:.25;transform:scale(1.035)}.prompt-stage.is-switching .prompt-stage__text{opacity:0;transform:translateX(16px)}
+@media(max-width:900px){.prompt-stage{padding:32px}.prompt-stage__hint{display:none}.prompt-stage__main{grid-template-columns:40% 60%}.prompt-stage__text{font-size:19px}}
+</style>
 </head>
 <body>
 <div id="hint" aria-hidden="true"></div>
@@ -8769,6 +8775,29 @@ refreshRailCatalog();
   let saved;try{saved=localStorage.getItem(KEY);}catch{}
   if(saved==='dark'||saved==='light') apply(saved); else paintIcon(current());
   btn.addEventListener('click',()=>apply(current()==='dark'?'light':'dark'));
+})();
+</script>
+
+<script id="interactive-prompt-script">
+(()=>{
+ const cases=[
+  {no:'01',short:'Liquid Beauty',title:'超現實水光肌',en:'LIQUID BEAUTY',img:'assets/user-media/liquid-beauty.png',prompt:'請製作一張超現實水光肌主題的醫美 Facebook 廣告。人物周圍不要使用一般診所背景，改成大量<b>透明液態玻璃、水滴、珍珠與半透明凝膠材質</b>漂浮，讓肌膚與液體材質互相呼應，直接視覺化水潤、光澤與彈性。整體使用銀白、透明與淡粉，呈現當代 3D 商業視覺。主標為 <b>GLOW FROM WITHIN</b>，中文小標為「令肌膚，自帶光。」資訊保持少量與高級留白。'},
+  {no:'02',short:'粉色 Y2K',title:'粉色 Y2K 年輕醫美',en:'PINK Y2K',img:'assets/user-media/y2k-1.png',prompt:'請製作一張吸睛、適合 IG／Facebook 年輕客群的醫美廣告。整體使用 <b>Baby Pink、銀色 Chrome、透明壓克力與閃亮星星</b>，呈現粉色 Y2K 社群感。人物姿勢活潑，不使用傳統醫美端莊站姿。主標為「今天開始，比昨天更漂亮 ♡」。優惠價格 <b>$5,999</b> 要放大成主要視覺焦點，搭配貼紙、愛心與閃亮符號，強化年輕、潮流與商業促銷感。'},
+  {no:'03',short:'未來實驗室',title:'未來感醫美實驗室',en:'FUTURE LAB',img:'assets/user-media/2-04d82a505191.png',prompt:'請製作一張醫美診所 Facebook 廣告圖，<b>定位為專業科技＋醫療感</b>。主視覺使用女性正面臉部，周圍加入細緻掃描線與肌膚分析 UI。背景使用銀白、冰藍與半透明玻璃，加入 3D 球體、玻璃材質與光線折射。治療資訊設計成「分析數據卡」。主標為 <b>SKIN RE:START</b>，中文標題為「啟動肌膚新生計畫」。避免電競科技風，維持醫美精品感。'},
+  {no:'04',short:'The New Me',title:'醫美雜誌封面',en:'THE NEW ME',img:'assets/user-media/the-new-me.png',prompt:'請把醫美 Facebook 廣告做成一本<b>時尚雜誌封面</b>。人物放得非常大，標題穿插在人像前後，主標分成三行：<b>THE／NEW／ME</b>。旁邊只放少量資訊：SKIN／LIFT／CONTOUR，再加入期刊編號、細線與 Editorial Typography。整體偏 Vogue 與韓國時尚雜誌 Editorial 氛圍，但不要直接模仿任何品牌版面。成品要有平面設計師作品集感，不像單純 AI 生成的漂亮人物照。'}
+ ];
+ function mount(){
+  const slide=document.querySelector('[data-vm-index="5"]'); if(!slide||slide.querySelector('.prompt-stage'))return;
+  const root=slide.querySelector('.imported-theme-root'); if(root)root.style.visibility='hidden';
+  const stage=document.createElement('div');stage.className='prompt-stage';
+  stage.innerHTML='<div class="prompt-stage__top"><div><div class="prompt-stage__kicker">GOOD PROMPT｜四個真實醫美案例</div><h2 class="prompt-stage__title">點一張作品，讀一段完整 Prompt</h2></div><div class="prompt-stage__hint">圖片與指令同步切換</div></div><div class="prompt-stage__main"><div class="prompt-stage__visual"><img><div class="prompt-stage__number"></div><div class="prompt-stage__visual-title"><b></b><span></span></div></div><div class="prompt-stage__copy"><div class="prompt-stage__label">完整指令｜可直接參考</div><div class="prompt-stage__text"></div><div class="prompt-stage__tabs"></div></div></div>';
+  slide.appendChild(stage);
+  const tabs=stage.querySelector('.prompt-stage__tabs');
+  cases.forEach((c,i)=>{const b=document.createElement('button');b.className='prompt-stage__tab';b.innerHTML='<img src="'+c.img+'"><span><strong>'+c.no+' '+c.short+'</strong><small>點擊查看完整指令</small></span>';b.onclick=()=>show(i);tabs.appendChild(b)});
+  function show(i){const c=cases[i];stage.classList.add('is-switching');setTimeout(()=>{stage.querySelector('.prompt-stage__visual img').src=c.img;stage.querySelector('.prompt-stage__number').textContent=c.no+' / 04';stage.querySelector('.prompt-stage__visual-title b').textContent=c.title;stage.querySelector('.prompt-stage__visual-title span').textContent=c.en;stage.querySelector('.prompt-stage__text').innerHTML=c.prompt;[...tabs.children].forEach((b,n)=>b.classList.toggle('is-active',n===i));stage.classList.remove('is-switching')},170)}
+  show(0);
+ }
+ document.addEventListener('DOMContentLoaded',()=>{mount();new MutationObserver(mount).observe(document.body,{childList:true,subtree:true})});
 })();
 </script>
 </body>
