@@ -9267,11 +9267,15 @@ refreshRailCatalog();
   });
 </script>
 <script id="github-pages-asset-paths">
-  document.querySelectorAll('img').forEach(function (image) {
-    var source = image.getAttribute('src') || '';
-    if (source.indexOf('/skill-reference/') === 0) image.setAttribute('src', source.slice(1));
-    else if (image.src.indexOf(location.origin + '/skill-reference/') === 0) image.setAttribute('src', image.src.replace(location.origin + '/', ''));
-  });
+  function fixGithubPagesAssetPaths() {
+    document.querySelectorAll('img').forEach(function (image) {
+      var source = image.getAttribute('src') || '';
+      if (source.indexOf('/skill-reference/') === 0) image.setAttribute('src', source.slice(1));
+      else if (image.src.indexOf(location.origin + '/skill-reference/') === 0) image.setAttribute('src', image.src.replace(location.origin + '/', ''));
+    });
+  }
+  fixGithubPagesAssetPaths();
+  new MutationObserver(fixGithubPagesAssetPaths).observe(document.body, { childList: true, subtree: true });
 </script>
 </body>
 </html>
