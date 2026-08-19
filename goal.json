@@ -179,25 +179,23 @@
       }
     },
     {
-      "layout": "theme01_page020",
+      "layout": "theme01_page052",
       "props": {
-        "kicker": "GOOD PROMPT｜完整醫美指令",
-        "title": "四個可以直接複製的完整 Prompt",
-        "en": "4 COMPLETE PROMPTS",
-        "cn": "先讀完整內容，下一頁再找共同結構",
-        "items": [
-          {"label": "Liquid Beauty", "sub": "完整 Prompt", "amount": "01"},
-          {"label": "粉色 Y2K", "sub": "完整 Prompt", "amount": "02"},
-          {"label": "未來實驗室", "sub": "完整 Prompt", "amount": "03"},
-          {"label": "The New Me", "sub": "完整 Prompt", "amount": "04"}
+        "eyebrow": "GOOD PROMPT｜完整醫美指令",
+        "titleLines": [
+          {"text": "四個完整 Prompt"},
+          {"text": "共同結構已標色"},
+          {"text": "下一頁再拆解"}
         ],
-        "images": ["assets/prompt-cards/board-v3.svg"],
+        "lead": "紫色定位、橘色主視覺、綠色藝術指導、金色文案、藍色限制。",
+        "tags": [],
+        "images": ["assets/prompt-cards/board-v4.svg"],
         "imageSlotCount": 1,
         "imageFit": "contain",
-        "imageLayout": "normal",
-        "showCaptions": false,
+        "tagCount": 0,
         "highlight": false,
         "highlightIndex": 0,
+        "showLead": false,
         "accentColor": "#7a5ae0",
         "showCaption": true,
         "caption": "四段皆為完整可執行指令｜可直接複製後替換品牌與療程"
