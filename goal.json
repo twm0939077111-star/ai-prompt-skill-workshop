@@ -41,40 +41,25 @@
       }
     },
     {
-      "layout": "theme01_page083",
+      "layout": "theme01_page027",
       "props": {
-        "kicker": "OPENING TEST｜先做再學",
-        "title": "先別學，直接做一次",
-        "en": "3-MIN AI CHALLENGE",
-        "cn": "完成一張醫美 Facebook 廣告圖",
-        "takeawayCount": 3,
-        "takeaways": [
-          {
-            "tag": "STEP 01",
-            "en": "COPY",
-            "text": "輸入同一句需求，不添加其他條件。"
-          },
-          {
-            "tag": "STEP 02",
-            "en": "CREATE",
-            "text": "讓 AI 直接生成一張廣告圖片。"
-          },
-          {
-            "tag": "STEP 03",
-            "en": "SAVE",
-            "text": "保存結果，稍後再用完整 Prompt 重做。"
-          }
+        "kicker": "OPENING TEST｜開場測試",
+        "quote": "請用 AI 做一張醫美 Facebook 廣告圖",
+        "contrastWord": "限時 3 分鐘",
+        "highlightWord": "現在開始",
+        "attribution": "不要補充任何條件",
+        "caption": "需求：皮膚管理，吸引客人預約",
+        "notes": [
+          {"label": "直接生成"},
+          {"label": "保存第一版"}
         ],
-        "summary": "請幫一家醫美診所製作一張 Facebook 廣告圖片，主題是皮膚管理，目的是吸引客人預約。",
-        "bandLabel": "限時 3 分鐘｜現在開始",
-        "colorMode": "series",
-        "accentColor": "#7a5ae0",
-        "showEn": true,
-        "highlight": true,
-        "highlightIndex": 0,
-        "showSummary": true,
-        "showCaption": true,
-        "caption": "先不要修改需求｜保留第一版，這就是你的測試基準"
+        "noteCount": 2,
+        "accentColor": "#c9f24d",
+        "showHighlighter": true,
+        "showQuoteMark": true,
+        "showAttribution": true,
+        "align": "left",
+        "showCaption": true
       }
     },
     {
