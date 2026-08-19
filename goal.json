@@ -178,18 +178,17 @@
       }
     },
     {
-      "layout": "theme01_page020",
+      "layout": "theme01_page076",
       "props": {
         "kicker": "產業案例｜醫美 01",
-        "title": "同一產業，也能有五種品牌氣質",
+        "title": "同一產業，也能有不同品牌氣質",
         "en": "MEDICAL BEAUTY GALLERY",
-        "cn": "Prompt 決定精品、科技、潮流或視覺實驗",
-        "items": [
-          {"label": "韓系精品", "sub": "柔光人像 × 精品留白", "amount": "01"},
-          {"label": "未來實驗室", "sub": "肌膚掃描 × 玻璃科技", "amount": "02"},
-          {"label": "香水廣告感", "sub": "療程商品化 × 奶油金屬", "amount": "03"},
-          {"label": "Liquid Beauty", "sub": "超現實水光肌 × 液態材質", "amount": "04"},
-          {"label": "粉紅 Y2K", "sub": "年輕潮流 × 高飽和社群感", "amount": "05"}
+        "cn": "同樣是醫美，也能用精品、科技、商品與材質說故事",
+        "frames": [
+          {"tag": "LUXURY", "caption": "韓系精品｜柔光人像與高級留白"},
+          {"tag": "TECH", "caption": "未來實驗室｜肌膚掃描與透明科技"},
+          {"tag": "PRODUCT", "caption": "香水廣告感｜療程商品化與奶油金屬"},
+          {"tag": "MATERIAL", "caption": "Liquid Beauty｜水光肌與液態視覺"}
         ],
         "images": [
           "assets/user-media/beauty-campaign1-68d74b8094f3.png",
@@ -199,13 +198,13 @@
         ],
         "imageSlotCount": 4,
         "imageFit": "contain",
-        "imageLayout": "normal",
-        "showCaptions": true,
         "highlight": false,
         "highlightIndex": 0,
+        "showIndex": true,
+        "showFrameCaption": true,
         "accentColor": "#7a5ae0",
         "showCaption": true,
-        "caption": "好的 Prompt 不是固定風格，而是能準確控制品牌方向"
+        "caption": "Prompt 不只決定圖片好不好看，也能精準控制品牌定位"
       }
     },
     {
