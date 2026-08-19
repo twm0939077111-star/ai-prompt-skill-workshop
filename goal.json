@@ -6,7 +6,7 @@
   "randomSeed": "prompt-skill-cover-compare-20260818-editorial",
   "themePack": "theme01",
   "allowMediaReuse": true,
-  "pageCount": 13,
+  "pageCount": 8,
   "slides": [
     {
       "layout": "theme01_page004",
@@ -208,40 +208,6 @@
       }
     },
     {
-      "layout": "theme01_page052",
-      "props": {
-        "eyebrow": "產業案例｜醫美 02",
-        "titleLines": [
-          {"text": "同樣是人物主視覺"},
-          {"text": "排版語言不同"},
-          {"text": "品牌個性就不同"}
-        ],
-        "lead": "這四張都採用雜誌式人像，但 Prompt 分別控制字體比例、桃紅色、貼紙標籤與商業促銷層級。",
-        "tags": [
-          {"label": "韓系 Editorial"},
-          {"label": "桃紅社群感"},
-          {"label": "THE NEW ME"},
-          {"label": "人物超版"}
-        ],
-        "caption": "人物相似不代表設計相同｜真正差異來自版面規則與品牌語氣",
-        "images": [
-          "assets/user-media/1-2ae8c24113dd.png",
-          "assets/user-media/2-b6f0d30cc743.png",
-          "assets/user-media/the-new-me.png",
-          "assets/user-media/the-new-me2.png",
-          "assets/user-media/y2k-1.png"
-        ],
-        "imageSlotCount": 5,
-        "imageFit": "contain",
-        "tagCount": 4,
-        "highlight": false,
-        "highlightIndex": 0,
-        "showLead": true,
-        "accentColor": "#e8503a",
-        "showCaption": true
-      }
-    },
-    {
       "layout": "theme01_page076",
       "props": {
         "kicker": "產業案例｜眼鏡業",
@@ -269,67 +235,6 @@
         "accentColor": "#46b083",
         "showCaption": true,
         "caption": "Prompt 不只生成漂亮圖片，也能讓圖片自己說明產品價值"
-      }
-    },
-    {
-      "layout": "theme01_page066",
-      "props": {
-        "kicker": "同一個 AI，三種結果",
-        "title": "交代方式決定成果穩定度",
-        "en": "THREE WAYS TO WORK",
-        "cn": "從猜測走向可重複",
-        "cornerLabel": "使用方式",
-        "dimCount": 5,
-        "rowCount": 3,
-        "dims": [
-          "目的清楚",
-          "背景完整",
-          "格式明確",
-          "成果可驗收",
-          "下次可重複"
-        ],
-        "rows": [
-          {
-            "name": "一句話需求",
-            "tag": "AI 靠猜",
-            "scores": [
-              1,
-              1,
-              1,
-              1,
-              1
-            ]
-          },
-          {
-            "name": "完整 Prompt",
-            "tag": "這次做好",
-            "scores": [
-              3,
-              3,
-              3,
-              3,
-              2
-            ]
-          },
-          {
-            "name": "Prompt＋Skill",
-            "tag": "每次穩定",
-            "scores": [
-              3,
-              3,
-              3,
-              3,
-              3
-            ]
-          }
-        ],
-        "legend": [
-          "1｜資訊不足",
-          "2｜部分明確",
-          "3｜可以執行",
-          "重點｜減少猜測"
-        ],
-        "caption": "Prompt 提升單次品質；Skill 讓同類工作維持同一套方法"
       }
     },
     {
@@ -379,99 +284,6 @@
         ],
         "caption": "從一次做對，進步到每次都做得穩定",
         "statCount": 3
-      }
-    },
-    {
-      "layout": "theme01_page029",
-      "props": {
-        "kicker": "PROMPT × SKILL",
-        "title": "兩者負責不同的事",
-        "en": "TASK + METHOD",
-        "cn": "一次交辦，加上長期方法",
-        "pointCount": 3,
-        "imageSlotCount": 0,
-        "points": [
-          {
-            "h": "Prompt｜這一次",
-            "d": "指定眼前任務的目的、背景、要求與交付格式。"
-          },
-          {
-            "h": "Skill｜每一次",
-            "d": "保存同類工作的步驟、判斷原則與品質標準。"
-          },
-          {
-            "h": "搭配使用｜更穩定",
-            "d": "Prompt 告訴 AI 現在做什麼；Skill 告訴 AI 應該怎麼做好。"
-          }
-        ],
-        "caption": "一次做對靠 Prompt；每次做好靠 Skill"
-      }
-    },
-    {
-      "layout": "theme01_page007",
-      "props": {
-        "kicker": "WORK APPLICATIONS",
-        "title": "先從這些工作開始",
-        "en": "START SMALL",
-        "cn": "重複、耗時、成果可檢查",
-        "itemCount": 4,
-        "stats": [
-          {
-            "value": "01",
-            "unit": "會議整理",
-            "label": "逐字稿變行動紀錄",
-            "sub": "摘要決策、負責人與追蹤事項"
-          },
-          {
-            "value": "02",
-            "unit": "內容製作",
-            "label": "維持一致品牌語氣",
-            "sub": "套用結構、語氣與禁用表達"
-          },
-          {
-            "value": "03",
-            "unit": "簡報製作",
-            "label": "資訊變成清楚故事線",
-            "sub": "規劃章節、頁面角色與重點"
-          },
-          {
-            "value": "04",
-            "unit": "資料整理",
-            "label": "把雜亂資訊變可用成果",
-            "sub": "分類、摘要、比較並找出重點"
-          }
-        ],
-        "caption": "最好的第一個場景，是你已經重複做過很多次的工作"
-      }
-    },
-    {
-      "layout": "theme01_page083",
-      "props": {
-        "kicker": "明天就能開始",
-        "title": "完成第一個 AI 工作實驗",
-        "en": "START WITH ONE TASK",
-        "cn": "不要一次改變全部工作",
-        "takeawayCount": 3,
-        "takeaways": [
-          {
-            "tag": "STEP 01",
-            "en": "WRITE",
-            "text": "挑一項真實工作，寫出包含四項資訊的 Prompt。"
-          },
-          {
-            "tag": "STEP 02",
-            "en": "CHECK",
-            "text": "檢查成果能不能使用，補上缺少的條件。"
-          },
-          {
-            "tag": "STEP 03",
-            "en": "SAVE",
-            "text": "成功後保存做法，逐步整理成自己的 Skill。"
-          }
-        ],
-        "summary": "會問只是開始；真正的能力，是把好結果整理成下一次仍能使用的方法。",
-        "bandLabel": "選一項工作，今天開始",
-        "caption": "Prompt 讓 AI 聽懂；Skill 讓好方法留下來"
       }
     }
   ]
