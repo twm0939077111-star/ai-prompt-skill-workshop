@@ -6,7 +6,7 @@
   "randomSeed": "prompt-skill-cover-compare-20260818-editorial",
   "themePack": "theme01",
   "allowMediaReuse": true,
-  "pageCount": 9,
+  "pageCount": 11,
   "slides": [
     {
       "layout": "theme01_page004",
@@ -176,6 +176,86 @@
         "showVerdict": true,
         "showCaption": true,
         "caption": "不必一次寫得完美；先補齊四步，再根據結果調整"
+      }
+    },
+    {
+      "layout": "theme01_page083",
+      "props": {
+        "kicker": "GOOD PROMPT｜固定格式",
+        "title": "好指令要寫出四件事",
+        "en": "PROMPT STRUCTURE",
+        "cn": "讓 AI 不必猜你的期待",
+        "takeawayCount": 4,
+        "takeaways": [
+          {
+            "tag": "01｜定位",
+            "en": "CONTEXT",
+            "text": "產業、品牌個性、受眾與圖片使用情境。"
+          },
+          {
+            "tag": "02｜主視覺",
+            "en": "SUBJECT",
+            "text": "畫面主角、姿勢、視角與視覺焦點。"
+          },
+          {
+            "tag": "03｜設計規格",
+            "en": "ART DIRECTION",
+            "text": "色系、材質、光線、構圖與版面語言。"
+          },
+          {
+            "tag": "04｜文字與限制",
+            "en": "COPY + LIMITS",
+            "text": "主標、小標、必要資訊，以及不要出現的風格。"
+          }
+        ],
+        "summary": "好 Prompt 不是堆很多形容詞，而是把定位、畫面、設計規格與限制寫成可以執行的條件。",
+        "bandLabel": "照順序填，就能直接使用",
+        "caption": "先決定方向，再要求 AI 生成畫面",
+        "colorMode": "series",
+        "accentColor": "#7a5ae0",
+        "showEn": true,
+        "highlight": true,
+        "highlightIndex": 3,
+        "showSummary": true,
+        "showCaption": true
+      }
+    },
+    {
+      "layout": "theme01_page029",
+      "props": {
+        "kicker": "完整範例｜醫美產業",
+        "title": "未來感醫美實驗室",
+        "en": "PROMPT EXAMPLE",
+        "cn": "從定位寫到限制條件",
+        "pointCount": 4,
+        "points": [
+          {
+            "h": "定位與目標",
+            "d": "製作醫美診所 Facebook 廣告，呈現專業科技與高級醫療感。"
+          },
+          {
+            "h": "主視覺",
+            "d": "女性正面臉部，周圍加入細緻掃描線與肌膚分析 UI。"
+          },
+          {
+            "h": "場景與材質",
+            "d": "銀白、冰藍、半透明玻璃，加入 3D 球體與光線折射。"
+          },
+          {
+            "h": "文字與限制",
+            "d": "主標 SKIN RE:START；資訊做成數據卡，避免電競科技風。"
+          }
+        ],
+        "images": ["assets/user-media/2-04d82a505191.png"],
+        "imageSlotCount": 1,
+        "imageFit": "contain",
+        "imageSide": "left",
+        "imageLayout": "normal",
+        "highlight": true,
+        "highlightIndex": 3,
+        "accentColor": "#5b8def",
+        "showCaption": true,
+        "caption": "可直接複製，再替換品牌、療程與文字內容"
       }
     },
     {
