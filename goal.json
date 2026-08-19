@@ -191,15 +191,10 @@
           {"label": "未來實驗室", "sub": "完整 Prompt", "amount": "03"},
           {"label": "The New Me", "sub": "完整 Prompt", "amount": "04"}
         ],
-        "images": [
-          "assets/prompt-cards/liquid.svg",
-          "assets/prompt-cards/y2k.svg",
-          "assets/prompt-cards/future.svg",
-          "assets/prompt-cards/new-me.svg"
-        ],
-        "imageSlotCount": 4,
+        "images": ["assets/prompt-cards/board-v3.svg"],
+        "imageSlotCount": 1,
         "imageFit": "contain",
-        "imageLayout": "collage",
+        "imageLayout": "normal",
         "showCaptions": false,
         "highlight": false,
         "highlightIndex": 0,
