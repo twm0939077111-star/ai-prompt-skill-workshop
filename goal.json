@@ -6,7 +6,7 @@
   "randomSeed": "prompt-skill-cover-compare-20260818-editorial",
   "themePack": "theme01",
   "allowMediaReuse": true,
-  "pageCount": 15,
+  "pageCount": 13,
   "slides": [
     {
       "layout": "theme01_page004",
@@ -178,140 +178,98 @@
       }
     },
     {
-      "layout": "theme01_page045",
+      "layout": "theme01_page020",
       "props": {
-        "kicker": "A｜作品集＋完整 Prompt",
-        "title": "未來感醫美實驗室",
-        "en": "PROMPT REFERENCE",
-        "intro": "為醫美診所製作 Facebook 正方形廣告。女性正面臉部置中，加入肌膚掃描線與分析 UI；背景使用銀白、冰藍與半透明玻璃。",
-        "stats": [
-          {"value": "主體", "unit": "女性正面臉部", "label": "置中、乾淨、專業"},
-          {"value": "材質", "unit": "玻璃＋3D 球體", "label": "加入光線折射"},
-          {"value": "限制", "unit": "避免電競科技風", "label": "維持精品醫美感"}
+        "kicker": "產業案例｜醫美 01",
+        "title": "同一產業，也能有五種品牌氣質",
+        "en": "MEDICAL BEAUTY GALLERY",
+        "cn": "Prompt 決定精品、科技、潮流或視覺實驗",
+        "items": [
+          {"label": "韓系精品", "sub": "柔光人像 × 精品留白", "amount": "01"},
+          {"label": "未來實驗室", "sub": "肌膚掃描 × 玻璃科技", "amount": "02"},
+          {"label": "香水廣告感", "sub": "療程商品化 × 奶油金屬", "amount": "03"},
+          {"label": "Liquid Beauty", "sub": "超現實水光肌 × 液態材質", "amount": "04"},
+          {"label": "粉紅 Y2K", "sub": "年輕潮流 × 高飽和社群感", "amount": "05"}
         ],
-        "points": [
-          {"h": "資訊呈現", "d": "將療程資訊整理成肌膚分析數據卡。"},
-          {"h": "視覺氣質", "d": "專業科技、醫療可信、明亮精品。"},
-          {"h": "主標示例", "d": "SKIN RE :START｜啟動肌膚新生計劃。"}
+        "images": [
+          "assets/user-media/beauty-campaign1-68d74b8094f3.png",
+          "assets/user-media/2-04d82a505191.png",
+          "assets/user-media/1-56a470a41edf.png",
+          "assets/user-media/liquid-beauty.png",
+          "assets/user-media/y2k-1.png"
         ],
-        "caption": "先看完整作品，再讀懂 Prompt 如何控制畫面。",
-        "images": ["assets/user-media/2.png"],
-        "statCount": 3,
-        "pointCount": 3,
-        "highlight": true,
-        "highlightIndex": 2,
-        "imageSlotCount": 1,
+        "imageSlotCount": 5,
         "imageFit": "contain",
         "imageLayout": "normal",
-        "showCaption": true
+        "showCaptions": true,
+        "highlight": true,
+        "highlightIndex": 1,
+        "accentColor": "#7a5ae0",
+        "showCaption": true,
+        "caption": "好的 Prompt 不是固定風格，而是能準確控制品牌方向"
       }
     },
     {
-      "layout": "theme01_page035",
+      "layout": "theme01_page052",
       "props": {
-        "kicker": "PROMPT 參考 02｜醫美",
-        "title": "精品香水廣告感",
-        "en": "TIMELESS GLOW",
-        "lead": "把療程當精品商品包裝；人物搭配玻璃、水波與藝術裝置。",
-        "highlightWord": "精品商品化",
-        "bigStat": {"value": "KV", "unit": "新品視覺", "label": "不像傳統醫美廣告"},
-        "stats": [
-          {"value": "色彩", "unit": "奶油白×銀×淡粉", "label": "乾淨精品"},
-          {"value": "字體", "unit": "超大英文 Campaign", "label": "中文極簡"},
-          {"value": "價格", "unit": "精品目錄小標", "label": "低調呈現"}
+        "eyebrow": "產業案例｜醫美 02",
+        "titleLines": [
+          {"text": "同樣是人物主視覺"},
+          {"text": "排版語言不同"},
+          {"text": "品牌個性就不同"}
         ],
-        "caption": "TIMELESS GLOW｜把時間，留在最美好的狀態",
-        "images": ["assets/user-media/1-6b17e25a016a.png"],
-        "imageSlotCount": 1,
-        "imageFit": "contain",
-        "imageLayout": "normal",
-        "layout": "split-left",
-        "statCount": 3,
-        "highlight": true,
-        "showHighlighter": true,
-        "accentColor": "#e0a23a",
-        "showCaption": true
-      }
-    },
-    {
-      "layout": "theme01_page057",
-      "props": {
-        "kicker": "PROMPT 參考 03｜醫美",
-        "title": "韓國時尚雜誌封面",
-        "en": "K-BEAUTY EDITORIAL",
-        "lead": "人物放大甚至局部超版；巨型 Typography 疊在人像前後，搭配貼紙、編號與不完全置中的 Editorial 排版。",
-        "highlightWord": "雜誌聯名感",
-        "namePlate": {"name": "BE YOUR OWN TYPE.", "role": "主標示例"},
-        "bigStat": {"value": "03", "unit": "PROMPT CASE", "label": "醫美社群廣告"},
+        "lead": "這四張都採用雜誌式人像，但 Prompt 分別控制字體比例、桃紅色、貼紙標籤與商業促銷層級。",
         "tags": [
-          {"label": "人物局部超版"}, {"label": "巨型 Typography"}, {"label": "白黑＋桃紅"}, {"label": "貼紙＋編號"}, {"label": "不完全置中"}
+          {"label": "韓系 Editorial"},
+          {"label": "桃紅社群感"},
+          {"label": "THE NEW ME"},
+          {"label": "人物超版"}
         ],
-        "caption": "BE YOUR OWN TYPE.｜美，不需要長得一樣",
-        "images": ["assets/user-media/1-f37a8aad782b.png"],
-        "imageSlotCount": 1,
+        "caption": "人物相似不代表設計相同｜真正差異來自版面規則與品牌語氣",
+        "images": [
+          "assets/user-media/1-2ae8c24113dd.png",
+          "assets/user-media/2-b6f0d30cc743.png",
+          "assets/user-media/the-new-me.png",
+          "assets/user-media/the-new-me2.png"
+        ],
+        "imageSlotCount": 4,
         "imageFit": "contain",
-        "imageSide": "right",
-        "tagCount": 5,
+        "tagCount": 4,
         "highlight": true,
         "highlightIndex": 2,
-        "showStat": true,
-        "showHighlighter": true,
+        "showLead": true,
         "accentColor": "#e8503a",
         "showCaption": true
       }
     },
     {
-      "layout": "theme01_page073",
+      "layout": "theme01_page076",
       "props": {
-        "index": "04",
-        "kicker": "PROMPT 參考 04｜眼鏡",
-        "title": "眼鏡漂浮・潮流視覺",
-        "en": "FLOATING EYEWEAR",
-        "lead": "不用真人，讓 3–5 副不同造型鏡框漂浮在中央，搭配透明壓克力、玻璃折射與柔和陰影。",
-        "highlightWord": "產品主角化",
-        "pullQuote": "今天，想戴哪一種自己？",
-        "stats": [
-          {"value": "3–5", "unit": "副鏡框漂浮", "label": "產品構圖"},
-          {"value": "4", "unit": "種風格分類", "label": "CLASSIC 至 RETRO"}
+        "kicker": "產業案例｜眼鏡業",
+        "title": "從產品展示到功能敘事",
+        "en": "EYEWEAR GALLERY",
+        "cn": "同一種商品，也能用材質、服務、效果與細節說故事",
+        "frames": [
+          {"tag": "STYLE", "caption": "漂浮鏡框｜玻璃折射與多元風格"},
+          {"tag": "MATCH", "caption": "選框實驗室｜臉型分析與個人推薦"},
+          {"tag": "CLARITY", "caption": "兩種世界｜鏡片內外直接解釋效果"},
+          {"tag": "DETAIL", "caption": "眼神特寫｜放大鏡框材質與配戴感"}
         ],
-        "imgCaption": "玻璃折射、透明壓克力與柔和陰影",
-        "images": ["assets/user-media/1-26ed84d16a78.png"],
-        "imageSide": "left",
-        "imageSlotCount": 1,
-        "imageFit": "contain",
-        "statCount": 2,
-        "showQuote": true,
-        "showGhost": false,
-        "showHighlighter": true,
-        "accentColor": "#46b083",
-        "showCaption": true
-      }
-    },
-    {
-      "layout": "theme01_page015",
-      "props": {
-        "kicker": "PROMPT 參考 05｜眼鏡",
-        "title": "一副眼鏡 × 兩種世界",
-        "en": "ONE FRAME · TWO WORLDS",
-        "lead": "中央放一副超大眼鏡；鏡片內是清晰明亮的台北街景，鏡片外保留模糊散景，直接說明視力差異。",
-        "highlightWord": "功能視覺化",
-        "bigStat": {"value": "05", "unit": "PROMPT CASE", "label": "一眼理解產品價值"},
-        "stats": [
-          {"value": "鏡內", "unit": "清晰明亮", "label": "台北街景"},
-          {"value": "鏡外", "unit": "模糊散景", "label": "視力差異"},
-          {"value": "主標", "unit": "世界沒有模糊", "label": "專業驗光×精準配鏡"}
+        "images": [
+          "assets/user-media/1-1ff6f91d6747.png",
+          "assets/user-media/1-7398c569ab9b.png",
+          "assets/user-media/1-1d9171158649.png",
+          "assets/user-media/1-d0376e5d430c.png"
         ],
-        "caption": "世界沒有模糊，只是你需要看得更清楚。",
-        "images": ["assets/user-media/1-78c91220f84a.png"],
-        "imageSlotCount": 1,
+        "imageSlotCount": 4,
         "imageFit": "contain",
-        "imageLayout": "normal",
-        "layout": "split-right",
-        "statCount": 3,
         "highlight": true,
-        "showHighlighter": true,
-        "accentColor": "#7a5ae0",
-        "showCaption": true
+        "highlightIndex": 2,
+        "showIndex": true,
+        "showFrameCaption": true,
+        "accentColor": "#46b083",
+        "showCaption": true,
+        "caption": "Prompt 不只生成漂亮圖片，也能讓圖片自己說明產品價值"
       }
     },
     {
