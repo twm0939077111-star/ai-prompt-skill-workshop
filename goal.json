@@ -179,45 +179,33 @@
       }
     },
     {
-      "layout": "theme01_page083",
+      "layout": "theme01_page076",
       "props": {
-        "kicker": "GOOD PROMPT｜醫美案例",
-        "title": "四個可以直接參考的指令",
-        "en": "4 PROMPT EXAMPLES",
-        "cn": "同一產業，做出四種品牌方向",
-        "takeawayCount": 4,
-        "takeaways": [
-          {
-            "tag": "01｜未來實驗室",
-            "en": "FUTURE LAB",
-            "text": "專業科技醫美廣告；女性正臉＋掃描 UI；銀白冰藍玻璃；避免電競風。"
-          },
-          {
-            "tag": "02｜精品香水感",
-            "en": "LUXURY BEAUTY",
-            "text": "人物＋透明玻璃與水波；奶油白銀淡粉；主標 TIMELESS GLOW。"
-          },
-          {
-            "tag": "03｜韓系雜誌",
-            "en": "EDITORIAL",
-            "text": "人物超出版面＋巨型字；白黑桃紅；加入貼紙、編號與細線。"
-          },
-          {
-            "tag": "04｜液態水光肌",
-            "en": "LIQUID BEAUTY",
-            "text": "液態玻璃、水滴與珍珠漂浮；銀白透明淡粉；主標 GLOW FROM WITHIN。"
-          }
+        "kicker": "GOOD PROMPT｜完整醫美指令",
+        "title": "四個可以直接複製的完整 Prompt",
+        "en": "4 COMPLETE PROMPTS",
+        "cn": "先讀完整內容，下一頁再找共同結構",
+        "frames": [
+          {"tag": "01", "caption": "超現實水光肌・Liquid Beauty"},
+          {"tag": "02", "caption": "粉色 Y2K 年輕醫美"},
+          {"tag": "03", "caption": "未來感醫美實驗室"},
+          {"tag": "04", "caption": "醫美雜誌封面・The New Me"}
         ],
-        "summary": "先看四個指令，不用背。下一頁再一起找出：它們為什麼都能讓 AI 做出清楚、有品牌感的畫面。",
-        "bandLabel": "先看案例，再找共同結構",
-        "caption": "四個方向都來自你提供的醫美指令文件",
-        "colorMode": "series",
+        "images": [
+          "assets/prompt-cards/liquid.svg",
+          "assets/prompt-cards/y2k.svg",
+          "assets/prompt-cards/future.svg",
+          "assets/prompt-cards/new-me.svg"
+        ],
+        "imageSlotCount": 4,
+        "imageFit": "contain",
+        "highlight": false,
+        "highlightIndex": 0,
+        "showIndex": true,
+        "showFrameCaption": true,
         "accentColor": "#7a5ae0",
-        "showEn": true,
-        "highlight": true,
-        "highlightIndex": 3,
-        "showSummary": true,
-        "showCaption": true
+        "showCaption": true,
+        "caption": "四段皆為完整可執行指令｜可直接複製後替換品牌與療程"
       }
     },
     {
