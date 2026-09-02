@@ -1,0 +1,76 @@
+.pd-focus-compare .pd-compare-card:first-child {
+  border-color: rgba(118, 87, 207, .22);
+  filter: saturate(.88);
+}
+
+.pd-focus-compare .pd-compare-card:nth-child(2) {
+  border-color: rgba(216, 75, 136, .34);
+  box-shadow: 0 1.1cqw 2.5cqw rgba(194, 62, 120, .16);
+}
+
+.pd-focus-compare .pd-compare-card:nth-child(2)::after {
+  content: "✓ BETTER";
+  position: absolute;
+  right: .85cqw;
+  top: .85cqw;
+  z-index: 3;
+  padding: .38cqw .55cqw;
+  border-radius: .48cqw;
+  background: #d84b88;
+  color: #fff;
+  font-size: .72cqw;
+  font-weight: 900;
+  letter-spacing: .06em;
+}
+
+.pd-focus-factors .pd-factor-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.45cqw;
+  margin-top: 2cqw;
+}
+
+.pd-focus-factors .pd-factor {
+  position: relative;
+  min-height: 23.2cqw;
+  padding: 1.6cqw 1.55cqw;
+  overflow: hidden;
+  border-width: .13cqw;
+}
+
+.pd-focus-factors .pd-factor::after {
+  content: "";
+  position: absolute;
+  right: -3.2cqw;
+  bottom: -3.2cqw;
+  width: 9.5cqw;
+  height: 9.5cqw;
+  border: .12cqw solid color-mix(in srgb, var(--pd-factor) 28%, white);
+  border-radius: 50%;
+}
+
+.pd-focus-factors .pd-factor b:first-child {
+  width: 3.25cqw;
+  height: 3.25cqw;
+  border-radius: .9cqw;
+  font-size: 1.4cqw;
+  box-shadow: 0 .55cqw 1.2cqw color-mix(in srgb, var(--pd-factor) 25%, transparent);
+}
+
+.pd-focus-factors .pd-factor h3 {
+  margin: 1.05cqw 0 .75cqw;
+  font-size: 1.72cqw;
+}
+
+.pd-focus-factors .pd-factor p {
+  max-width: 92%;
+  color: #625b6f;
+  font-size: 1.08cqw;
+  line-height: 1.62;
+}
+
+.pd-focus-factors .pd-factor-summary {
+  right: 10cqw;
+  left: 10cqw;
+  bottom: 2.2cqw;
+  font-size: 1.28cqw;
+}

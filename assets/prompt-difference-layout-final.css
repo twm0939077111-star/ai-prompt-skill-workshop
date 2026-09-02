@@ -1,0 +1,83 @@
+/* Final evidence-first refinement for pages 4 and 5. */
+
+#local_prompt_difference_compare .pd-compare-card {
+  grid-template-columns: minmax(0, 44%) minmax(0, 56%);
+  min-height: 29.2cqw;
+  overflow: hidden;
+}
+
+#local_prompt_difference_compare .pd-compare-visual {
+  height: 100%;
+  min-height: 29.2cqw;
+  padding: 0.7cqw;
+  background: linear-gradient(145deg, rgba(252, 249, 247, 0.98), rgba(245, 238, 241, 0.92));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#local_prompt_difference_compare .pd-compare-visual img,
+#local_prompt_difference_compare .pd-compare-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 0.75cqw;
+}
+
+#local_prompt_difference_compare .pd-compare-copy {
+  padding: 1.25cqw 1.35cqw 1.15cqw;
+}
+
+#local_prompt_difference_compare .pd-compare-copy h3 {
+  font-size: clamp(20px, 1.42cqw, 34px);
+  line-height: 1.18;
+  margin: 0.42cqw 0 0.6cqw;
+}
+
+#local_prompt_difference_compare .pd-compare-copy p,
+#local_prompt_difference_compare .pd-compare-copy li {
+  font-size: clamp(14px, 0.91cqw, 22px);
+  line-height: 1.52;
+}
+
+#local_prompt_difference_compare .pd-compare-card.is-a {
+  opacity: 0.9;
+  filter: saturate(0.78);
+}
+
+#local_prompt_difference_compare .pd-compare-card.is-b {
+  transform: translateY(-0.22cqw);
+  box-shadow: 0 1.1cqw 2.5cqw rgba(205, 64, 116, 0.18);
+}
+
+#local_prompt_difference_factors .pd-factor-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2cqw;
+}
+
+#local_prompt_difference_factors .pd-factor-card {
+  min-height: 29.5cqw;
+  padding: 1.55cqw 1.45cqw 1.35cqw;
+}
+
+#local_prompt_difference_factors .pd-factor-no {
+  font-size: clamp(42px, 3.1cqw, 72px);
+}
+
+#local_prompt_difference_factors .pd-factor-card h3 {
+  font-size: clamp(24px, 1.7cqw, 40px);
+  line-height: 1.18;
+}
+
+#local_prompt_difference_factors .pd-factor-card p,
+#local_prompt_difference_factors .pd-factor-card li {
+  font-size: clamp(16px, 1.08cqw, 25px);
+  line-height: 1.52;
+}
+
+@media (max-width: 900px) {
+  #local_prompt_difference_compare .pd-compare-card {
+    grid-template-columns: 42% 58%;
+  }
+}

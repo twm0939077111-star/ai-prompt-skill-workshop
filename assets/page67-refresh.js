@@ -8,7 +8,7 @@
       en: "PINK Y2K BEAUTY",
       type: "社群促銷",
       lead: "年輕社群感 × 大價格焦點",
-      summary: "鎖定 20–35 歲女性，以 <strong>Baby Pink × Chrome</strong> 建立 Y2K 品牌感；人物右側約 45%，左側安排主標、療程與 <strong>$5,999</strong>，並明確排除診所感與廉價促銷感。",
+      summary: "<strong>對象：</strong>20–35 歲、喜歡韓系 Y2K 的女性<br><strong>人物：</strong>右側約 45%，星星髮飾、手自然靠近臉部<br><strong>畫面：</strong>Baby Pink × Chrome × 透明壓克力；左側主標與 $5,999<br><strong>避免：</strong>白袍／診所場景／廉價促銷傳單",
       chips: ["客群", "構圖", "材質", "文案", "限制"],
       accent: "#e04487",
       image: "assets/user-media/y2k-1.png",
@@ -100,7 +100,7 @@ $5,999 必須是畫面最大的促銷資訊，使用立體 Chrome 字體呈現�
       en: "FUTURE SKIN LAB",
       type: "科技專業",
       lead: "專業科技 × 醫療精品",
-      summary: "正面人像占中右側約 55–60%，半臉加入 <strong>掃描網格與肌膚分析 UI</strong>；以銀白、冰藍、玻璃數據卡呈現專業感，同時排除電競、機器人與黑暗實驗室風格。",
+      summary: "<strong>人物：</strong>正面近距離人像，中間偏右約 55–60%<br><strong>掃描：</strong>半臉網格、定位點、肌膚分析 UI<br><strong>畫面：</strong>銀白 × 冰藍 × 半透明玻璃；數據卡與 $3,980<br><strong>避免：</strong>電競／賽博龐克／機器人／黑暗實驗室",
       chips: ["客群", "構圖", "UI", "數據", "限制"],
       accent: "#416fc6",
       image: "assets/user-media/2-04d82a505191.png",
@@ -215,7 +215,7 @@ $5,999 必須是畫面最大的促銷資訊，使用立體 Chrome 字體呈現�
       en: "LIQUID BEAUTY",
       type: "材質敘事",
       lead: "水潤材質 × 精品護膚",
-      summary: "人物右側約 55–60%，用 <strong>透明水流、液態玻璃、水滴、珍珠與凝膠</strong> 把水潤、光澤、彈性視覺化；冷冰藍與銀白光塑造精品感，並排除海洋海報與塑膠材質感。",
+      summary: "<strong>人物：</strong>右側約 55–60%，濕髮、水亮真實肌膚<br><strong>材質：</strong>透明水流、液態玻璃、水滴、珍珠、凝膠<br><strong>主標：</strong>GLOW FROM WITHIN／令肌膚，自帶光。<br><strong>避免：</strong>診所背景／海洋海報／塑膠果凍感",
       chips: ["構圖", "液體", "光線", "文案", "限制"],
       accent: "#2f8ba8",
       image: "assets/user-media/grok-animation/liquid-static.png",
@@ -316,7 +316,7 @@ WITHIN
       en: "BE YOUR OWN TYPE",
       type: "編輯設計",
       lead: "巨型字體 × 非對稱封面",
-      summary: "超大局部人像占右側約 60–70%，四行 <strong>BE YOUR OWN TYPE.</strong> 與人物前後穿插；以白、黑、高飽和桃紅和貼紙標籤建立韓系 Editorial 感，排除一般促銷傳單。",
+      summary: "<strong>人物：</strong>超近距離人像占右側約 60–70%<br><strong>字體：</strong>BE／YOUR／OWN／TYPE. 與人像前後穿插<br><strong>畫面：</strong>白 × 黑 × 高飽和桃紅；貼紙、條碼、編號<br><strong>避免：</strong>全部置中／制式卡片／一般醫美促銷傳單",
       chips: ["人像", "字體", "層次", "標籤", "限制"],
       accent: "#ef2f74",
       image: "assets/user-media/1-2ae8c24113dd.png",
@@ -620,7 +620,7 @@ Editorial 裝飾必須節制，保留留白，避免資訊過多。
     const promptRoot = promptSlide.querySelector(".imported-theme-root");
     const resultRoot = resultSlide.querySelector(".imported-theme-root");
     if (promptRoot) promptRoot.setAttribute("aria-hidden", "true");
-    if (resultRoot) resultRoot.setAttribute("aria-hidden", "true");
+    if (resultRoot) resultRoot.removeAttribute("aria-hidden");
   }
 
   function mount() {
@@ -629,9 +629,7 @@ Editorial 裝飾必須節制，保留留白，避免資訊過多。
     if (!promptSlide || !resultSlide) return false;
 
     if (!promptSlide.querySelector(".p67-prompt-page")) promptSlide.appendChild(buildPromptPage());
-    if (!resultSlide.querySelector(".p67-gallery-page")) resultSlide.appendChild(buildGalleryPage());
     hideOriginalLayer(promptSlide);
-    hideOriginalLayer(resultSlide);
     updateSlideSemantics(promptSlide, resultSlide);
     ensureModal();
     return true;

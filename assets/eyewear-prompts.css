@@ -1,0 +1,53 @@
+.slide[data-vm-slide-id="local_eyewear_prompts"] {
+  container-type: inline-size;
+}
+
+.eye-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: none;
+  place-items: center;
+  padding: 4vh 4vw;
+  background: rgba(19, 14, 28, .74);
+  backdrop-filter: blur(14px);
+  font-family: "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+}
+
+.eye-modal.is-open {
+  display: grid;
+}
+
+.eye-dialog-close {
+  margin-left: auto;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #ded7e8;
+  border-radius: 50%;
+  background: #fff;
+  color: #403849;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.eye-copy {
+  border: 0;
+  padding: 12px 18px;
+  border-radius: 11px;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.p08-eye-page {
+  background:
+    radial-gradient(circle at 91% 3%, rgba(70, 176, 131, .18), transparent 28%),
+    radial-gradient(circle at 4% 96%, rgba(91, 141, 239, .12), transparent 25%),
+    linear-gradient(rgba(70, 176, 131, .032) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(70, 176, 131, .032) 1px, transparent 1px),
+    #f8faf9;
+  background-size: auto, auto, 3.5cqw 3.5cqw, 3.5cqw 3.5cqw, auto;
+}
