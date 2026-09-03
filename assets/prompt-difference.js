@@ -128,8 +128,14 @@
   }
 
   function render() {
-    return mount(COMPARE_ID, buildCompare, "同一 Prompt 的兩種廣告") &&
-      mount(FACTORS_ID, buildFactors, "同 Prompt 差異的 8 個原因");
+    let mounted = false;
+    if (document.querySelector(`[data-vm-slide-id="${COMPARE_ID}"]`)) {
+      mounted = mount(COMPARE_ID, buildCompare, "同一 Prompt 的兩種廣告") || mounted;
+    }
+    if (document.querySelector(`[data-vm-slide-id="${FACTORS_ID}"]`)) {
+      mounted = mount(FACTORS_ID, buildFactors, "同 Prompt 差異的 8 個原因") || mounted;
+    }
+    return mounted;
   }
 
   if (!render()) {

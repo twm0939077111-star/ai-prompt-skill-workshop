@@ -115,8 +115,14 @@
   }
 
   function render() {
-    return replace(COMPARE_ID, "為什麼 B 圖更好看", comparePage) &&
-      replace(FACTORS_ID, "讓圖片更好看的 3 個關鍵", factorPage);
+    let rendered = false;
+    if (document.querySelector(`[data-vm-slide-id="${COMPARE_ID}"]`)) {
+      rendered = replace(COMPARE_ID, "為什麼 B 圖更好看", comparePage) || rendered;
+    }
+    if (document.querySelector(`[data-vm-slide-id="${FACTORS_ID}"]`)) {
+      rendered = replace(FACTORS_ID, "讓圖片更好看的 3 個關鍵", factorPage) || rendered;
+    }
+    return rendered;
   }
 
   if (!render()) {

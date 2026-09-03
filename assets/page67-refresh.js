@@ -455,8 +455,8 @@ Editorial 裝飾必須節制，保留留白，避免資訊過多。
   function buildPromptPage() {
     const page = el("div", "p67-page p67-prompt-page");
     page.appendChild(buildHeader(
-      "GOOD PROMPT｜四篇完整版",
-      "四篇完整 Prompt，先把<strong>想要的畫面</strong>說清楚",
+      "03 / SOCIAL CONTENT｜醫美品牌",
+      "醫美品牌<strong>完整指令</strong>",
       "點選卡片 · <b>閱讀／複製完整版</b>"
     ));
 
@@ -499,8 +499,8 @@ Editorial 裝飾必須節制，保留留白，避免資訊過多。
   function buildGalleryPage() {
     const page = el("div", "p67-page p67-gallery-page");
     page.appendChild(buildHeader(
-      "RESULT｜四個完整 Prompt 的成果",
-      "同樣是醫美，完整 Prompt 能定義<strong>四種品牌樣貌</strong>",
+      "03 / SOCIAL CONTENT｜醫美品牌",
+      "醫美品牌<strong>視覺成果</strong>",
       "<b>01–04</b> 與上一頁完全對應"
     ));
 
@@ -615,12 +615,50 @@ Editorial 裝飾必須節制，保留留白，避免資訊過多。
   }
 
   function updateSlideSemantics(promptSlide, resultSlide) {
-    promptSlide.dataset.label = "四篇完整醫美 Prompt";
-    resultSlide.dataset.label = "四篇 Prompt 對應成果";
+    promptSlide.dataset.label = "醫美品牌完整指令";
+    resultSlide.dataset.label = "醫美品牌視覺成果";
     const promptRoot = promptSlide.querySelector(".imported-theme-root");
     const resultRoot = resultSlide.querySelector(".imported-theme-root");
     if (promptRoot) promptRoot.setAttribute("aria-hidden", "true");
     if (resultRoot) resultRoot.removeAttribute("aria-hidden");
+
+    const resultTitle = resultSlide.querySelector("h2");
+    if (resultTitle) resultTitle.textContent = "醫美品牌視覺成果";
+    const resultKicker = resultSlide.querySelector(".aip-kicker");
+    if (resultKicker) resultKicker.textContent = "03 / SOCIAL CONTENT｜醫美品牌";
+    const resultSubtitle = Array.from(resultSlide.querySelectorAll("*"))
+      .find((element) => element.children.length === 0
+        && element.textContent.trim() === "編號與上一頁四個完整 Prompt 完全對應");
+    if (resultSubtitle) resultSubtitle.textContent = "編號與下一頁四個完整 Prompt 完全對應";
+
+    const modelElement = document.getElementById("deck-view-model");
+    if (modelElement) {
+      try {
+        const model = JSON.parse(modelElement.textContent);
+        const promptModel = model.slides?.find((slide) => slide.id === "theme01_page030-7");
+        const resultModel = model.slides?.find((slide) => slide.id === "theme01_page076-8");
+        if (promptModel) {
+          promptModel.label = "醫美品牌完整指令";
+          promptModel.props = {
+            ...(promptModel.props || {}),
+            kicker: "03 / SOCIAL CONTENT｜醫美品牌",
+            title: "醫美品牌完整指令",
+          };
+        }
+        if (resultModel) {
+          resultModel.label = "醫美品牌視覺成果";
+          resultModel.props = {
+            ...(resultModel.props || {}),
+            kicker: "03 / SOCIAL CONTENT｜醫美品牌",
+            title: "醫美品牌視覺成果",
+            cn: "編號與下一頁四個完整 Prompt 完全對應",
+          };
+        }
+        modelElement.textContent = JSON.stringify(model);
+      } catch (_error) {
+        // Keep the already-rendered titles when the view model is unavailable.
+      }
+    }
   }
 
   function mount() {
