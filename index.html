@@ -2098,7 +2098,7 @@
   const modelElement = document.getElementById('deck-view-model');
   if (!modelElement) return;
   const model = JSON.parse(modelElement.textContent);
-  const deletedSlideIds = new Set(['theme01_page040-5', 'theme01_page052-6']);
+  const deletedSlideIds = new Set(['theme01_page040-5', 'theme01_page052-6', 'local_skill_package_anatomy']);
   const domSlides = [...document.querySelectorAll('#deck > .slide')].filter((slide) => {
     if (!deletedSlideIds.has(slide.dataset.vmSlideId)) return true;
     slide.remove();
