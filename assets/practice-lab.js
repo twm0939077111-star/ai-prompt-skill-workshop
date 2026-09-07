@@ -55,13 +55,13 @@
             <h2>四個指定品牌，<span class="pl-accent">比賽誰做得更好</span></h2>
             <p>套用剛剛學到的方法，讓作品清楚呈現每個品牌的個性。</p>
           </header>
-          <main class="pl-brand-track" aria-label="四個品牌席位">
-            <article><span class="pl-brand-letter">A</span><h3>品牌 A</h3><p>講師現場公布</p></article>
-            <article><span class="pl-brand-letter">B</span><h3>品牌 B</h3><p>講師現場公布</p></article>
-            <article><span class="pl-brand-letter">C</span><h3>品牌 C</h3><p>講師現場公布</p></article>
-            <article><span class="pl-brand-letter">D</span><h3>品牌 D</h3><p>講師現場公布</p></article>
+          <main class="pl-brand-track" aria-label="四個指定實作品牌">
+            <article><span class="pl-brand-letter">A</span><h3>Pd皮拉提斯</h3><p>指定實作品牌</p></article>
+            <article><span class="pl-brand-letter">B</span><h3>艾自己水餃</h3><p>指定實作品牌</p></article>
+            <article><span class="pl-brand-letter">C</span><h3>恩特包膜</h3><p>指定實作品牌</p></article>
+            <article><span class="pl-brand-letter">D</span><h3>恩羽醫美</h3><p>指定實作品牌</p></article>
           </main>
-          <p class="pl-brand-note">品牌名稱可以在上課前替換，也可以現場抽題。</p>
+          <p class="pl-brand-note">四個品牌，四種不同產業與視覺個性。</p>
           <footer><strong>最後一起票選：</strong>哪一張最符合品牌，也最讓人想停下來看？</footer>
         </section>`,
     },
@@ -169,7 +169,7 @@
       definitions[3].id,
     );
     model.state = { ...(model.state || {}), slideOrder: currentOrder };
-    model.exportId = 'practice-lab-20260907-v7';
+    model.exportId = 'practice-lab-20260907-v8';
     modelElement.textContent = JSON.stringify(model);
     return true;
   }
