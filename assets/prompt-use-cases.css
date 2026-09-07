@@ -461,11 +461,137 @@
   font-size: .75cqw;
 }
 
+/* 完整 Prompt 教學講義頁 */
+.puc-full-prompt {
+  background:
+    radial-gradient(circle at 13% 12%, rgba(116, 81, 200, .2), transparent 24%),
+    radial-gradient(circle at 88% 88%, rgba(64, 169, 163, .15), transparent 24%),
+    linear-gradient(135deg, #fbfaff, #f4f1fa 54%, #eef7f6);
+}
+
+.puc-full-prompt header {
+  position: absolute;
+  z-index: 2;
+  top: 2.65cqw;
+  right: 19cqw;
+  left: 5.4cqw;
+}
+
+.puc-full-prompt header h2 {
+  margin: .45cqw 0 0;
+  font-size: 3.15cqw;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.puc-full-prompt header > p:last-child {
+  width: auto;
+  margin: .7cqw 0 0;
+  color: #70687c;
+  font-size: 1.02cqw;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.puc-full-prompt-index {
+  position: absolute;
+  z-index: 2;
+  top: 3.2cqw;
+  right: 5.4cqw;
+  display: flex;
+  align-items: center;
+  gap: .85cqw;
+  color: #7655cb;
+}
+
+.puc-full-prompt-index strong {
+  font: 900 4.2cqw/.82 "Inter", sans-serif;
+  letter-spacing: -.08em;
+}
+
+.puc-full-prompt-index span {
+  padding: .2cqw 0 .2cqw .85cqw;
+  border-left: .18cqw solid rgba(118, 85, 203, .38);
+  font: 900 .78cqw/1.25 "Space Mono", monospace;
+  letter-spacing: .15em;
+}
+
+.puc-full-prompt-copy {
+  position: absolute;
+  z-index: 2;
+  top: 12.35cqw;
+  right: 4.6cqw;
+  bottom: 3.45cqw;
+  left: 4.6cqw;
+  box-sizing: border-box;
+  padding: 1.55cqw 2.15cqw 1.25cqw;
+  border: .1cqw solid rgba(104, 76, 174, .16);
+  border-radius: 1.65cqw;
+  background: rgba(255, 255, 255, .84);
+  box-shadow: 0 1.1cqw 3.1cqw rgba(48, 36, 70, .11);
+  column-count: 2;
+  column-gap: 3cqw;
+  column-rule: .08cqw solid rgba(111, 82, 184, .14);
+}
+
+.puc-full-prompt-copy::before {
+  content: "“";
+  position: absolute;
+  top: .55cqw;
+  left: 1.25cqw;
+  color: rgba(118, 85, 203, .12);
+  font: 900 6.5cqw/1 Georgia, serif;
+}
+
+.puc-full-prompt-copy p {
+  margin: 0 0 .75cqw;
+  color: #413a4d;
+  font-size: 1.3cqw;
+  font-weight: 700;
+  line-height: 1.46;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  break-inside: avoid;
+}
+
+.puc-full-prompt--portrait .puc-full-prompt-copy p {
+  font-size: 1.45cqw;
+  line-height: 1.45;
+}
+
+.puc-full-prompt-copy code {
+  color: #6b4dbd;
+  font-family: "Microsoft JhengHei", system-ui, sans-serif;
+  font-size: .91em;
+  font-weight: 900;
+  overflow-wrap: anywhere;
+}
+
+.puc-full-prompt--illustration .puc-full-prompt-index,
+.puc-full-prompt--illustration h2 em,
+.puc-full-prompt--illustration .puc-full-prompt-copy code {
+  color: #268f8b;
+}
+
+.puc-full-prompt--illustration .puc-full-prompt-index span {
+  border-left-color: rgba(38, 143, 139, .38);
+}
+
+.puc-full-prompt footer {
+  position: absolute;
+  right: 5.4cqw;
+  bottom: 1.25cqw;
+  color: #81788d;
+  font-size: .78cqw;
+  font-weight: 800;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .puc-use-list article,
   .puc-generated-card,
   .puc-transform-hero,
-  .puc-transform-more figure {
+  .puc-transform-more figure,
+  .puc-full-prompt-copy {
     animation: puc-rise .58s both;
   }
 

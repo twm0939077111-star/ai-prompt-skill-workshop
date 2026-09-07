@@ -14,7 +14,7 @@
             <p class="pl-kicker">YOUR TURN / PRACTICE LAB</p>
             <h1><span>學員</span><strong>實作挑戰</strong></h1>
             <div class="pl-opening-rule" aria-hidden="true"><i></i><b>04</b><i></i></div>
-            <p class="pl-opening-lead">現在換你來做</p>
+            <p class="pl-opening-lead">我們先來做做看</p>
             <p class="pl-opening-copy">先完成自己的第一版，課程後面再把學到的方法真正用進作品裡。</p>
           </main>
           <div class="pl-opening-sequence" aria-label="三項實作內容">
@@ -46,6 +46,36 @@
         </section>`,
     },
     {
+      id: 'local_practice_medical_brief',
+      label: '醫美實作題目',
+      layout: 'LOCAL-PRACTICE-MEDICAL-BRIEF',
+      html: `
+        <section class="pl-slide pl-brief" aria-label="醫美實作題目">
+          <p class="pl-brief-ghost" aria-hidden="true">BEAUTY</p>
+          <header class="pl-brief-head">
+            <p class="pl-kicker">FIRST TRY / MEDICAL BEAUTY BRIEF</p>
+            <h2>這次試做的是<span>醫美療程廣告</span></h2>
+            <p>兩個療程，任選一個完成即可。</p>
+          </header>
+          <main class="pl-brief-options" aria-label="兩個醫美療程選項">
+            <article>
+              <span>OPTION 01</span>
+              <h3>輪廓拉提</h3>
+            </article>
+            <b aria-hidden="true">OR</b>
+            <article>
+              <span>OPTION 02</span>
+              <h3>水光保濕</h3>
+            </article>
+          </main>
+          <aside class="pl-brief-price" aria-label="統一體驗價五千九百九十九元">
+            <span>統一體驗價</span>
+            <strong><small>$</small>5,999</strong>
+          </aside>
+          <footer>只要完成其中一個療程主題即可。</footer>
+        </section>`,
+    },
+    {
       id: 'local_practice_method_opening',
       label: '用學到的方法製作圖片',
       layout: 'LOCAL-PRACTICE-METHOD-OPENING',
@@ -55,7 +85,7 @@
           <main class="pl-opening-main">
             <p class="pl-kicker">ROUND TWO / APPLY THE METHOD</p>
             <h1><span>現在換用我們學到的方式</span><strong>製作圖片</strong></h1>
-            <div class="pl-opening-rule" aria-hidden="true"><i></i><b>19</b><i></i></div>
+            <div class="pl-opening-rule" aria-hidden="true"><i></i><b>22</b><i></i></div>
             <p class="pl-opening-lead">把方法真正用進作品裡</p>
             <p class="pl-opening-copy">這一次，把需求寫得更清楚，再比較新作品與第一版的差別。</p>
           </main>
@@ -143,9 +173,9 @@
       });
     };
 
-    placeDefinitions(earlyPracticeAnchor, definitions.slice(0, 2));
-    placeDefinitions(practiceAnchor, definitions.slice(2, 4));
-    placeDefinitions(finalAnchor, definitions.slice(4));
+    placeDefinitions(earlyPracticeAnchor, definitions.slice(0, 3));
+    placeDefinitions(practiceAnchor, definitions.slice(3, 5));
+    placeDefinitions(finalAnchor, definitions.slice(5));
 
     [...deck.querySelectorAll(':scope > .slide')].forEach((slide, index) => {
       slide.dataset.vmIndex = String(index);
@@ -168,19 +198,19 @@
     modelSlides.splice(
       earlyPracticeAnchorIndex >= 0 ? earlyPracticeAnchorIndex + 1 : modelSlides.length,
       0,
-      ...modelDefinitions.slice(0, 2),
+      ...modelDefinitions.slice(0, 3),
     );
     const practiceAnchorIndex = modelSlides.findIndex((slide) => slide.id === PRACTICE_ANCHOR_ID);
     modelSlides.splice(
       practiceAnchorIndex >= 0 ? practiceAnchorIndex + 1 : modelSlides.length,
       0,
-      ...modelDefinitions.slice(2, 4),
+      ...modelDefinitions.slice(3, 5),
     );
     const finalAnchorIndex = modelSlides.findIndex((slide) => slide.id === FINAL_ANCHOR_ID);
     modelSlides.splice(
       finalAnchorIndex >= 0 ? finalAnchorIndex + 1 : modelSlides.length,
       0,
-      ...modelDefinitions.slice(3),
+      ...modelDefinitions.slice(5),
     );
     model.slides = modelSlides;
 
@@ -190,22 +220,22 @@
     currentOrder.splice(
       orderEarlyPracticeAnchorIndex >= 0 ? orderEarlyPracticeAnchorIndex + 1 : currentOrder.length,
       0,
-      ...definitions.slice(0, 2).map((definition) => definition.id),
+      ...definitions.slice(0, 3).map((definition) => definition.id),
     );
     const orderPracticeAnchorIndex = currentOrder.indexOf(PRACTICE_ANCHOR_ID);
     currentOrder.splice(
       orderPracticeAnchorIndex >= 0 ? orderPracticeAnchorIndex + 1 : currentOrder.length,
       0,
-      ...definitions.slice(2, 4).map((definition) => definition.id),
+      ...definitions.slice(3, 5).map((definition) => definition.id),
     );
     const orderFinalAnchorIndex = currentOrder.indexOf(FINAL_ANCHOR_ID);
     currentOrder.splice(
       orderFinalAnchorIndex >= 0 ? orderFinalAnchorIndex + 1 : currentOrder.length,
       0,
-      definitions[4].id,
+      definitions[5].id,
     );
     model.state = { ...(model.state || {}), slideOrder: currentOrder };
-    model.exportId = 'practice-lab-20260907-v10';
+    model.exportId = 'practice-lab-20260907-v12';
     modelElement.textContent = JSON.stringify(model);
     return true;
   }

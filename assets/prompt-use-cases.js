@@ -80,6 +80,27 @@
         </section>`,
     },
     {
+      id: 'local_prompt_text_to_image_full_prompt',
+      label: '電影級人像完整提示詞',
+      layout: 'LOCAL-PROMPT-TEXT-TO-IMAGE-FULL',
+      html: `
+        <section class="puc-slide puc-full-prompt puc-full-prompt--portrait" aria-label="電影級人像完整提示詞">
+          <div class="puc-bg"></div>
+          <header>
+            <p class="puc-kicker">01 / TEXT TO IMAGE / FULL PROMPT</p>
+            <h2>電影級人像攝影 <em>完整提示詞</em></h2>
+            <p>保留可調參數，換掉角色、髮色、服裝與鏡頭就能再次使用。</p>
+          </header>
+          <aside class="puc-full-prompt-index" aria-hidden="true"><strong>01</strong><span>FULL PROMPT</span></aside>
+          <article class="puc-full-prompt-copy">
+            <p>創作一張電影級編輯風格的人像攝影作品，主角為 <code>{argument name="character name" default="一位年輕女性"}</code>，她正靜止站在黃金時刻溫暖光影下的繁忙城市街道中央。她留著 <code>{argument name="hair color" default="柔和棕色"}</code> 的頭髮，隨意紮起，細碎的髮絲捕捉著邊緣光，擁有淺榛綠色的雙眸、自然妝容、小珍珠耳釘，神情冷靜且帶著一絲惆悵，直視鏡頭。她穿著 <code>{argument name="coat color" default="黑色"}</code> 外套或西裝外套，以垂直 4:5 的構圖呈現半身像。</p>
+            <p>在她周圍精確配置 9 位呈現動態模糊的行人：1 位左前方側影、1 位左下方身著柔和紅色的局部人物、1 位左上方局部臉部、1 位上方中央的金髮人物、1 位上方中央的深髮色人物、1 位右上方男性、1 位右側中間盤髮女性、1 位右側遠處的深色身影，以及 1 位右前方深色肩膀剪影。對人群使用強烈的動態模糊效果，同時保持女性臉部的清晰對焦，營造出時間在她身邊慢下來的感覺。</p>
+            <p>光線應為黃金時刻的背光與氛圍光，具備柔和的散景、髮絲邊緣的溫暖高光、淺景深、真實的皮膚紋理、自然的臉部比例，以及高端時尚雜誌的編輯風格。採用 <code>{argument name="lens style" default="85mm 人像鏡頭"}</code> 的視覺效果，結合電影級調色、細膩的底片顆粒感，且不包含任何文字或浮水印。</p>
+          </article>
+          <footer>來源：指令圖片生成類／指令.txt</footer>
+        </section>`,
+    },
+    {
       id: 'local_prompt_image_to_image',
       label: '第二種｜用照片生成有趣的新版本',
       layout: 'LOCAL-PROMPT-IMAGE-TO-IMAGE',
@@ -119,6 +140,29 @@
               <p>這裡呈現的是完整指令的重點摘錄。</p>
             </aside>
           </main>
+        </section>`,
+    },
+    {
+      id: 'local_prompt_image_to_image_full_prompt',
+      label: '照片轉紙感插畫完整提示詞',
+      layout: 'LOCAL-PROMPT-IMAGE-TO-IMAGE-FULL',
+      html: `
+        <section class="puc-slide puc-full-prompt puc-full-prompt--illustration" aria-label="照片轉紙感插畫完整提示詞">
+          <div class="puc-bg"></div>
+          <header>
+            <p class="puc-kicker">02 / IMAGE TO IMAGE / FULL PROMPT</p>
+            <h2>照片轉紙感插畫 <em>完整提示詞</em></h2>
+            <p>每張照片單獨輸出，上半保留原圖，下半重構成極簡插畫。</p>
+          </header>
+          <aside class="puc-full-prompt-index" aria-hidden="true"><strong>02</strong><span>FULL PROMPT</span></aside>
+          <article class="puc-full-prompt-copy">
+            <p>請將我上傳的每一張照片分別制作成一張獨立的高級設計海報，不多圖拼接，每張照片單獨輸出。整體采用<code>{argument name="構圖比例" default="3:4"}</code>豎版構圖，上下兩個區域高度嚴格1:1，各占畫面50%。</p>
+            <p>上半部分保留原始照片，保持主體結構、真實質感、自然光影和原有色彩氛圍，僅進行輕微高級攝影調色，使其具有雜志攝影和藝術出版物質感。為適配畫幅，可自然擴展天空、地面或環境背景，但不得拉伸、扭曲或改變主體。</p>
+            <p>下半部分提取照片中最具識別性的主體、輪廓、姿態與敘事關系，重構為極簡紙感手繪封面插畫。高度提煉並刪減覆雜細節，只保留最關鍵的視覺特征，以纖細、略帶不穩定感的手繪線條和少量明確的丙烯平塗色塊重新表達，讓人一眼識別原始主題。主體保持小而集中，約占下半部分<code>{argument name="主體占比" default="10%–20%"}</code>，四周大面積留白，背景以粗糙白紙或淺色紙張為主，僅用極少量線條或色面暗示環境。</p>
+            <p>配色從上方照片提取並壓縮為不超過4種主要顏色，色塊鮮明、完整、克制，保留紙張顆粒、手工塗抹和輕微不規則邊緣。線條負責提示結構，色塊負責建立主體。避免彩鉛、蠟筆、水彩暈染、純線稿、覆雜寫實、厚重油畫、光滑數字插畫和3D質感。</p>
+            <p>可加入少量簡潔文字，根據照片內容靈活使用標題、主題詞、對象名稱、地點、年份、編號或短句，不局限於城市題材。文字排版疏朗克制，與留白和插畫自然融合，具有藝術書封、獨立出版物和兒童繪本式設計感。整體呈現小主體、大留白、強提煉、高識別度、安靜、童趣、輕松、詩意而高級的視覺氣質，避免商業卡通感、電商感和模板感。</p>
+          </article>
+          <footer>來源：指令圖畫類／指令.txt</footer>
         </section>`,
     },
   ];
@@ -206,7 +250,7 @@
     );
     resultFirstPairs.forEach(([resultId, promptId]) => moveBefore(currentOrder, resultId, promptId, (item) => item));
     model.state = { ...(model.state || {}), slideOrder: currentOrder };
-    model.exportId = 'prompt-use-cases-20260904-v2';
+    model.exportId = 'prompt-use-cases-20260908-v3';
     modelElement.textContent = JSON.stringify(model);
     return true;
   }

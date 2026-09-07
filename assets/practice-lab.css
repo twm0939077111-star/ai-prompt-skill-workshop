@@ -408,6 +408,181 @@
   font: 900 1cqw/1.6 "Space Mono", monospace;
 }
 
+.pl-brief {
+  background:
+    radial-gradient(circle at 50% 38%, rgba(255, 255, 255, .98), rgba(249, 246, 255, .72) 35%, transparent 63%),
+    radial-gradient(circle at 86% 14%, rgba(228, 111, 150, .19), transparent 25%),
+    radial-gradient(circle at 12% 88%, rgba(78, 180, 173, .15), transparent 24%),
+    linear-gradient(rgba(118, 87, 207, .045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(118, 87, 207, .045) 1px, transparent 1px),
+    linear-gradient(135deg, #fbfaff, #eff3fb 64%, #faf3ff);
+  background-size: auto, auto, auto, 3.6cqw 3.6cqw, 3.6cqw 3.6cqw, auto;
+}
+
+.pl-brief::before,
+.pl-brief::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: .48cqw;
+  background: linear-gradient(180deg, transparent, rgba(118, 87, 207, .72) 30%, rgba(78, 180, 173, .66) 70%, transparent);
+}
+
+.pl-brief::before { left: 4.2cqw; }
+.pl-brief::after { right: 4.2cqw; }
+
+.pl-brief-ghost {
+  position: absolute;
+  left: 50%;
+  top: 8.3cqw;
+  width: 100%;
+  margin: 0;
+  transform: translateX(-50%);
+  color: transparent;
+  font: 900 13.4cqw/.9 "Inter", sans-serif;
+  letter-spacing: -.07em;
+  text-align: center;
+  -webkit-text-stroke: .11cqw rgba(118, 87, 207, .065);
+  white-space: nowrap;
+}
+
+.pl-brief-head {
+  position: absolute;
+  z-index: 2;
+  top: 4.5cqw;
+  left: 8cqw;
+  right: 8cqw;
+  text-align: center;
+}
+
+.pl-brief-head h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: .8cqw 0 .4cqw;
+  color: #302a40;
+  font-size: 3.2cqw;
+  line-height: 1.05;
+}
+
+.pl-brief-head h2 span {
+  margin-top: .65cqw;
+  color: transparent;
+  font-size: 5.35cqw;
+  font-weight: 950;
+  background: linear-gradient(92deg, #3c315d 4%, #7a55d1 50%, #4d9db6 98%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.pl-brief-head > p:last-child {
+  margin: 0;
+  color: #6d6679;
+  font-size: 1.36cqw;
+  font-weight: 800;
+}
+
+.pl-brief-options {
+  position: absolute;
+  z-index: 2;
+  left: 9cqw;
+  right: 9cqw;
+  top: 21.1cqw;
+  display: grid;
+  grid-template-columns: 1fr 5.3cqw 1fr;
+  align-items: center;
+  border-top: .1cqw solid rgba(105, 79, 170, .2);
+  border-bottom: .1cqw solid rgba(105, 79, 170, .2);
+}
+
+.pl-brief-options article {
+  padding: 2.7cqw 2cqw 2.85cqw;
+  text-align: center;
+}
+
+.pl-brief-options article:first-child {
+  background: linear-gradient(180deg, rgba(118, 87, 207, .075), transparent 82%);
+}
+
+.pl-brief-options article:last-child {
+  background: linear-gradient(180deg, rgba(91, 141, 239, .075), transparent 82%);
+}
+
+.pl-brief-options article span {
+  color: var(--pl-violet);
+  font: 900 1.03cqw/1 "Space Mono", monospace;
+  letter-spacing: .18em;
+}
+
+.pl-brief-options article:last-child span { color: var(--pl-blue); }
+
+.pl-brief-options h3 {
+  margin: 1.1cqw 0 0;
+  color: #3d315f;
+  font-size: 5.2cqw;
+  line-height: 1;
+  letter-spacing: -.06em;
+}
+
+.pl-brief-options article:last-child h3 { color: #355eaa; }
+
+.pl-brief-options > b {
+  display: grid;
+  place-items: center;
+  width: 3.45cqw;
+  height: 3.45cqw;
+  margin: 0 auto;
+  border-radius: 50%;
+  color: #fff;
+  background: #2f2843;
+  font: 900 .9cqw/1 "Space Mono", monospace;
+  box-shadow: 0 .6cqw 1.4cqw rgba(43, 32, 65, .2);
+}
+
+.pl-brief-price {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: 5.1cqw;
+  display: flex;
+  align-items: baseline;
+  gap: 1.15cqw;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.pl-brief-price span {
+  color: #6d6679;
+  font-size: 1.3cqw;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+.pl-brief-price strong {
+  color: #d85f8c;
+  font: 950 4.85cqw/.9 "Inter", sans-serif;
+  letter-spacing: -.05em;
+  text-shadow: 0 .55cqw 1.2cqw rgba(216, 95, 140, .14);
+}
+
+.pl-brief-price small {
+  margin-right: .35cqw;
+  font-size: 2.2cqw;
+}
+
+.pl-brief footer {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  bottom: 2.1cqw;
+  color: #4e475b;
+  font-size: 1.25cqw;
+  font-weight: 900;
+  text-align: center;
+}
+
 .pl-brand-intro {
   position: absolute;
   top: 4.1cqw;
@@ -662,14 +837,16 @@
 @media (prefers-reduced-motion: no-preference) {
   .pl-opening-main,
   .pl-page-head,
-  .pl-brand-intro {
+  .pl-brand-intro,
+  .pl-brief-head {
     animation: pl-in .52s both;
   }
 
   .pl-opening-list article,
   .pl-brand-track article,
   .pl-format-list span,
-  .pl-ad-questions li {
+  .pl-ad-questions li,
+  .pl-brief-options article {
     animation: pl-in .5s both;
   }
 
