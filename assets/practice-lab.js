@@ -1,4 +1,5 @@
 (() => {
+  const EARLY_PRACTICE_ANCHOR_ID = 'local_tool_setup';
   const PRACTICE_ANCHOR_ID = 'local_eyewear_prompts';
   const FINAL_ANCHOR_ID = 'local_skill_theme09';
   const definitions = [
@@ -12,9 +13,9 @@
           <main class="pl-opening-main">
             <p class="pl-kicker">YOUR TURN / PRACTICE LAB</p>
             <h1><span>學員</span><strong>實作挑戰</strong></h1>
-            <div class="pl-opening-rule" aria-hidden="true"><i></i><b>16</b><i></i></div>
+            <div class="pl-opening-rule" aria-hidden="true"><i></i><b>04</b><i></i></div>
             <p class="pl-opening-lead">現在換你來做</p>
-            <p class="pl-opening-copy">先完成自己的第一版，再把今天學到的方法真正用進作品裡。</p>
+            <p class="pl-opening-copy">先完成自己的第一版，課程後面再把學到的方法真正用進作品裡。</p>
           </main>
           <div class="pl-opening-sequence" aria-label="三項實作內容">
             <span><b>01</b>自由廣告圖</span>
@@ -42,6 +43,27 @@
             </aside>
           </main>
           <footer><strong>請保留第一版。</strong> 後面重新製作時，才能看見方法帶來的差別。</footer>
+        </section>`,
+    },
+    {
+      id: 'local_practice_method_opening',
+      label: '用學到的方法製作圖片',
+      layout: 'LOCAL-PRACTICE-METHOD-OPENING',
+      html: `
+        <section class="pl-slide pl-opening pl-method-opening" aria-label="用學到的方法製作圖片">
+          <p class="pl-opening-ghost" aria-hidden="true">APPLY</p>
+          <main class="pl-opening-main">
+            <p class="pl-kicker">ROUND TWO / APPLY THE METHOD</p>
+            <h1><span>現在換用我們學到的方式</span><strong>製作圖片</strong></h1>
+            <div class="pl-opening-rule" aria-hidden="true"><i></i><b>19</b><i></i></div>
+            <p class="pl-opening-lead">把方法真正用進作品裡</p>
+            <p class="pl-opening-copy">這一次，把需求寫得更清楚，再比較新作品與第一版的差別。</p>
+          </main>
+          <div class="pl-opening-sequence" aria-label="第二次實作流程">
+            <span><b>01</b>說清楚目標</span>
+            <span><b>02</b>補上必要資訊</span>
+            <span><b>03</b>完成第二版</span>
+          </div>
         </section>`,
     },
     {
@@ -100,9 +122,10 @@
   function install() {
     const deck = document.getElementById('deck');
     const modelElement = document.getElementById('deck-view-model');
+    const earlyPracticeAnchor = deck?.querySelector(`[data-vm-slide-id="${EARLY_PRACTICE_ANCHOR_ID}"]`);
     const practiceAnchor = deck?.querySelector(`[data-vm-slide-id="${PRACTICE_ANCHOR_ID}"]`);
     const finalAnchor = deck?.querySelector(`[data-vm-slide-id="${FINAL_ANCHOR_ID}"]`);
-    if (!deck || !practiceAnchor || !finalAnchor || !modelElement) return false;
+    if (!deck || !earlyPracticeAnchor || !practiceAnchor || !finalAnchor || !modelElement) return false;
 
     const placeDefinitions = (anchor, items) => {
       let cursor = anchor;
@@ -120,8 +143,9 @@
       });
     };
 
-    placeDefinitions(practiceAnchor, definitions.slice(0, 3));
-    placeDefinitions(finalAnchor, definitions.slice(3));
+    placeDefinitions(earlyPracticeAnchor, definitions.slice(0, 2));
+    placeDefinitions(practiceAnchor, definitions.slice(2, 4));
+    placeDefinitions(finalAnchor, definitions.slice(4));
 
     [...deck.querySelectorAll(':scope > .slide')].forEach((slide, index) => {
       slide.dataset.vmIndex = String(index);
@@ -140,11 +164,17 @@
       props: {},
       media: {},
     }));
+    const earlyPracticeAnchorIndex = modelSlides.findIndex((slide) => slide.id === EARLY_PRACTICE_ANCHOR_ID);
+    modelSlides.splice(
+      earlyPracticeAnchorIndex >= 0 ? earlyPracticeAnchorIndex + 1 : modelSlides.length,
+      0,
+      ...modelDefinitions.slice(0, 2),
+    );
     const practiceAnchorIndex = modelSlides.findIndex((slide) => slide.id === PRACTICE_ANCHOR_ID);
     modelSlides.splice(
       practiceAnchorIndex >= 0 ? practiceAnchorIndex + 1 : modelSlides.length,
       0,
-      ...modelDefinitions.slice(0, 3),
+      ...modelDefinitions.slice(2, 4),
     );
     const finalAnchorIndex = modelSlides.findIndex((slide) => slide.id === FINAL_ANCHOR_ID);
     modelSlides.splice(
@@ -156,20 +186,26 @@
 
     const currentOrder = (model.state?.slideOrder || modelSlides.map((slide) => slide.id))
       .filter((slideId) => !insertedIds.has(slideId));
+    const orderEarlyPracticeAnchorIndex = currentOrder.indexOf(EARLY_PRACTICE_ANCHOR_ID);
+    currentOrder.splice(
+      orderEarlyPracticeAnchorIndex >= 0 ? orderEarlyPracticeAnchorIndex + 1 : currentOrder.length,
+      0,
+      ...definitions.slice(0, 2).map((definition) => definition.id),
+    );
     const orderPracticeAnchorIndex = currentOrder.indexOf(PRACTICE_ANCHOR_ID);
     currentOrder.splice(
       orderPracticeAnchorIndex >= 0 ? orderPracticeAnchorIndex + 1 : currentOrder.length,
       0,
-      ...definitions.slice(0, 3).map((definition) => definition.id),
+      ...definitions.slice(2, 4).map((definition) => definition.id),
     );
     const orderFinalAnchorIndex = currentOrder.indexOf(FINAL_ANCHOR_ID);
     currentOrder.splice(
       orderFinalAnchorIndex >= 0 ? orderFinalAnchorIndex + 1 : currentOrder.length,
       0,
-      definitions[3].id,
+      definitions[4].id,
     );
     model.state = { ...(model.state || {}), slideOrder: currentOrder };
-    model.exportId = 'practice-lab-20260907-v8';
+    model.exportId = 'practice-lab-20260907-v10';
     modelElement.textContent = JSON.stringify(model);
     return true;
   }

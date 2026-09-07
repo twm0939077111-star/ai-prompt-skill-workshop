@@ -226,6 +226,28 @@
   font: 900 .9cqw/1 "Space Mono", monospace;
 }
 
+.pl-method-opening .pl-opening-ghost {
+  top: 6.5cqw;
+  font-size: 17.2cqw;
+  letter-spacing: -.055em;
+}
+
+.pl-method-opening .pl-opening-main h1 span {
+  font-size: 4.55cqw;
+  letter-spacing: -.065em;
+}
+
+.pl-method-opening .pl-opening-main h1 strong {
+  font-size: 8.65cqw;
+  background: linear-gradient(92deg, #3c315d 4%, #5b8def 52%, #4eb4ad 98%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.pl-method-opening .pl-opening-sequence::before {
+  background: linear-gradient(90deg, #5b8def, #4eb4ad);
+}
+
 .pl-ad footer,
 .pl-brand footer,
 .pl-deck footer {
