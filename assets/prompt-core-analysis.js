@@ -322,7 +322,7 @@
 ];
   const escape = text => text.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   function panel(item) {
-    return `<div class="pca-body"><aside class="pca-idea"><span>這次最重要的事</span><h3>${escape(item.core).replace('\n','<br>')}</h3><p>${escape(item.intro)}</p></aside><div class="pca-rows">${item.rows.map(([title,quote,why],i)=>`<article><b class="pca-no">0${i+1}</b><div><h4>${escape(title)}</h4><blockquote>${escape(quote)}</blockquote><p>${escape(why)}</p></div></article>`).join('')}</div></div><footer><p><b>換成自己的題目</b>${escape(item.change)}</p><p><b>生成後看這裡</b>${escape(item.check)}</p></footer>`;
+    return `<div class="pca-body"><aside class="pca-idea"><span>這次最重要的事</span><h3>${escape(item.core).replace('\n','，')}</h3><p>${escape(item.intro)}</p></aside><div class="pca-rows">${item.rows.map(([title,quote,why],i)=>`<article><b class="pca-no">0${i+1}</b><div><h4>${escape(title)}</h4><blockquote>${escape(quote)}</blockquote><p>${escape(why)}</p></div></article>`).join('')}</div></div><footer><p><b>換成自己的題目</b>${escape(item.change)}</p><p><b>生成後看這裡</b>${escape(item.check)}</p></footer>`;
   }
   const deck=document.getElementById('deck'), modelElement=document.getElementById('deck-view-model');
   if(!deck || !modelElement) return;
