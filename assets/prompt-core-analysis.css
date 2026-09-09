@@ -1,25 +1,25 @@
 .pca-page { box-sizing:border-box; width:100%;height:100%;position:relative;overflow:hidden;container-type:inline-size;background:linear-gradient(135deg,#fcf9ff,#f3f0fb 60%,#ecf6f4);color:#29233b;font-family:"Microsoft JhengHei",system-ui,sans-serif;padding:3cqw 4.5cqw; }
 .pca-page * {box-sizing:border-box;}
 .pca-page header>span {font-size:1.1cqw;color:#8064b4;letter-spacing:.14em;font-weight:700;}
-.pca-page h2 {font-size:2.7cqw;line-height:1.25;margin:.5cqw 0;letter-spacing:-.04em;}
+.pca-page h2 {font-size:3.2cqw;line-height:1.25;margin:.5cqw 0;letter-spacing:-.04em;}
 .pca-page header>p {font-size:1.05cqw;color:#756d82;margin:.4cqw 0 0;}
-.pca-page nav {display:flex;gap:.7cqw;margin:1.4cqw 0 1.3cqw;}
-.pca-page nav button {font:700 1.12cqw "Microsoft JhengHei",sans-serif;color:#655475;border:1px solid #dcd2e9;border-radius:2cqw;background:#ffffff99;padding:.5cqw 1.2cqw;cursor:pointer;}
+.pca-page nav {display:flex;gap:.7cqw;margin:.9cqw 0 .9cqw;}
+.pca-page nav button {font:700 1.4cqw "Microsoft JhengHei",sans-serif;color:#655475;border:1px solid #dcd2e9;border-radius:2cqw;background:#ffffff99;padding:.5cqw 1.2cqw;cursor:pointer;}
 .pca-page nav button[aria-pressed="true"] {background:#7353ac;color:#fff;border-color:#7353ac;}
 .pca-page nav button:focus-visible {outline:3px solid #1c947e;outline-offset:3px;}
 .pca-spacer {height:3.6cqw;}
 .pca-body {display:grid;grid-template-columns:31% 1fr;gap:4cqw;align-items:start;}
 .pca-idea {border-top:.3cqw solid #9b7acb;padding-top:1.5cqw;}
-.pca-idea>span {font-size:1.05cqw;color:#8064b4;font-weight:700;}
-.pca-idea h3 {font-size:2.7cqw;line-height:1.35;letter-spacing:-.05em;margin:.7cqw 0 1.1cqw;color:#7050a7;}
-.pca-idea p {font-size:1.5cqw;line-height:1.75;margin:0;color:#675e74;}
-.pca-rows {display:grid;gap:1.05cqw;}
-.pca-rows article {display:grid;grid-template-columns:2.8cqw 1fr;gap:1cqw;border-bottom:1px solid #dcd4e7;padding-bottom:1cqw;}
+.pca-idea>span {font-size:1.3cqw;color:#8064b4;font-weight:700;}
+.pca-idea h3 {font-size:3cqw;line-height:1.35;letter-spacing:-.05em;margin:.7cqw 0 1.1cqw;color:#7050a7;}
+.pca-idea p {font-size:1.8cqw;line-height:1.65;margin:0;color:#675e74;}
+.pca-rows {display:grid;gap:.7cqw;}
+.pca-rows article {display:grid;grid-template-columns:2.8cqw 1fr;gap:1cqw;border-bottom:1px solid #dcd4e7;padding-bottom:.65cqw;}
 .pca-rows article:last-child {border-bottom:0;}
 .pca-no {font-size:2.15cqw;color:#a082c5;line-height:1;}
-.pca-rows h4 {font-size:1.6cqw;margin:0 0 .3cqw;line-height:1.25;}
-.pca-rows blockquote {font-size:1.38cqw;color:#8063ad;font-weight:700;margin:0 0 .3cqw;line-height:1.45;}
-.pca-rows p {font-size:1.38cqw;line-height:1.55;margin:0;color:#62596f;}
+.pca-rows h4 {font-size:1.9cqw;margin:0 0 .3cqw;line-height:1.25;}
+.pca-rows blockquote {font-size:1.75cqw;color:#8063ad;font-weight:700;margin:0 0 .3cqw;line-height:1.4;}
+.pca-rows p {font-size:1.75cqw;line-height:1.45;margin:0;color:#62596f;}
 .pca-page footer {position:absolute;left:4.5cqw;right:4.5cqw;bottom:2.6cqw;border-top:1px solid #d4c9e1;padding-top:1cqw;display:grid;gap:.55cqw;}
-.pca-page footer p {margin:0;font-size:1.3cqw;line-height:1.5;display:grid;grid-template-columns:11cqw 1fr;gap:1cqw;}
+.pca-page footer p {margin:0;font-size:1.55cqw;line-height:1.5;display:grid;grid-template-columns:12.5cqw 1fr;gap:1cqw;}
 .pca-page footer b {color:#7050a7;}
