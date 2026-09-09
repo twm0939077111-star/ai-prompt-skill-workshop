@@ -1,6 +1,6 @@
 (() => {
   const ANCHOR_ID = 'theme01_page047-4';
-  const SOURCE = 'Data-DI｜OpenAI reasoning best practices';
+  const SOURCE = '<a href="https://learn.chatgpt.com/docs/prompting" target="_blank" rel="noopener noreferrer">OpenAI 官方提示指南</a> · 教學整理 · 2026-09-10';
   const definitions = [
     {
       id: 'local_prompt_modern_brief',
@@ -9,20 +9,20 @@
       html: `
         <section class="mp-modern mp-brief" aria-label="Prompt 其實是一份任務說明書">
           <p class="mp-kicker">PROMPT / THE DEFINITION</p>
-          <h2 class="mp-title">Prompt 不是一句咒語，<em>是一份任務說明書</em></h2>
+          <h2 class="mp-title">Prompt（提示詞）<em>把需求說清楚</em></h2>
           <div class="mp-brief-stage">
             <div class="mp-brief-word">Prompt</div>
             <div class="mp-brief-equals">=</div>
             <div class="mp-brief-definition">
               <strong>把腦中的期待<br>變成 AI 能執行的條件</strong>
-              <span>讓它知道要做什麼、為誰而做，以及什麼才算完成。</span>
+              <span>可以是問題、指令或目標；複雜任務再補充以下資訊。</span>
             </div>
           </div>
-          <div class="mp-brief-elements" aria-label="好 Prompt 的四個必要元素">
+          <div class="mp-brief-elements" aria-label="複雜任務可補充的四類資訊">
             <span class="mp-brief-element"><i>01</i>目標</span>
             <span class="mp-brief-element"><i>02</i>背景</span>
-            <span class="mp-brief-element"><i>03</i>限制</span>
-            <span class="mp-brief-element"><i>04</i>完成標準</span>
+            <span class="mp-brief-element"><i>03</i>輸出格式</span>
+            <span class="mp-brief-element"><i>04</i>限制與確認</span>
           </div>
           <p class="mp-source">${SOURCE}</p>
         </section>`,
@@ -69,7 +69,7 @@
           <div class="mp-principle-list">
             <article class="mp-principle">
               <span class="mp-principle-no">01</span>
-              <div><h3>先給目標</h3><p>交代要完成的結果，不必規定每一步內部推理。</p></div>
+              <div><h3>先給目標</h3><p>說清楚要完成的結果；需要時可要求步驟與依據。</p></div>
             </article>
             <article class="mp-principle">
               <span class="mp-principle-no">02</span>
@@ -77,11 +77,11 @@
             </article>
             <article class="mp-principle">
               <span class="mp-principle-no">03</span>
-              <div><h3>先直接試</h3><p>格式或風格需要高度一致時，再加入精準範例。</p></div>
+              <div><h3>先直接試</h3><p>先用簡單指令試做，再依結果補充範例與修改。</p></div>
             </article>
             <article class="mp-principle">
               <span class="mp-principle-no">04</span>
-              <div><h3>先列假設</h3><p>資訊不足時先標示不確定處，避免 AI 自己亂補。</p></div>
+              <div><h3>先確認缺口</h3><p>缺少關鍵資訊先詢問；草稿假設須標註，不能當事實。</p></div>
             </article>
           </div>
           <p class="mp-source">${SOURCE}</p>
@@ -111,13 +111,13 @@
                 <p><b>畫面</b><span>柔和奶油色調、乾淨留白、自然膚質近景。</span></p>
                 <p><b>文字</b><span>主標不超過12字，資訊層級清楚。</span></p>
                 <p><b>限制</b><span>避免療效保證、價格煽動與製造外貌焦慮。</span></p>
-                <p><b>確認</b><span>資訊不足時，先列出假設與待確認事項。</span></p>
+                <p><b>確認</b><span>缺少價格、日期或來源時先問，不自行編造。</span></p>
               </div>
               <div class="mp-example-structure">任務 → 受眾 → 畫面 → 文字 → 限制 → 確認</div>
-              <div class="mp-example-result">AI 可以執行</div>
+              <div class="mp-example-result">開始試做與檢查</div>
             </article>
           </div>
-          <p class="mp-example-conclusion">你的完整長指令可以保留，重點是<em>分層、對齊、沒有衝突</em>。</p>
+          <p class="mp-example-conclusion">你的完整長指令可以保留，重點是<em>分層、檢查、持續修改</em>。</p>
           <p class="mp-source">${SOURCE}</p>
         </section>`,
     },

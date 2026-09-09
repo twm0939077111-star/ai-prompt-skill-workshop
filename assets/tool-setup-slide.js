@@ -10,7 +10,7 @@
         <header class="ts-head">
           <p class="ts-kicker">BEFORE WE START / APP SETUP</p>
           <h2>上課前，先把<br><em>今天會用的工具</em>準備好</h2>
-          <p>請先下載並登入 <strong>ChatGPT</strong> 與 <strong>Grok</strong>，等等就能直接跟著操作。</p>
+          <p>先開啟官方網頁並登入；功能與額度依帳號而異，操作前先確認。</p>
         </header>
         <main class="ts-tools" aria-label="今天使用的兩個工具">
           <article class="ts-tool ts-tool--chatgpt">
@@ -18,25 +18,25 @@
             <span class="ts-watermark" aria-hidden="true">GPT</span>
             <div class="ts-tool-title">
               <small>PROMPT &amp; CREATION</small>
-              <h3>ChatGPT</h3>
+              <h3><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT</a></h3>
             </div>
             <p>練習 Prompt、生成圖片，整理想法與簡報內容。</p>
             <div class="ts-tags"><span>Prompt</span><span>圖片生成</span><span>內容整理</span></div>
           </article>
-          <div class="ts-join" aria-hidden="true"><span>DOWNLOAD</span><b>＋</b><span>LOGIN</span></div>
+          <div class="ts-join" aria-hidden="true"><span>OPEN</span><b>＋</b><span>LOGIN</span></div>
           <article class="ts-tool ts-tool--grok">
             <span class="ts-no">02</span>
             <span class="ts-watermark" aria-hidden="true">GROK</span>
             <div class="ts-tool-title">
               <small>IMAGE TO VIDEO</small>
-              <h3>Grok</h3>
+              <h3><a href="https://grok.com/" target="_blank" rel="noopener noreferrer">Grok</a></h3>
             </div>
             <p>把完成的圖片延伸成動畫，練習動作、鏡頭與限制。</p>
             <div class="ts-tags"><span>圖片轉動畫</span><span>鏡頭控制</span><span>動態成果</span></div>
           </article>
         </main>
         <footer class="ts-footer">
-          <span>上課前完成</span><b>下載 App</b><i>→</i><b>登入帳號</b><i>→</i><strong>準備開始</strong>
+          <span>上課前完成</span><b>開啟網頁／App</b><i>→</i><b>登入帳號</b><i>→</i><strong>確認功能與額度</strong>
         </footer>
       </section>`,
   };

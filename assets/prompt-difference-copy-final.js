@@ -4,15 +4,15 @@
       tag: "A｜不好看的結果",
       badge: "只執行風格元素",
       title: "元素都有，但畫面沒有被設計",
-      body: "粉紅、人物、Chrome 與價格都出現了，卻缺少清楚的人物比例、視線動線與資訊主次。",
+      body: "粉紅、人物、鍍鉻金屬質感 與價格都出現了，卻缺少清楚的人物比例、視線動線與資訊主次。",
       bullets: ["構圖｜人物與文字互搶焦點", "層級｜主標、價格與裝飾主次不清", "感受｜像元素拼貼，完成度偏低"]
     },
     b: {
       tag: "B｜好看的結果",
       badge: "完整廣告設計",
       title: "每個元素都被安排成一套系統",
-      body: "人物、主標、賣點、價格與 CTA 各有位置，裝飾也服務資訊層級，因此整體更精緻、可信。",
-      bullets: ["構圖｜人物與資訊區分工清楚", "層級｜主標 → 賣點 → 價格 → CTA", "感受｜像完成的社群廣告，而非元素堆疊"]
+      body: "人物、主標、賣點、價格與 行動呼籲（CTA） 各有位置，裝飾也服務資訊層級，因此資訊較容易閱讀。",
+      bullets: ["構圖｜人物與資訊區分工清楚", "層級｜主標 → 賣點 → 價格 → 行動呼籲（CTA）", "感受｜像完成的社群廣告，而非元素堆疊"]
     }
   };
 
@@ -36,7 +36,7 @@
     if (!compare) return false;
 
     const compareLead = compare.querySelector(".pd-lead");
-    if (compareLead) compareLead.textContent = "差別不在粉紅、Chrome 或人物有沒有出現，而在 GPT 是否把需求補成完整構圖、資訊層級與廣告系統。";
+    if (compareLead) compareLead.textContent = "先比較構圖、資訊層級與閱讀順序；兩張成品不能單獨證明差異全由 Prompt 造成。";
     const compareCards = compare.querySelectorAll(".pd-compare-card");
     setCard(compareCards[0], copy.a);
     setCard(compareCards[1], copy.b);
