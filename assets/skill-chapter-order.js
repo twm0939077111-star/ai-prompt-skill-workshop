@@ -2,14 +2,15 @@
   'use strict';
   const groups = [
     {"title":"Skill 基本概念","ids":["local_skill_opening","local_skill_definition","local_skill_storyboard","local_skill_roles","local_ppt_skill_intro","local_skill_jobs","local_skill_use"]},
-    {"title":"應用一｜工作週報","ids":["local_weekly_setup","local_weekly_data","local_weekly_prompt","local_weekly_analysis","local_weekly_result","local_weekly_practice"]},
-    {"title":"應用二｜PPT 簡報製作","ids":["local_ai_presentation_chapter","local_skill_theme02","local_skill_theme08","local_skill_theme09","local_practice_marketing_deck"]},
-    {"title":"延伸應用｜會議追蹤","ids":["local_skill_meeting_input","local_skill_meeting_output"]},
-    {"title":"自製 Skill 與總練習","ids":["local_github_skill_anatomy","local_skill_build","local_skill_exercise"]}
+    {"title":"應用一｜工作週報","ids":["local_weekly_setup","local_weekly_data","local_weekly_prompt","local_weekly_practice"]},
+    {"title":"應用二｜PPT 簡報製作","ids":["local_skill_theme02","local_skill_theme08","local_skill_theme09","local_practice_marketing_deck"]},
+    {"title":"自製 Skill","ids":["local_skill_build"]}
   ];
+  const removed = ["local_weekly_analysis","local_weekly_result","local_ai_presentation_chapter","local_skill_meeting_input","local_skill_meeting_output","local_github_skill_anatomy","local_skill_exercise"];
   const deck=document.getElementById('deck'),el=document.getElementById('deck-view-model');
   if(!deck||!el)return;
   const model=JSON.parse(el.textContent);
+  for(const id of removed)deck.querySelector(`[data-vm-slide-id="${id}"]`)?.remove();
   const ids=groups.flatMap(g=>g.ids),nodes=[...deck.querySelectorAll(':scope > .slide')];
   const byId=new Map(nodes.map(n=>[n.dataset.vmSlideId,n]));
   if(new Set(ids).size!==ids.length||ids.some(id=>!byId.has(id)))throw new Error('Skill chapter order: missing or duplicate slides');
@@ -20,16 +21,7 @@
   const order=ordered.map((n,i)=>{n.dataset.vmIndex=String(i);if(n.hasAttribute('data-vm-slide-index'))n.dataset.vmSlideIndex=String(i);return n.dataset.vmSlideId;});
   const modelById=new Map(model.slides.map(s=>[s.id,s]));
   model.slides=order.map(id=>modelById.get(id));model.state.slideOrder=order;
-  const ppt=byId.get('local_ai_presentation_chapter');
-  ppt.querySelector('.apc-copy > span').textContent='應用 02 · PPT 簡報製作';
-  ppt.querySelector('.apc-copy h1').innerHTML='第二個應用，<br><strong>用 Skill 製作簡報。</strong>';
-  ppt.querySelector('.apc-copy > p').textContent='週報練習完成後，接著把內容、素材與版型規則整理好。先看三種風格，再完成一份品牌簡報。';
-  ppt.dataset.label='應用二｜PPT 簡報製作';ppt.dataset.vmLabel=ppt.dataset.label;
-  modelById.get('local_ai_presentation_chapter').label=ppt.dataset.label;
   byId.get('local_weekly_setup').querySelector('header > span').textContent='應用 01｜工作週報 · 下載與準備';
-  byId.get('local_skill_meeting_input').querySelector('header > span').textContent='延伸應用｜會議追蹤 ①';
-  byId.get('local_skill_meeting_output').querySelector('header > span').textContent='延伸應用｜會議追蹤 ②';
   byId.get('local_skill_build').querySelector('header > span').textContent='最後一段｜建立自己的 Skill';
-  byId.get('local_skill_exercise').querySelector('header > span').textContent='總練習｜建議 20 分鐘';
-  model.exportId='skill-sections-20260911';el.textContent=JSON.stringify(model);
+  model.exportId='skill-49pages-20260911';el.textContent=JSON.stringify(model);
 })();
