@@ -12,9 +12,11 @@
   const model=JSON.parse(el.textContent);
   const openers = [{"id":"local_weekly_chapter_opening","title":"工作週報 Skill","tag":"應用 01｜工作週報"},{"id":"local_ppt_chapter_opening","title":"簡報 Skill","tag":"應用 02｜簡報製作"}];
   for(const item of openers){
-    const node=document.createElement('section');node.className='slide final-skill-opening';
+    const weekly=item.id==='local_weekly_chapter_opening';
+    const node=document.createElement('section');node.className='slide designed-skill-opening '+(weekly?'dso-weekly':'dso-ppt');
     Object.assign(node.dataset,{vmSlideId:item.id,vmSlideKey:item.id,vmLayout:'LOCAL-SKILL-OPENING',themePack:'theme01',label:'現在介紹'+item.title});
-    node.innerHTML=`<div class="fso-grid"></div><div class="fso-orbit fso-o1"></div><div class="fso-orbit fso-o2"></div><main style="display:flex;flex-direction:column;justify-content:center;align-items:center"><div class="fso-kicker" style="margin-top:0">${item.tag}</div><div class="fso-rule"></div><h1 style="margin-top:3cqw;line-height:1.3">現在介紹<br><strong>${item.title}</strong></h1></main>`;
+    const art=weekly?`<div class="dso-report-art" aria-label="工作紀錄整理成週報的示意"><div class="dso-paper-back"></div><div class="dso-report"><div class="dso-report-heading"><span>本週工作報告</span><b>WEEKLY</b></div><div class="dso-report-row"><i>✓</i><div><b>本週成果</b><span class="dso-lines"></span></div></div><div class="dso-report-row"><i>→</i><div><b>下週計畫</b><span class="dso-lines"></span></div></div><div class="dso-report-row"><i>?</i><div><b>待確認事項</b><span class="dso-lines"></span></div></div></div><div class="dso-stamp">整理・核對・交付</div></div>`:`<div class="dso-deck-art" aria-label="內容轉化為簡報版型的示意"><div class="dso-deck-back"></div><div class="dso-deck-middle"></div><div class="dso-deck-front"><div class="dso-mini-top">從內容，到畫面。<span>01</span></div><div class="dso-mini-body"><div><b>讓想法<br>被看見</b><i></i><i></i></div><div class="dso-shapes"><span></span><span></span><span></span></div></div></div><span class="dso-art-caption">內容 × 結構 × 風格</span></div>`;
+    node.innerHTML=`<div class="dso-accent-field" aria-hidden="true"></div><header class="dso-top"><span>SKILL APPLICATION</span><b>${weekly?'01':'02'}</b></header><main class="dso-copy"><p class="dso-intro">現在介紹</p><h1>${weekly?'工作週報':'簡報'}<br><strong>Skill<span class="dso-title-dot">.</span></strong></h1><p class="dso-description">${weekly?'把零散工作紀錄，<br>整理成清楚的一頁週報。':'把內容與素材，<br>變成有邏輯的視覺表達。'}</p></main>${art}<footer class="dso-bottom"><span>${weekly?'WORK → REPORT':'IDEAS → SLIDES'}</span><span>${weekly?'工作應用｜週報':'工作應用｜簡報'}</span></footer>`;
     deck.appendChild(node);model.slides.push({id:item.id,key:item.id,layout:'LOCAL-SKILL-OPENING',dataLayout:'LOCAL-SKILL-OPENING',themePack:'theme01',label:'現在介紹'+item.title,props:{},media:{}});
   }
   for(const id of removed)deck.querySelector(`[data-vm-slide-id="${id}"]`)?.remove();
@@ -30,5 +32,5 @@
   model.slides=order.map(id=>modelById.get(id));model.state.slideOrder=order;
   byId.get('local_weekly_setup').querySelector('header > span').textContent='應用 01｜工作週報 · 下載與準備';
   byId.get('local_skill_build').querySelector('header > span').textContent='最後一段｜建立自己的 Skill';
-  model.exportId='skill-51pages-20260911';el.textContent=JSON.stringify(model);
+  model.exportId='skill-designed-20260911';el.textContent=JSON.stringify(model);
 })();
