@@ -35,27 +35,3 @@
 @media (prefers-reduced-motion:no-preference){.ts-slide .ts-head{animation:ts-fade .5s both}.ts-slide .ts-tool{animation:ts-rise .55s both}.ts-slide .ts-tool--grok{animation-delay:.12s}.ts-slide .ts-footer{animation:ts-fade .5s .2s both}}
 @keyframes ts-fade{from{opacity:0;transform:translateY(-.7cqw)}to{opacity:1;transform:none}}
 @keyframes ts-rise{from{opacity:0;transform:translateY(1.15cqw)}to{opacity:1;transform:none}}
-
-/* Page 03: beginner definition, example conversation, and preparation. */
-.cg-intro{padding:3cqw 4cqw}
-.cg-intro .ts-head h2{font-size:4.5cqw;line-height:1.12;margin:.65cqw 0 .8cqw}
-.cg-intro .ts-head>p:last-child{font-size:1.55cqw;font-weight:500;color:#514a60}
-.cg-body{position:relative;z-index:1;display:grid;grid-template-columns:.95fr 1.05fr;gap:3cqw;margin-top:2.3cqw;height:28cqw}
-.cg-uses{padding:.5cqw 0}
-.cg-body h3{font-size:2.1cqw;color:#5f409d;margin:0 0 1.3cqw;line-height:1.35}
-.cg-uses article{display:flex;gap:1.25cqw;padding:1.45cqw 0;border-bottom:1px solid #ded7e9}
-.cg-uses article>b{font-size:2.2cqw;color:#9679c4;line-height:1.25}
-.cg-uses h4{font-size:2cqw;margin:0 0 .55cqw;line-height:1.2}
-.cg-uses p{font-size:1.5cqw;line-height:1.5;margin:0;color:#61596e}
-.cg-conversation{padding:1.5cqw 1.8cqw;border:1px solid #e0d8eb;border-radius:1.3cqw;background:#ffffffd9;box-shadow:0 .6cqw 2cqw #5835850b}
-.cg-conversation h3{font-size:1.9cqw;display:flex;align-items:center;justify-content:space-between;gap:1cqw;margin-bottom:1.3cqw}
-.cg-conversation small{font-size:.95cqw;font-weight:400;color:#716779;white-space:nowrap}
-.cg-turn{display:flex;align-items:flex-start;gap:.85cqw;margin:.8cqw 0}
-.cg-turn>span{padding:.5cqw 0;width:2cqw;flex-shrink:0;font-weight:800;font-size:1.4cqw;color:#7653af}
-.cg-turn p{margin:0;border-radius:.7cqw;padding:.7cqw 1cqw;font-size:1.6cqw;line-height:1.55;background:#eee6f8;color:#342b45;flex:1}
-.cg-ai p{background:#eef5f2}.cg-ai>span{color:#39745f}
-.cg-takeaway{font-size:1.45cqw;font-weight:700;color:#654594;text-align:center;margin:1.1cqw 0 0}
-.cg-bottom{position:absolute;z-index:1;left:4cqw;right:4cqw;bottom:2.5cqw}
-.cg-prep{display:flex;align-items:center;justify-content:space-between;gap:1cqw;padding:1.05cqw 1.5cqw;background:#302941;color:#eee8f8;border-radius:.8cqw;font-size:1.25cqw}
-.cg-prep b{color:#d6c6f1}.cg-prep a{color:white;font-weight:800;text-decoration:underline;text-underline-offset:.2cqw}.cg-prep strong{font-size:1.15cqw;color:#f2d3a7}
-.cg-note{display:flex;justify-content:space-between;gap:1cqw;margin-top:.8cqw;font-size:1.05cqw;color:#635a70}.cg-note a{color:#635a70}
