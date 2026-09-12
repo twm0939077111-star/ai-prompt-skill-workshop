@@ -2,41 +2,34 @@
   const ANCHOR_ID = 'theme01_page009-3';
   const definition = {
     id: 'local_tool_setup',
-    label: '上課前先準備 ChatGPT 與 Grok',
+    label: '什麼是 ChatGPT？',
     layout: 'LOCAL-TOOL-SETUP',
     html: `
-      <section class="ts-slide" aria-label="上課前先準備 ChatGPT 與 Grok">
+      <section class="ts-slide cg-intro" aria-label="什麼是 ChatGPT？">
         <div class="ts-bg" aria-hidden="true"><i></i><i></i><i></i></div>
         <header class="ts-head">
-          <p class="ts-kicker">BEFORE WE START / APP SETUP</p>
-          <h2>上課前，先把<br><em>今天會用的工具</em>準備好</h2>
-          <p>先開啟官方網頁並登入；功能與額度依帳號而異，操作前先確認。</p>
+          <p class="ts-kicker">MEET CHATGPT / 認識今天的 AI 助手</p>
+          <h2>什麼是 <em>ChatGPT</em>？</h2>
+          <p>一個能用日常語言對話，協助你理解資訊、整理內容與發想的 AI 助手。</p>
         </header>
-        <main class="ts-tools" aria-label="今天使用的兩個工具">
-          <article class="ts-tool ts-tool--chatgpt">
-            <span class="ts-no">01</span>
-            <span class="ts-watermark" aria-hidden="true">GPT</span>
-            <div class="ts-tool-title">
-              <small>PROMPT &amp; CREATION</small>
-              <h3><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT</a></h3>
-            </div>
-            <p>練習 Prompt、生成圖片，整理想法與簡報內容。</p>
-            <div class="ts-tags"><span>Prompt</span><span>圖片生成</span><span>內容整理</span></div>
-          </article>
-          <div class="ts-join" aria-hidden="true"><span>OPEN</span><b>＋</b><span>LOGIN</span></div>
-          <article class="ts-tool ts-tool--grok">
-            <span class="ts-no">02</span>
-            <span class="ts-watermark" aria-hidden="true">GROK</span>
-            <div class="ts-tool-title">
-              <small>IMAGE TO VIDEO</small>
-              <h3><a href="https://grok.com/" target="_blank" rel="noopener noreferrer">Grok</a></h3>
-            </div>
-            <p>把完成的圖片延伸成動畫，練習動作、鏡頭與限制。</p>
-            <div class="ts-tags"><span>圖片轉動畫</span><span>鏡頭控制</span><span>動態成果</span></div>
-          </article>
+        <main class="cg-body">
+          <div class="cg-uses">
+            <h3>你可以請它幫忙……</h3>
+            <article><b>01</b><div><h4>解釋不懂的事</h4><p>「請用初學者聽得懂的方式說明。」</p></div></article>
+            <article><b>02</b><div><h4>整理與改寫內容</h4><p>把一段筆記變成重點、文案或大綱。</p></div></article>
+            <article><b>03</b><div><h4>一起想點子</h4><p>提出不同方向，再挑選、補充與修改。</p></div></article>
+          </div>
+          <div class="cg-conversation" aria-label="教學用對話示意">
+            <h3>不用一次問完，接著說就好。<small>對話示意</small></h3>
+            <div class="cg-turn cg-me"><span>我</span><p>幫我想三個水餃店的貼文主題。</p></div>
+            <div class="cg-turn cg-ai"><span>AI</span><p>① 下班後的快速晚餐<br>② 家人一起包水餃<br>③ 三種水餃沾醬搭配</p></div>
+            <div class="cg-turn cg-me"><span>我</span><p>選第一個，寫成 50 字，語氣親切一點。</p></div>
+            <p class="cg-takeaway">先說需求 → 看回覆 → 再補充條件</p>
+          </div>
         </main>
-        <footer class="ts-footer">
-          <span>上課前完成</span><b>開啟網頁／App</b><i>→</i><b>登入帳號</b><i>→</i><strong>確認功能與額度</strong>
+        <footer class="cg-bottom">
+          <div class="cg-prep"><b>上課前準備</b><span><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT ↗</a> 對話與圖片練習</span><span><a href="https://grok.com/" target="_blank" rel="noopener noreferrer">Grok ↗</a> 後面練習動畫</span><strong>登入並確認功能與額度</strong></div>
+          <div class="cg-note"><span>AI 回覆可能出錯；使用前要核對內容。可用功能依帳號而異。</span><a href="https://learn.chatgpt.com/docs/use-chatgpt" target="_blank" rel="noopener noreferrer">官方入門說明 ↗</a></div>
         </footer>
       </section>`,
   };
@@ -94,7 +87,7 @@
     const orderAnchorIndex = currentOrder.indexOf(ANCHOR_ID);
     currentOrder.splice(orderAnchorIndex >= 0 ? orderAnchorIndex + 1 : currentOrder.length, 0, definition.id);
     model.state = { ...(model.state || {}), slideOrder: currentOrder };
-    model.exportId = 'tool-setup-slide-20260907-v1';
+    model.exportId = 'chatgpt-intro-20260912-v1';
     modelElement.textContent = JSON.stringify(model);
     return true;
   }
