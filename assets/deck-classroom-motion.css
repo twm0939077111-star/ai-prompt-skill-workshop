@@ -1,0 +1,23 @@
+/* Lazy imported slides sometimes start CSS with a delay while offscreen. */
+#deck > .slide:not(.active),
+#deck > .slide:not(.active) *,
+#deck > .slide:not(.active) *::before,
+#deck > .slide:not(.active) *::after {
+  animation-play-state: paused !important;
+}
+@media print {
+  #deck > .slide, #deck > .slide *,
+  #deck > .slide *::before, #deck > .slide *::after {
+    animation-play-state: paused !important;
+  }
+}
+/* Delayed CSS from imported templates must also settle under reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  #deck > .slide, #deck > .slide *,
+  #deck > .slide *::before, #deck > .slide *::after {
+    animation-duration: 0.001ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0ms !important;
+  }
+}
