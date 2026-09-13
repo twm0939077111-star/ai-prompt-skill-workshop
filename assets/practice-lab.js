@@ -32,7 +32,7 @@
         <section class="pl-slide pl-ad" aria-label="自由廣告圖實作">
           <header class="pl-page-head">
             <span class="pl-page-no">01</span>
-            <div><p class="pl-kicker">FIRST TRY / NO METHOD YET</p><h2>先照自己的方式，做一張<span class="pl-accent">廣告圖</span></h2><p>先不要套用今天的方法，直接完成你心中的第一版。</p></div>
+            <div><p class="pl-kicker">FIRST TRY / NO METHOD YET</p><h2>先照自己的方式，做一張<span class="pl-accent">圖</span></h2><p>先不要套用今天的方法，直接完成你心中的第一版。</p></div>
           </header>
           <main class="pl-ad-main">
             <div class="pl-ad-canvas"><span>YOUR FIRST VERSION</span><strong>?</strong><p>把完成的廣告圖放在這裡</p></div>
