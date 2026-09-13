@@ -55,8 +55,8 @@
           <main class="pl-industry-grid" aria-label="四個行業選項">
             <article><span>01</span><div><h3>家具業</h3><p>例如：沙發促銷</p></div></article>
             <article><span>02</span><div><h3>零售業</h3><p>例如：生活用品特賣</p></div></article>
-            <article><span>03</span><div><h3>餐飲業</h3><p>例如：餐廳新店開幕</p></div></article>
-            <article><span>04</span><div><h3>美髮業</h3><p>例如：剪髮、染髮優惠</p></div></article>
+            <article><span>03</span><div><h3>醫美業</h3><p>例如：醫美診所服務介紹</p></div></article>
+            <article><span>04</span><div><h3>眼鏡業</h3><p>例如：眼鏡新品上市</p></div></article>
           </main>
           <footer>店名、商品與優惠內容，可自行設定。</footer>
         </section>`,
@@ -96,8 +96,8 @@
           <main class="pl-brand-track" aria-label="與第09頁對應的四個行業">
             <article><span class="pl-brand-letter">A</span><h3>家具業</h3><p>例如：沙發促銷</p></article>
             <article><span class="pl-brand-letter">B</span><h3>零售業</h3><p>例如：生活用品特賣</p></article>
-            <article><span class="pl-brand-letter">C</span><h3>餐飲業</h3><p>例如：餐廳新店開幕</p></article>
-            <article><span class="pl-brand-letter">D</span><h3>美髮業</h3><p>例如：剪髮、染髮優惠</p></article>
+            <article><span class="pl-brand-letter">C</span><h3>醫美業</h3><p>例如：醫美診所服務介紹</p></article>
+            <article><span class="pl-brand-letter">D</span><h3>眼鏡業</h3><p>例如：眼鏡新品上市</p></article>
           </main>
           <p class="pl-brand-note">同一個題目，比較第一版與第二版的差別。</p>
           <footer><strong>最後一起票選：</strong>哪一張最清楚傳達商品特色，也最吸引人？</footer>
