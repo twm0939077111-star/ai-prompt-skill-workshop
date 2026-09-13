@@ -47,32 +47,18 @@
     },
     {
       id: 'local_practice_medical_brief',
-      label: '醫美實作題目',
+      label: '常見行業廣告實作',
       layout: 'LOCAL-PRACTICE-MEDICAL-BRIEF',
       html: `
-        <section class="pl-slide pl-brief" aria-label="醫美實作題目">
-          <p class="pl-brief-ghost" aria-hidden="true">BEAUTY</p>
-          <header class="pl-brief-head">
-            <p class="pl-kicker">FIRST TRY / MEDICAL BEAUTY BRIEF</p>
-            <h2>這次試做的是<span>醫美療程廣告</span></h2>
-            <p>兩個療程，任選一個完成即可。</p>
-          </header>
-          <main class="pl-brief-options" aria-label="兩個醫美療程選項">
-            <article>
-              <span>OPTION 01</span>
-              <h3>輪廓拉提</h3>
-            </article>
-            <b aria-hidden="true">OR</b>
-            <article>
-              <span>OPTION 02</span>
-              <h3>水光保濕</h3>
-            </article>
+        <section class="pl-slide pl-industry" aria-label="常見行業廣告實作題目">
+          <header class="pl-industry-head"><p class="pl-kicker">廣告圖實作</p><h2>選一個熟悉的行業，<span>做廣告圖</span></h2><p>四個行業任選一個，完成你的第一張廣告圖。</p></header>
+          <main class="pl-industry-grid" aria-label="四個行業選項">
+            <article><span>01</span><div><h3>家具業</h3><p>例如：沙發促銷</p></div></article>
+            <article><span>02</span><div><h3>零售業</h3><p>例如：生活用品特賣</p></div></article>
+            <article><span>03</span><div><h3>餐飲業</h3><p>例如：餐廳新店開幕</p></div></article>
+            <article><span>04</span><div><h3>美髮業</h3><p>例如：剪髮、染髮優惠</p></div></article>
           </main>
-          <aside class="pl-brief-price" aria-label="統一體驗價五千九百九十九元">
-            <span>統一體驗價</span>
-            <strong><small>$</small>5,999</strong>
-          </aside>
-          <footer>只要完成其中一個療程主題即可。</footer>
+          <footer>店名、商品與優惠內容，可自行設定。</footer>
         </section>`,
     },
     {
