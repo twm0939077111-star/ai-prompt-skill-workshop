@@ -1,7 +1,15 @@
 (() => {
   const definitions = [
-    {id:'local_chatgpt_intro',label:'什麼是 ChatGPT？',body:`
-      <main class="cg-title-only"><h2>什麼是 <em>ChatGPT</em>？</h2></main>`},
+    {id:'local_chatgpt_intro',label:'認識 ChatGPT',body:`
+      <header class="ts-head cg-ui-heading"><h2>認識 <em>ChatGPT</em></h2><span>介面示意</span></header>
+      <main class="cg-interface" aria-label="ChatGPT 空白對話介面教學示意">
+        <div class="cg-window-bar"><span class="cg-window-dots" aria-hidden="true">● ● ●</span><span>chatgpt.com</span><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">開啟 ChatGPT ↗</a></div>
+        <div class="cg-window-content"><div class="cg-app-label">ChatGPT <span aria-hidden="true">⌄</span></div>
+          <p class="cg-empty-title">有什麼我可以幫忙的嗎？</p>
+          <div class="cg-composer" aria-label="訊息輸入框示意，非實際輸入欄位"><span class="cg-placeholder">傳送訊息給 ChatGPT</span><div class="cg-composer-tools" aria-hidden="true"><span>＋</span><span class="cg-send">↑</span></div></div>
+        </div>
+      </main>
+      <div class="cg-input-guide"><span aria-hidden="true">↑</span>在這裡，把你的需求告訴它。</div>`},
     {id:'local_chatgpt_uses',label:'ChatGPT 可以幫你做什麼？',body:`
       <header class="ts-head"><p class="ts-kicker">認識 CHATGPT · 02</p><h2><em>ChatGPT</em> 可以幫你做什麼？</h2></header>
       <main class="cg-cards">
