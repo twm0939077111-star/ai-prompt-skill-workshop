@@ -1,4 +1,4 @@
-// Per-slide teaching motion; rationale: docs/逐頁動畫分析.md
+// Per-slide compositions: docs/逐頁動畫第二版.md
 window.__classroomMotionPlan = [
   {
     "id": "theme01_page004-1",
@@ -6,7 +6,11 @@ window.__classroomMotionPlan = [
     "size": "large",
     "blocks": ".aip-mono",
     "mode": "sequence",
-    "ambient": true
+    "ambient": true,
+    "composition": "舞台聚焦",
+    "titleEffect": "zoom",
+    "blockEffect": "spread",
+    "motif": "halo"
   },
   {
     "id": "theme01_page009-3",
@@ -14,7 +18,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".aip-content > div:nth-child(2) > div",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "課綱路線",
+    "titleEffect": "wipe",
+    "blockEffect": "steps",
+    "motif": "connect"
   },
   {
     "id": "local_tool_setup",
@@ -22,7 +30,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".ts-tool",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "雙工具會合",
+    "titleEffect": "drop",
+    "blockEffect": "opposed",
+    "motif": "brackets"
   },
   {
     "id": "local_chatgpt_intro",
@@ -30,7 +42,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".cg-turn",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "對話接球",
+    "titleEffect": "reveal",
+    "blockEffect": "chat",
+    "motif": "dots"
   },
   {
     "id": "local_practice_opening",
@@ -38,7 +54,11 @@ window.__classroomMotionPlan = [
     "size": "large",
     "blocks": ".pl-opening-sequence > *",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "挑戰蓋章",
+    "titleEffect": "stamp",
+    "blockEffect": "bounce",
+    "motif": "underline"
   },
   {
     "id": "local_practice_ad",
@@ -46,7 +66,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".pl-ad-canvas, .pl-ad-questions",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "畫布展開",
+    "titleEffect": "slide",
+    "blockEffect": "unfold",
+    "motif": "frame"
   },
   {
     "id": "local_practice_medical_brief",
@@ -54,7 +78,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".pl-brief-options article",
     "mode": "together",
-    "ambient": false
+    "ambient": false,
+    "composition": "雙選項開門",
+    "titleEffect": "center",
+    "blockEffect": "doors",
+    "motif": "brackets"
   },
   {
     "id": "theme01_page047-4",
@@ -62,7 +90,11 @@ window.__classroomMotionPlan = [
     "size": "large",
     "blocks": ".pi-v5-caption, .pi-v5-flow",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "指令視窗啟動",
+    "titleEffect": "wipe",
+    "blockEffect": "typebars",
+    "motif": "cursor"
   },
   {
     "id": "local_prompt_modern_brief",
@@ -70,7 +102,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".mp-brief-word, .mp-brief-definition, .mp-brief-element",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "概念拼合",
+    "titleEffect": "slide",
+    "blockEffect": "assemble",
+    "motif": "connect"
   },
   {
     "id": "local_prompt_modern_length",
@@ -78,7 +114,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".mp-length-col",
     "mode": "together",
-    "ambient": false
+    "ambient": false,
+    "composition": "左右權衡",
+    "titleEffect": "center",
+    "blockEffect": "opposed",
+    "motif": "underline"
   },
   {
     "id": "local_prompt_modern_principles",
@@ -86,7 +126,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".mp-principle",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "原則逐格點亮",
+    "titleEffect": "reveal",
+    "blockEffect": "tiles",
+    "motif": "corners"
   },
   {
     "id": "local_prompt_modern_example",
@@ -94,7 +138,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".mp-example-card--old, .mp-example-card--new",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "結構整理",
+    "titleEffect": "wipe",
+    "blockEffect": "replace",
+    "motif": "connect"
   },
   {
     "id": "local_prompt_difference_compare",
@@ -102,7 +150,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".pd-compare-card",
     "mode": "together",
-    "ambient": false
+    "ambient": false,
+    "composition": "雙圖對焦",
+    "titleEffect": "zoom",
+    "blockEffect": "doors",
+    "motif": "frame"
   },
   {
     "id": "local_prompt_use_cases_overview",
@@ -110,7 +162,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".puc-use-list > article",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "分類階梯",
+    "titleEffect": "slide",
+    "blockEffect": "steps",
+    "motif": "rail"
   },
   {
     "id": "local_prompt_text_to_image",
@@ -118,7 +174,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".puc-generated-card",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "照片扇形展開",
+    "titleEffect": "reveal",
+    "blockEffect": "fan",
+    "motif": "none"
   },
   {
     "id": "local_prompt_text_to_image_full_prompt",
@@ -126,7 +186,12 @@ window.__classroomMotionPlan = [
     "size": "small",
     "blocks": "",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "全文閱讀底線",
+    "titleEffect": "wipe",
+    "blockEffect": "fade",
+    "motif": "underline",
+    "accent": "h2"
   },
   {
     "id": "local_prompt_core_portrait",
@@ -134,7 +199,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".pca-idea, .pca-rows > article",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "分析框逐格鎖定",
+    "titleEffect": "drop",
+    "blockEffect": "tiles",
+    "motif": "corners"
   },
   {
     "id": "local_prompt_image_to_image",
@@ -142,7 +211,12 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".puc-transform-hero, .puc-transform-more",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "原圖到結果",
+    "titleEffect": "slide",
+    "blockEffect": "transform",
+    "motif": "connect",
+    "accent": ".puc-transform-hero"
   },
   {
     "id": "local_prompt_image_to_image_full_prompt",
@@ -150,7 +224,12 @@ window.__classroomMotionPlan = [
     "size": "small",
     "blocks": "",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "書頁閱讀角標",
+    "titleEffect": "center",
+    "blockEffect": "fade",
+    "motif": "brackets",
+    "accent": "h2"
   },
   {
     "id": "local_prompt_core_illustration",
@@ -158,7 +237,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".pca-idea, .pca-rows > article",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "條件展開",
+    "titleEffect": "reveal",
+    "blockEffect": "unfold",
+    "motif": "rail"
   },
   {
     "id": "theme01_page076-8",
@@ -166,7 +249,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".aip-content img",
     "mode": "gallery",
-    "ambient": false
+    "ambient": false,
+    "composition": "作品展牆",
+    "titleEffect": "zoom",
+    "blockEffect": "gallery",
+    "motif": "corners"
   },
   {
     "id": "theme01_page030-7",
@@ -174,7 +261,12 @@ window.__classroomMotionPlan = [
     "size": "small",
     "blocks": "",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "四指令導讀線",
+    "titleEffect": "slide",
+    "blockEffect": "fade",
+    "motif": "rail",
+    "accent": ".p67-prompt-card"
   },
   {
     "id": "local_prompt_core_medical",
@@ -182,7 +274,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".pca-idea, .pca-rows > article",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "案例比較聚焦",
+    "titleEffect": "wipe",
+    "blockEffect": "spotlight",
+    "motif": "frame"
   },
   {
     "id": "theme01_page020-10",
@@ -190,7 +286,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".aip-content img",
     "mode": "gallery",
-    "ambient": false
+    "ambient": false,
+    "composition": "鏡片光圈展現",
+    "titleEffect": "center",
+    "blockEffect": "aperture",
+    "motif": "halo"
   },
   {
     "id": "local_eyewear_prompts",
@@ -198,7 +298,12 @@ window.__classroomMotionPlan = [
     "size": "small",
     "blocks": "",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "指令閱讀雙線",
+    "titleEffect": "reveal",
+    "blockEffect": "fade",
+    "motif": "doubleline",
+    "accent": ".p67-prompt-card"
   },
   {
     "id": "local_prompt_core_eyewear",
@@ -206,7 +311,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".pca-idea, .pca-rows > article",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "觀察項目對照",
+    "titleEffect": "drop",
+    "blockEffect": "opposed",
+    "motif": "brackets"
   },
   {
     "id": "local_practice_method_opening",
@@ -214,7 +323,11 @@ window.__classroomMotionPlan = [
     "size": "large",
     "blocks": ".pl-opening-sequence > *",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "第二回合揭幕",
+    "titleEffect": "center",
+    "blockEffect": "spread",
+    "motif": "underline"
   },
   {
     "id": "local_practice_brand_battle",
@@ -222,7 +335,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".pl-brand-track > article",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "品牌卡翻開",
+    "titleEffect": "wipe",
+    "blockEffect": "flip",
+    "motif": "corners"
   },
   {
     "id": "local_grok_opening",
@@ -230,7 +347,11 @@ window.__classroomMotionPlan = [
     "size": "large",
     "blocks": ".go-tags, figure",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "動畫章節推近",
+    "titleEffect": "zoom",
+    "blockEffect": "depth",
+    "motif": "halo"
   },
   {
     "id": "local_grok_modes",
@@ -238,7 +359,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".gm-grid > article",
     "mode": "together",
-    "ambient": false
+    "ambient": false,
+    "composition": "三入口展開",
+    "titleEffect": "reveal",
+    "blockEffect": "spread",
+    "motif": "brackets"
   },
   {
     "id": "local_grok_prompt_formula",
@@ -246,7 +371,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".gp-flow > article",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "公式組裝",
+    "titleEffect": "slide",
+    "blockEffect": "assemble",
+    "motif": "connect"
   },
   {
     "id": "local_grok_full_prompt_liquid",
@@ -254,7 +383,12 @@ window.__classroomMotionPlan = [
     "size": "small",
     "blocks": ".gfp-side",
     "mode": "fade",
-    "ambient": false
+    "ambient": false,
+    "composition": "程式註解標記",
+    "titleEffect": "wipe",
+    "blockEffect": "slide",
+    "motif": "brackets",
+    "accent": "h2"
   },
   {
     "id": "local_grok_bilingual_prompts",
@@ -262,7 +396,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".glg-grid > article",
     "mode": "together",
-    "ambient": false
+    "ambient": false,
+    "composition": "雙語對話",
+    "titleEffect": "center",
+    "blockEffect": "chat",
+    "motif": "doubleline"
   },
   {
     "id": "local_grok_practice",
@@ -270,7 +408,12 @@ window.__classroomMotionPlan = [
     "size": "small",
     "blocks": "",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "影片播放引導",
+    "titleEffect": "drop",
+    "blockEffect": "fade",
+    "motif": "dots",
+    "accent": "h2"
   },
   {
     "id": "local_skill_opening",
@@ -278,7 +421,11 @@ window.__classroomMotionPlan = [
     "size": "large",
     "blocks": ".fso-kicker, .fso-foot",
     "mode": "sequence",
-    "ambient": true
+    "ambient": true,
+    "composition": "Skill軌道聚焦",
+    "titleEffect": "stamp",
+    "blockEffect": "spread",
+    "motif": "halo"
   },
   {
     "id": "local_skill_definition",
@@ -286,7 +433,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".sw-grid > article",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "手冊翻頁",
+    "titleEffect": "reveal",
+    "blockEffect": "unfold",
+    "motif": "brackets"
   },
   {
     "id": "local_skill_storyboard",
@@ -294,7 +445,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".fsc-card",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "需求與方法會合",
+    "titleEffect": "center",
+    "blockEffect": "doors",
+    "motif": "connect"
   },
   {
     "id": "local_skill_roles",
@@ -302,7 +457,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".sw-grid > article",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "準備項目入位",
+    "titleEffect": "slide",
+    "blockEffect": "tiles",
+    "motif": "corners"
   },
   {
     "id": "local_ppt_skill_intro",
@@ -310,7 +469,12 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".fso2-flow > article",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "流程逐站通電",
+    "titleEffect": "wipe",
+    "blockEffect": "pulse",
+    "motif": "connect",
+    "accent": ".fso2-flow > article"
   },
   {
     "id": "local_skill_jobs",
@@ -318,7 +482,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".sw-grid > article",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "工作情境展開",
+    "titleEffect": "drop",
+    "blockEffect": "fan",
+    "motif": "underline"
   },
   {
     "id": "local_skill_use",
@@ -326,7 +494,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".sw-grid > article",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "四步驟向前推進",
+    "titleEffect": "reveal",
+    "blockEffect": "steps",
+    "motif": "rail"
   },
   {
     "id": "local_weekly_chapter_opening",
@@ -334,7 +506,11 @@ window.__classroomMotionPlan = [
     "size": "large",
     "blocks": ".dso-bottom",
     "mode": "sequence",
-    "ambient": true
+    "ambient": true,
+    "composition": "週報卡片亮相",
+    "titleEffect": "slide",
+    "blockEffect": "depth",
+    "motif": "corners"
   },
   {
     "id": "local_weekly_setup",
@@ -342,7 +518,12 @@ window.__classroomMotionPlan = [
     "size": "small",
     "blocks": "",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "安裝步驟標記",
+    "titleEffect": "wipe",
+    "blockEffect": "fade",
+    "motif": "brackets",
+    "accent": "h2"
   },
   {
     "id": "local_ppt_chapter_opening",
@@ -350,7 +531,11 @@ window.__classroomMotionPlan = [
     "size": "large",
     "blocks": ".dso-bottom",
     "mode": "sequence",
-    "ambient": true
+    "ambient": true,
+    "composition": "簡報舞台揭幕",
+    "titleEffect": "center",
+    "blockEffect": "spread",
+    "motif": "doubleline"
   },
   {
     "id": "local_skill_theme02",
@@ -358,7 +543,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".pl-application-grid > article",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "用途卡片翻開",
+    "titleEffect": "slide",
+    "blockEffect": "flip",
+    "motif": "underline"
   },
   {
     "id": "local_skill_theme08",
@@ -366,7 +555,11 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".pl-method-grid > article",
     "mode": "sequence",
-    "ambient": false
+    "ambient": false,
+    "composition": "製作環節拼合",
+    "titleEffect": "reveal",
+    "blockEffect": "assemble",
+    "motif": "connect"
   },
   {
     "id": "local_skill_theme09",
@@ -374,7 +567,12 @@ window.__classroomMotionPlan = [
     "size": "small",
     "blocks": ".pl-explain .pl-point",
     "mode": "fade",
-    "ambient": false
+    "ambient": false,
+    "composition": "截圖旁註導讀",
+    "titleEffect": "wipe",
+    "blockEffect": "spotlight",
+    "motif": "rail",
+    "accent": "h2"
   },
   {
     "id": "local_practice_marketing_deck",
@@ -382,7 +580,12 @@ window.__classroomMotionPlan = [
     "size": "small",
     "blocks": ".pl-explain .pl-point",
     "mode": "fade",
-    "ambient": false
+    "ambient": false,
+    "composition": "成果旁註打勾",
+    "titleEffect": "drop",
+    "blockEffect": "pulse",
+    "motif": "check",
+    "accent": "h2"
   },
   {
     "id": "local_apple_result_demo",
@@ -390,6 +593,10 @@ window.__classroomMotionPlan = [
     "size": "medium",
     "blocks": ".pl-result-grid > figure",
     "mode": "gallery",
-    "ambient": false
+    "ambient": false,
+    "composition": "成果畫廊收束",
+    "titleEffect": "zoom",
+    "blockEffect": "gallery",
+    "motif": "frame"
   }
 ];
