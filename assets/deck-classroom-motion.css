@@ -1,5 +1,14 @@
 .classroom-accent { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; z-index:30; overflow:hidden; }
 .classroom-accent path { fill:none; stroke:#9682c6; stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round; stroke-dasharray:1; }
+#deck > .slide[data-classroom-static],
+#deck > .slide[data-classroom-static] *,
+#deck > .slide[data-classroom-static] *::before,
+#deck > .slide[data-classroom-static] *::after {
+  animation-duration:0.001ms !important;
+  animation-delay:0ms !important;
+  animation-iteration-count:1 !important;
+  transition:none !important;
+}
 @media print, (prefers-reduced-motion: reduce) { .classroom-accent { display:none !important; } }
 /* Lazy imported slides sometimes start CSS with a delay while offscreen. */
 #deck > .slide:not(.active),

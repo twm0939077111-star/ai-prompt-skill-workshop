@@ -1,6 +1,7 @@
 (function () {
   'use strict';
   const plans = new Map((window.__classroomMotionPlan || []).map(p => [p.id, p]));
+  const openingIds = new Set(['theme01_page004-1','local_practice_opening','theme01_page047-4','local_practice_method_opening','local_grok_opening','local_skill_opening','local_weekly_chapter_opening','local_ppt_chapter_opening']);
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const ambientNames = /^(cover-orb-[abcd]|fso-orbit-drift|dso-gentle-float)$/;
   const owned = new Set();
@@ -142,13 +143,14 @@
     if (active && active !== s) settleNative(active, false);
     active = s;
     const plan = plans.get(s.dataset.vmSlideId);
-    nativeEnabled = !!plan && !reduced.matches && !printing && !document.hidden;
+    s.toggleAttribute('data-classroom-static', !openingIds.has(s.dataset.vmSlideId));
+    nativeEnabled = !!plan && openingIds.has(plan.id) && !reduced.matches && !printing && !document.hidden;
     settleNative(s, nativeEnabled && plan.ambient);
     if (!plan) { last = {id: s.dataset.vmSlideId, missing: true}; return; }
     const title = select(s, 'h1, h2, .pi-v5-command-line')[0];
     const candidates = select(s, plan.blocks).filter(el => !title || (el !== title && !el.contains(title) && !title.contains(el)));
     const blocks = candidates.filter(el=>!candidates.some(parent=>parent!==el&&parent.contains(el)));
-    last = {run: ++runs, id: plan.id, page: plan.page, size: plan.size, composition:plan.composition, titleEffect:plan.titleEffect, blockEffect:plan.blockEffect, motif:plan.motif, title: !!title, blocks: blocks.length, suppressed: reduced.matches || printing || document.hidden};
+    last = {run: ++runs, id: plan.id, page: plan.page, enabled:openingIds.has(plan.id), size: plan.size, composition:plan.composition, titleEffect:plan.titleEffect, blockEffect:plan.blockEffect, motif:plan.motif, title: !!title, blocks: blocks.length, suppressed: !openingIds.has(plan.id) || reduced.matches || printing || document.hidden};
     if (last.suppressed) return;
     // Distances are authored-stage pixels, independent of the displayed deck scale.
     const big = plan.size === 'large', small = plan.size === 'small';
@@ -207,7 +209,7 @@
     cancelAnimationFrame(panelFrame);
     const s = e.target.closest('.slide');
     panelFrame = requestAnimationFrame(() => {
-      if (s !== active || !s.classList.contains('active') || reduced.matches || printing || document.hidden) return;
+      if (s !== active || !openingIds.has(s.dataset.vmSlideId) || !s.classList.contains('active') || reduced.matches || printing || document.hidden) return;
       const panel = s.querySelector('.pca-content');
       if (panel) { finish(); enter(panel, 0, 250, 0, true); }
     });
@@ -217,6 +219,6 @@
     replay: () => schedule(),
     status: () => ({...last, plannedPages: plans.size, running: [...owned].filter(a => a.playState === 'running').length, ambient: [...ambient].filter(a => a.playState === 'running').length, reduced: reduced.matches, printing})
   });
-  document.querySelectorAll('#deck > .slide').forEach(s => settleNative(s, false));
+  document.querySelectorAll('#deck > .slide').forEach(s => {s.toggleAttribute('data-classroom-static',!openingIds.has(s.dataset.vmSlideId));settleNative(s, false);});
   schedule();
 })();
