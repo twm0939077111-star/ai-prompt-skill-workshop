@@ -1,4 +1,4 @@
-// Per-slide compositions: docs/逐頁動畫第二版.md
+// Per-slide compositions; content pages remain static.
 window.__classroomMotionPlan = [
   {
     "id": "theme01_page004-1",
@@ -49,8 +49,20 @@ window.__classroomMotionPlan = [
     "motif": "dots"
   },
   {
-    "id": "local_practice_opening",
+    "id": "local_chatgpt_uses",
     "page": 5,
+    "size": "small",
+    "blocks": "",
+    "mode": "sequence",
+    "ambient": false,
+    "composition": "ChatGPT三種用途（靜態）",
+    "titleEffect": "fade",
+    "blockEffect": "fade",
+    "motif": "none"
+  },
+  {
+    "id": "local_practice_opening",
+    "page": 6,
     "size": "large",
     "blocks": ".pl-opening-sequence > *",
     "mode": "sequence",
@@ -62,7 +74,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_practice_ad",
-    "page": 6,
+    "page": 7,
     "size": "medium",
     "blocks": ".pl-ad-canvas, .pl-ad-questions",
     "mode": "sequence",
@@ -74,7 +86,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_practice_medical_brief",
-    "page": 7,
+    "page": 8,
     "size": "medium",
     "blocks": ".pl-brief-options article",
     "mode": "together",
@@ -86,7 +98,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "theme01_page047-4",
-    "page": 8,
+    "page": 9,
     "size": "large",
     "blocks": ".pi-v5-caption, .pi-v5-flow",
     "mode": "sequence",
@@ -98,7 +110,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_prompt_modern_brief",
-    "page": 9,
+    "page": 10,
     "size": "medium",
     "blocks": ".mp-brief-word, .mp-brief-definition, .mp-brief-element",
     "mode": "sequence",
@@ -110,7 +122,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_prompt_modern_length",
-    "page": 10,
+    "page": 11,
     "size": "medium",
     "blocks": ".mp-length-col",
     "mode": "together",
@@ -122,7 +134,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_prompt_modern_principles",
-    "page": 11,
+    "page": 12,
     "size": "medium",
     "blocks": ".mp-principle",
     "mode": "sequence",
@@ -134,7 +146,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_prompt_modern_example",
-    "page": 12,
+    "page": 13,
     "size": "medium",
     "blocks": ".mp-example-card--old, .mp-example-card--new",
     "mode": "sequence",
@@ -146,7 +158,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_prompt_difference_compare",
-    "page": 13,
+    "page": 14,
     "size": "medium",
     "blocks": ".pd-compare-card",
     "mode": "together",
@@ -158,7 +170,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_prompt_use_cases_overview",
-    "page": 14,
+    "page": 15,
     "size": "medium",
     "blocks": ".puc-use-list > article",
     "mode": "sequence",
@@ -170,7 +182,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_prompt_text_to_image",
-    "page": 15,
+    "page": 16,
     "size": "medium",
     "blocks": ".puc-generated-card",
     "mode": "sequence",
@@ -182,7 +194,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_prompt_text_to_image_full_prompt",
-    "page": 16,
+    "page": 17,
     "size": "small",
     "blocks": "",
     "mode": "sequence",
@@ -195,7 +207,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_prompt_core_portrait",
-    "page": 17,
+    "page": 18,
     "size": "medium",
     "blocks": ".pca-idea, .pca-rows > article",
     "mode": "sequence",
@@ -207,7 +219,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_prompt_image_to_image",
-    "page": 18,
+    "page": 19,
     "size": "medium",
     "blocks": ".puc-transform-hero, .puc-transform-more",
     "mode": "sequence",
@@ -220,7 +232,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_prompt_image_to_image_full_prompt",
-    "page": 19,
+    "page": 20,
     "size": "small",
     "blocks": "",
     "mode": "sequence",
@@ -233,7 +245,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_prompt_core_illustration",
-    "page": 20,
+    "page": 21,
     "size": "medium",
     "blocks": ".pca-idea, .pca-rows > article",
     "mode": "sequence",
@@ -245,7 +257,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "theme01_page076-8",
-    "page": 21,
+    "page": 22,
     "size": "medium",
     "blocks": ".aip-content img",
     "mode": "gallery",
@@ -257,7 +269,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "theme01_page030-7",
-    "page": 22,
+    "page": 23,
     "size": "small",
     "blocks": "",
     "mode": "sequence",
@@ -270,7 +282,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_prompt_core_medical",
-    "page": 23,
+    "page": 24,
     "size": "medium",
     "blocks": ".pca-idea, .pca-rows > article",
     "mode": "sequence",
@@ -282,7 +294,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "theme01_page020-10",
-    "page": 24,
+    "page": 25,
     "size": "medium",
     "blocks": ".aip-content img",
     "mode": "gallery",
@@ -294,7 +306,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_eyewear_prompts",
-    "page": 25,
+    "page": 26,
     "size": "small",
     "blocks": "",
     "mode": "sequence",
@@ -307,7 +319,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_prompt_core_eyewear",
-    "page": 26,
+    "page": 27,
     "size": "medium",
     "blocks": ".pca-idea, .pca-rows > article",
     "mode": "sequence",
@@ -319,7 +331,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_practice_method_opening",
-    "page": 27,
+    "page": 28,
     "size": "large",
     "blocks": ".pl-opening-sequence > *",
     "mode": "sequence",
@@ -331,7 +343,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_practice_brand_battle",
-    "page": 28,
+    "page": 29,
     "size": "medium",
     "blocks": ".pl-brand-track > article",
     "mode": "sequence",
@@ -343,7 +355,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_grok_opening",
-    "page": 29,
+    "page": 30,
     "size": "large",
     "blocks": ".go-tags, figure",
     "mode": "sequence",
@@ -355,7 +367,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_grok_modes",
-    "page": 30,
+    "page": 31,
     "size": "medium",
     "blocks": ".gm-grid > article",
     "mode": "together",
@@ -367,7 +379,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_grok_prompt_formula",
-    "page": 31,
+    "page": 32,
     "size": "medium",
     "blocks": ".gp-flow > article",
     "mode": "sequence",
@@ -379,7 +391,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_grok_full_prompt_liquid",
-    "page": 32,
+    "page": 33,
     "size": "small",
     "blocks": ".gfp-side",
     "mode": "fade",
@@ -392,7 +404,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_grok_bilingual_prompts",
-    "page": 33,
+    "page": 34,
     "size": "medium",
     "blocks": ".glg-grid > article",
     "mode": "together",
@@ -404,7 +416,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_grok_practice",
-    "page": 34,
+    "page": 35,
     "size": "small",
     "blocks": "",
     "mode": "sequence",
@@ -417,7 +429,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_opening",
-    "page": 35,
+    "page": 36,
     "size": "large",
     "blocks": ".fso-kicker, .fso-foot",
     "mode": "sequence",
@@ -429,7 +441,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_definition",
-    "page": 36,
+    "page": 37,
     "size": "medium",
     "blocks": ".sw-grid > article",
     "mode": "sequence",
@@ -441,7 +453,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_storyboard",
-    "page": 37,
+    "page": 38,
     "size": "medium",
     "blocks": ".fsc-card",
     "mode": "sequence",
@@ -453,7 +465,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_roles",
-    "page": 38,
+    "page": 39,
     "size": "medium",
     "blocks": ".sw-grid > article",
     "mode": "sequence",
@@ -465,7 +477,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_ppt_skill_intro",
-    "page": 39,
+    "page": 40,
     "size": "medium",
     "blocks": ".fso2-flow > article",
     "mode": "sequence",
@@ -478,7 +490,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_jobs",
-    "page": 40,
+    "page": 41,
     "size": "medium",
     "blocks": ".sw-grid > article",
     "mode": "sequence",
@@ -490,7 +502,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_use",
-    "page": 41,
+    "page": 42,
     "size": "medium",
     "blocks": ".sw-grid > article",
     "mode": "sequence",
@@ -502,7 +514,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_weekly_chapter_opening",
-    "page": 42,
+    "page": 43,
     "size": "large",
     "blocks": ".dso-paper-back, .dso-report, .dso-stamp",
     "mode": "sequence",
@@ -514,7 +526,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_weekly_setup",
-    "page": 43,
+    "page": 44,
     "size": "small",
     "blocks": "",
     "mode": "sequence",
@@ -527,7 +539,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_ppt_chapter_opening",
-    "page": 44,
+    "page": 45,
     "size": "large",
     "blocks": ".dso-deck-back, .dso-deck-middle, .dso-deck-front",
     "mode": "sequence",
@@ -539,7 +551,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_theme02",
-    "page": 45,
+    "page": 46,
     "size": "medium",
     "blocks": ".pl-application-grid > article",
     "mode": "sequence",
@@ -551,7 +563,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_theme08",
-    "page": 46,
+    "page": 47,
     "size": "medium",
     "blocks": ".pl-method-grid > article",
     "mode": "sequence",
@@ -563,7 +575,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_theme09",
-    "page": 47,
+    "page": 48,
     "size": "small",
     "blocks": ".pl-explain .pl-point",
     "mode": "fade",
@@ -576,7 +588,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_practice_marketing_deck",
-    "page": 48,
+    "page": 49,
     "size": "small",
     "blocks": ".pl-explain .pl-point",
     "mode": "fade",
@@ -589,7 +601,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_apple_result_demo",
-    "page": 49,
+    "page": 50,
     "size": "medium",
     "blocks": ".pl-result-grid > figure",
     "mode": "gallery",
