@@ -1,12 +1,7 @@
 (() => {
   const definitions = [
     {id:'local_chatgpt_intro',label:'什麼是 ChatGPT？',body:`
-      <header class="ts-head"><p class="ts-kicker">認識 CHATGPT · 01</p><h2>什麼是 <em>ChatGPT</em>？</h2></header>
-      <main class="cg-definition"><span class="cg-pill">能用對話互動的 AI 工具</span>
-        <p class="cg-big">用日常說話的方式，<br>請 <strong>AI</strong> 協助你。</p>
-        <div class="cg-simple"><span>你說出需求</span><b aria-hidden="true">→</b><span>它產生回覆</span></div>
-      </main>
-      <footer class="cg-foot">它是 AI，不是真人；回答不一定正確，重要資訊要再確認。</footer>`},
+      <main class="cg-title-only"><h2>什麼是 <em>ChatGPT</em>？</h2></main>`},
     {id:'local_chatgpt_uses',label:'ChatGPT 可以幫你做什麼？',body:`
       <header class="ts-head"><p class="ts-kicker">認識 CHATGPT · 02</p><h2><em>ChatGPT</em> 可以幫你做什麼？</h2></header>
       <main class="cg-cards">
