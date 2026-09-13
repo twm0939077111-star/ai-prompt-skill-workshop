@@ -84,23 +84,23 @@
     },
     {
       id: 'local_practice_brand_battle',
-      label: '四品牌實作競賽',
+      label: '四行業實作競賽',
       layout: 'LOCAL-PRACTICE-BRAND-BATTLE',
       html: `
-        <section class="pl-slide pl-brand" aria-label="四品牌實作競賽">
+        <section class="pl-slide pl-brand" aria-label="四行業實作競賽">
           <header class="pl-brand-intro">
-            <p class="pl-kicker">BRAND CHALLENGE / CLASS BATTLE</p>
-            <h2>四個指定品牌，<span class="pl-accent">比賽誰做得更好</span></h2>
-            <p>套用剛剛學到的方法，讓作品清楚呈現每個品牌的個性。</p>
+            <p class="pl-kicker">第二次實作 / 四行業挑戰</p>
+            <h2>四個熟悉的行業，<span class="pl-accent">比賽誰做得更好</span></h2>
+            <p>沿用第 09 頁選的行業與題目，套用剛剛學到的方法再做一次。</p>
           </header>
-          <main class="pl-brand-track" aria-label="四個指定實作品牌">
-            <article><span class="pl-brand-letter">A</span><h3>Pd皮拉提斯</h3><p>指定實作品牌</p></article>
-            <article><span class="pl-brand-letter">B</span><h3>艾自己水餃</h3><p>指定實作品牌</p></article>
-            <article><span class="pl-brand-letter">C</span><h3>恩特包膜</h3><p>指定實作品牌</p></article>
-            <article><span class="pl-brand-letter">D</span><h3>恩羽醫美</h3><p>指定實作品牌</p></article>
+          <main class="pl-brand-track" aria-label="與第09頁對應的四個行業">
+            <article><span class="pl-brand-letter">A</span><h3>家具業</h3><p>例如：沙發促銷</p></article>
+            <article><span class="pl-brand-letter">B</span><h3>零售業</h3><p>例如：生活用品特賣</p></article>
+            <article><span class="pl-brand-letter">C</span><h3>餐飲業</h3><p>例如：餐廳新店開幕</p></article>
+            <article><span class="pl-brand-letter">D</span><h3>美髮業</h3><p>例如：剪髮、染髮優惠</p></article>
           </main>
-          <p class="pl-brand-note">四個品牌，四種不同產業與視覺個性。</p>
-          <footer><strong>最後一起票選：</strong>哪一張最符合品牌，也最讓人想停下來看？</footer>
+          <p class="pl-brand-note">同一個題目，比較第一版與第二版的差別。</p>
+          <footer><strong>最後一起票選：</strong>哪一張最清楚傳達商品特色，也最吸引人？</footer>
         </section>`,
     },
     {
