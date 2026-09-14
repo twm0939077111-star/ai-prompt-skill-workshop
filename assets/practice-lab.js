@@ -83,27 +83,6 @@
         </section>`,
     },
     {
-      id: 'local_practice_brand_battle',
-      label: '四行業實作競賽',
-      layout: 'LOCAL-PRACTICE-BRAND-BATTLE',
-      html: `
-        <section class="pl-slide pl-brand" aria-label="四行業實作競賽">
-          <header class="pl-brand-intro">
-            <p class="pl-kicker">第二次實作 / 四行業挑戰</p>
-            <h2>四個熟悉的行業，<span class="pl-accent">比賽誰做得更好</span></h2>
-            <p>沿用第 09 頁選的行業與題目，套用剛剛學到的方法再做一次。</p>
-          </header>
-          <main class="pl-brand-track" aria-label="與第09頁對應的四個行業">
-            <article><span class="pl-brand-letter">A</span><h3>家具業</h3><p>例如：沙發促銷</p></article>
-            <article><span class="pl-brand-letter">B</span><h3>零售業</h3><p>例如：生活用品特賣</p></article>
-            <article><span class="pl-brand-letter">C</span><h3>醫美業</h3><p>例如：醫美診所服務介紹</p></article>
-            <article><span class="pl-brand-letter">D</span><h3>眼鏡業</h3><p>例如：眼鏡新品上市</p></article>
-          </main>
-          <p class="pl-brand-note">同一個題目，比較第一版與第二版的差別。</p>
-          <footer><strong>最後一起票選：</strong>哪一張最清楚傳達商品特色，也最吸引人？</footer>
-        </section>`,
-    },
-    {
       id: 'local_practice_marketing_deck',
       label: '品牌行銷簡報',
       layout: 'LOCAL-PRACTICE-MARKETING-DECK',
@@ -160,8 +139,8 @@
     };
 
     placeDefinitions(earlyPracticeAnchor, definitions.slice(0, 3));
-    placeDefinitions(practiceAnchor, definitions.slice(3, 5));
-    placeDefinitions(finalAnchor, definitions.slice(5));
+    placeDefinitions(practiceAnchor, definitions.slice(3, 4));
+    placeDefinitions(finalAnchor, definitions.slice(4));
 
     [...deck.querySelectorAll(':scope > .slide')].forEach((slide, index) => {
       slide.dataset.vmIndex = String(index);
@@ -190,13 +169,13 @@
     modelSlides.splice(
       practiceAnchorIndex >= 0 ? practiceAnchorIndex + 1 : modelSlides.length,
       0,
-      ...modelDefinitions.slice(3, 5),
+      ...modelDefinitions.slice(3, 4),
     );
     const finalAnchorIndex = modelSlides.findIndex((slide) => slide.id === FINAL_ANCHOR_ID);
     modelSlides.splice(
       finalAnchorIndex >= 0 ? finalAnchorIndex + 1 : modelSlides.length,
       0,
-      ...modelDefinitions.slice(5),
+      ...modelDefinitions.slice(4),
     );
     model.slides = modelSlides;
 
@@ -212,13 +191,13 @@
     currentOrder.splice(
       orderPracticeAnchorIndex >= 0 ? orderPracticeAnchorIndex + 1 : currentOrder.length,
       0,
-      ...definitions.slice(3, 5).map((definition) => definition.id),
+      ...definitions.slice(3, 4).map((definition) => definition.id),
     );
     const orderFinalAnchorIndex = currentOrder.indexOf(FINAL_ANCHOR_ID);
     currentOrder.splice(
       orderFinalAnchorIndex >= 0 ? orderFinalAnchorIndex + 1 : currentOrder.length,
       0,
-      definitions[5].id,
+      definitions[4].id,
     );
     model.state = { ...(model.state || {}), slideOrder: currentOrder };
     model.exportId = 'practice-lab-20260907-v12';
