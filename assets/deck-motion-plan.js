@@ -521,8 +521,32 @@ window.__classroomMotionPlan = [
     "motif": "none"
   },
   {
-    "id": "local_notebook_audio",
+    "id": "local_notebook_result",
     "page": 44,
+    "size": "large",
+    "blocks": ".ng-result-grid > article",
+    "mode": "sequence",
+    "ambient": false,
+    "composition": "Notebook操作步驟",
+    "titleEffect": "fade",
+    "blockEffect": "fade",
+    "motif": "none"
+  },
+  {
+    "id": "local_notebook_audio",
+    "page": 45,
+    "size": "large",
+    "blocks": "",
+    "mode": "sequence",
+    "ambient": false,
+    "composition": "Notebook操作步驟",
+    "titleEffect": "fade",
+    "blockEffect": "fade",
+    "motif": "none"
+  },
+  {
+    "id": "local_notebook_practice",
+    "page": 46,
     "size": "large",
     "blocks": "",
     "mode": "sequence",
@@ -534,7 +558,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_opening",
-    "page": 45,
+    "page": 47,
     "size": "large",
     "blocks": ".fso-kicker, .fso-foot",
     "mode": "sequence",
@@ -546,7 +570,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_definition",
-    "page": 46,
+    "page": 48,
     "size": "medium",
     "blocks": ".sw-grid > article",
     "mode": "sequence",
@@ -558,7 +582,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_storyboard",
-    "page": 47,
+    "page": 49,
     "size": "medium",
     "blocks": ".fsc-card",
     "mode": "sequence",
@@ -570,7 +594,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_roles",
-    "page": 48,
+    "page": 50,
     "size": "medium",
     "blocks": ".sw-grid > article",
     "mode": "sequence",
@@ -582,7 +606,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_ppt_skill_intro",
-    "page": 49,
+    "page": 51,
     "size": "medium",
     "blocks": ".fso2-flow > article",
     "mode": "sequence",
@@ -595,7 +619,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_jobs",
-    "page": 50,
+    "page": 52,
     "size": "medium",
     "blocks": ".sw-grid > article",
     "mode": "sequence",
@@ -606,20 +630,8 @@ window.__classroomMotionPlan = [
     "motif": "underline"
   },
   {
-    "id": "local_skill_use",
-    "page": 51,
-    "size": "medium",
-    "blocks": ".sw-grid > article",
-    "mode": "sequence",
-    "ambient": false,
-    "composition": "四步驟向前推進",
-    "titleEffect": "reveal",
-    "blockEffect": "steps",
-    "motif": "rail"
-  },
-  {
     "id": "local_weekly_chapter_opening",
-    "page": 52,
+    "page": 53,
     "size": "large",
     "blocks": ".dso-paper-back, .dso-report, .dso-stamp",
     "mode": "sequence",
@@ -631,7 +643,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_weekly_setup",
-    "page": 53,
+    "page": 54,
     "size": "small",
     "blocks": "",
     "mode": "sequence",
@@ -643,8 +655,80 @@ window.__classroomMotionPlan = [
     "accent": "h2"
   },
   {
+    "id": "local_weekly_tutorial_uses",
+    "page": 55,
+    "size": "large",
+    "blocks": "",
+    "mode": "sequence",
+    "ambient": false,
+    "composition": "工作週報示範與實作",
+    "titleEffect": "fade",
+    "blockEffect": "fade",
+    "motif": "none"
+  },
+  {
+    "id": "local_weekly_tutorial_method",
+    "page": 56,
+    "size": "large",
+    "blocks": "",
+    "mode": "sequence",
+    "ambient": false,
+    "composition": "工作週報示範與實作",
+    "titleEffect": "fade",
+    "blockEffect": "fade",
+    "motif": "none"
+  },
+  {
+    "id": "local_weekly_tutorial_step1",
+    "page": 57,
+    "size": "large",
+    "blocks": "",
+    "mode": "sequence",
+    "ambient": false,
+    "composition": "工作週報示範與實作",
+    "titleEffect": "fade",
+    "blockEffect": "fade",
+    "motif": "none"
+  },
+  {
+    "id": "local_weekly_tutorial_step2",
+    "page": 58,
+    "size": "large",
+    "blocks": "",
+    "mode": "sequence",
+    "ambient": false,
+    "composition": "工作週報示範與實作",
+    "titleEffect": "fade",
+    "blockEffect": "fade",
+    "motif": "none"
+  },
+  {
+    "id": "local_weekly_tutorial_result",
+    "page": 59,
+    "size": "large",
+    "blocks": "",
+    "mode": "sequence",
+    "ambient": false,
+    "composition": "工作週報示範與實作",
+    "titleEffect": "fade",
+    "blockEffect": "fade",
+    "motif": "none"
+  },
+  {
+    "id": "local_weekly_tutorial_practice",
+    "page": 60,
+    "size": "large",
+    "blocks": "",
+    "mode": "sequence",
+    "ambient": false,
+    "composition": "工作週報示範與實作",
+    "titleEffect": "fade",
+    "blockEffect": "fade",
+    "motif": "none"
+  },
+  {
     "id": "local_ppt_chapter_opening",
-    "page": 54,
+    "page": 61,
     "size": "large",
     "blocks": ".dso-deck-back, .dso-deck-middle, .dso-deck-front",
     "mode": "sequence",
@@ -656,7 +740,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_theme02",
-    "page": 55,
+    "page": 62,
     "size": "medium",
     "blocks": ".pl-application-grid > article",
     "mode": "sequence",
@@ -668,7 +752,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_theme08",
-    "page": 56,
+    "page": 63,
     "size": "medium",
     "blocks": ".pl-method-grid > article",
     "mode": "sequence",
@@ -680,7 +764,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_theme09",
-    "page": 57,
+    "page": 64,
     "size": "small",
     "blocks": ".pl-explain .pl-point",
     "mode": "fade",
@@ -693,7 +777,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_practice_marketing_deck",
-    "page": 58,
+    "page": 65,
     "size": "small",
     "blocks": ".pl-explain .pl-point",
     "mode": "fade",
@@ -706,7 +790,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_apple_result_demo",
-    "page": 59,
+    "page": 66,
     "size": "medium",
     "blocks": ".pl-result-grid > figure",
     "mode": "gallery",

@@ -9,8 +9,7 @@
       "local_skill_storyboard",
       "local_skill_roles",
       "local_ppt_skill_intro",
-      "local_skill_jobs",
-      "local_skill_use"
+      "local_skill_jobs"
     ]
   },
   {
@@ -32,7 +31,7 @@
     ]
   }
 ];
-  const removed = ["local_weekly_analysis","local_weekly_result","local_ai_presentation_chapter","local_skill_meeting_input","local_skill_meeting_output","local_github_skill_anatomy","local_skill_exercise","local_weekly_data","local_weekly_prompt","local_weekly_practice","local_skill_build"];
+  const removed = ["local_skill_use","local_weekly_analysis","local_weekly_result","local_ai_presentation_chapter","local_skill_meeting_input","local_skill_meeting_output","local_github_skill_anatomy","local_skill_exercise","local_weekly_data","local_weekly_prompt","local_weekly_practice","local_skill_build"];
   const deck=document.getElementById('deck'),el=document.getElementById('deck-view-model');
   if(!deck||!el)return;
   const model=JSON.parse(el.textContent);
