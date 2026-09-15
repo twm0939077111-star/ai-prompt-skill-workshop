@@ -1930,7 +1930,7 @@
 <link rel="stylesheet" href="assets/prompt-modern-principles.css">
 <link rel="stylesheet" href="assets/prompt-core-analysis.css?v=20260910-grid">
 <link rel="stylesheet" href="assets/cover-ai-course.css">
-<link rel="stylesheet" href="assets/prompt-use-cases.css?v=20260908-full-prompts-v3">
+<link rel="stylesheet" href="assets/prompt-use-cases.css?v=20260915-full-images">
 <link rel="stylesheet" href="assets/practice-lab.css?v=20260914-industries">
 <link rel="stylesheet" href="assets/tool-setup-slide.css?v=20260907-tool-setup-v1">
 <link rel="stylesheet" href="assets/chatgpt-intro-slide.css?v=20260913-course6">
@@ -2320,7 +2320,7 @@
 <script src="assets/html-ppt-teaching.js?v=20260911-tutorial"></script>
 <script src="assets/skill-chapter-order.js?v=20260911-tutorial"></script>
 <script src="assets/chatgpt-intro-slide.js?v=20260913-course6"></script>
-<link rel="stylesheet" href="assets/furniture-case.css?v=20260915-matched">
+<link rel="stylesheet" href="assets/furniture-case.css?v=20260915-centered">
 <script src="assets/furniture-case.js?v=20260915-matched"></script>
 <script id="embedded-text-state" type="application/json">{}</script>
 <script>
@@ -3970,7 +3970,7 @@ window.__isDeckEditableTextTarget = isDeckEditableTextTarget;
 
 function isDeckInteractiveTarget(target){
   if(!(target instanceof Element)) return false;
-  if(isPresentMode()) return !!target.closest('#preview-panel,#preview-panel-collapse,#slide-rail');
+  if(isPresentMode()) return !!target.closest('button,a,[role="button"],#preview-panel,#preview-panel-collapse,#slide-rail');
   return !!target.closest('button,select,input,textarea,a,#preview-panel,#preview-panel-collapse') ||
     (canEditDeck() && isDeckFileSlotTarget(target)) ||
     isDeckEditableTextTarget(target);
@@ -3981,6 +3981,8 @@ function blockPresentEditEntrypoint(e){
   if(canEditDeck()) return;
   const target = e.target instanceof Element ? e.target : null;
   if(!target) return;
+  // Gallery and prompt controls display content; they are not editor entry points.
+  if(e.type === 'click' && target.closest('.furniture-slide [data-gallery],.furniture-slide [data-version],.furniture-slide [data-prompt]')) return;
   if(!target.closest('[data-editable-id]') && !isDeckFileSlotTarget(target)) return;
   e.preventDefault();
   e.stopImmediatePropagation();
