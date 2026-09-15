@@ -465,7 +465,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_opening",
-    "page": 39,
+    "page": 40,
     "size": "large",
     "blocks": ".fso-kicker, .fso-foot",
     "mode": "sequence",
@@ -477,7 +477,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_notebook_intro",
-    "page": 40,
+    "page": 39,
     "size": "small",
     "blocks": ".nb-flow > section",
     "mode": "fade",

@@ -26,13 +26,13 @@
     <aside class="nb-grounding"><div><b>核心特色：來源導向</b><span>Source-grounding</span></div><p>以你選定的資料為依據，透過引用回查原文。<br><strong>減少無根據的回答；AI 仍可能出錯，重要內容請核對來源。</strong></p></aside>
     <footer class="nb-footer"><span>資料核對：2026.09.15</span><nav aria-label="官方資料"><a href="https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/" target="_blank" rel="noopener noreferrer">Google 更名公告 ↗</a><a href="https://support.google.com/gemininotebook/answer/16215270?hl=zh-Hant" target="_blank" rel="noopener noreferrer">來源使用說明 ↗</a></nav></footer>
   </section>`;
-  anchor.after(slide);
+  anchor.before(slide);
   const model = JSON.parse(modelElement.textContent);
   const entry = {id,key:id,layout:'LOCAL-TOOL-SETUP',dataLayout:'LOCAL-TOOL-SETUP',themePack:'theme01',label,props:{},media:{}};
   const slides = model.slides.filter(s => s.id !== id);
-  slides.splice(slides.findIndex(s => s.id === anchorId)+1,0,entry);
+  slides.splice(slides.findIndex(s => s.id === anchorId),0,entry);
   const order = (model.state?.slideOrder || slides.map(s => s.id)).filter(s => s !== id);
-  order.splice(order.indexOf(anchorId)+1,0,id);
+  order.splice(order.indexOf(anchorId),0,id);
   model.slides = slides; model.state = {...model.state,slideOrder:order};
   modelElement.textContent = JSON.stringify(model);
   deck.querySelectorAll(':scope > .slide').forEach((s,i) => {s.dataset.vmIndex=String(i);const badge=s.querySelector('.pl-opening-rule b');if(badge)badge.textContent=String(i+1).padStart(2,'0');});
