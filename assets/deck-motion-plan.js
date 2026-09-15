@@ -476,8 +476,17 @@ window.__classroomMotionPlan = [
     "motif": "halo"
   },
   {
-    "id": "local_skill_definition",
+    "id": "local_notebook_intro",
     "page": 40,
+    "size": "small",
+    "blocks": ".nb-flow > section",
+    "mode": "fade",
+    "ambient": false,
+    "composition": "來源導向工具介紹"
+  },
+  {
+    "id": "local_skill_definition",
+    "page": 41,
     "size": "medium",
     "blocks": ".sw-grid > article",
     "mode": "sequence",
@@ -489,7 +498,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_storyboard",
-    "page": 41,
+    "page": 42,
     "size": "medium",
     "blocks": ".fsc-card",
     "mode": "sequence",
@@ -501,7 +510,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_roles",
-    "page": 42,
+    "page": 43,
     "size": "medium",
     "blocks": ".sw-grid > article",
     "mode": "sequence",
@@ -513,7 +522,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_ppt_skill_intro",
-    "page": 43,
+    "page": 44,
     "size": "medium",
     "blocks": ".fso2-flow > article",
     "mode": "sequence",
@@ -526,7 +535,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_jobs",
-    "page": 44,
+    "page": 45,
     "size": "medium",
     "blocks": ".sw-grid > article",
     "mode": "sequence",
@@ -538,7 +547,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_use",
-    "page": 45,
+    "page": 46,
     "size": "medium",
     "blocks": ".sw-grid > article",
     "mode": "sequence",
@@ -550,7 +559,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_weekly_chapter_opening",
-    "page": 46,
+    "page": 47,
     "size": "large",
     "blocks": ".dso-paper-back, .dso-report, .dso-stamp",
     "mode": "sequence",
@@ -562,7 +571,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_weekly_setup",
-    "page": 47,
+    "page": 48,
     "size": "small",
     "blocks": "",
     "mode": "sequence",
@@ -575,7 +584,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_ppt_chapter_opening",
-    "page": 48,
+    "page": 49,
     "size": "large",
     "blocks": ".dso-deck-back, .dso-deck-middle, .dso-deck-front",
     "mode": "sequence",
@@ -587,7 +596,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_theme02",
-    "page": 49,
+    "page": 50,
     "size": "medium",
     "blocks": ".pl-application-grid > article",
     "mode": "sequence",
@@ -599,7 +608,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_theme08",
-    "page": 50,
+    "page": 51,
     "size": "medium",
     "blocks": ".pl-method-grid > article",
     "mode": "sequence",
@@ -611,7 +620,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_theme09",
-    "page": 51,
+    "page": 52,
     "size": "small",
     "blocks": ".pl-explain .pl-point",
     "mode": "fade",
@@ -624,7 +633,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_practice_marketing_deck",
-    "page": 52,
+    "page": 53,
     "size": "small",
     "blocks": ".pl-explain .pl-point",
     "mode": "fade",
@@ -637,7 +646,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_apple_result_demo",
-    "page": 53,
+    "page": 54,
     "size": "medium",
     "blocks": ".pl-result-grid > figure",
     "mode": "gallery",
