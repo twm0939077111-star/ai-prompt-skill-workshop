@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   const plans = new Map((window.__classroomMotionPlan || []).map(p => [p.id, p]));
-  const openingIds = new Set(['theme01_page004-1','local_practice_opening','theme01_page047-4','local_practice_method_opening','local_grok_opening','local_skill_opening','local_weekly_chapter_opening','local_ppt_chapter_opening']);
+  const openingIds = new Set(['theme01_page004-1','local_practice_opening','theme01_page047-4','local_practice_method_opening','local_grok_opening','local_notebook_opening','local_skill_opening','local_weekly_chapter_opening','local_ppt_chapter_opening']);
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const ambientNames = /^(cover-orb-[abcd]|fso-orbit-drift|dso-gentle-float)$/;
   const owned = new Set();
