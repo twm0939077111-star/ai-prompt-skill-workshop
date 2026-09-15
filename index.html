@@ -2322,9 +2322,12 @@
 <script src="assets/chatgpt-intro-slide.js?v=20260913-course6"></script>
 <link rel="stylesheet" href="assets/furniture-case.css?v=20260915-centered">
 <script src="assets/furniture-case.js?v=20260915-matched"></script>
-<link rel="stylesheet" href="assets/notebook-intro.css?v=20260915">
+<link rel="stylesheet" href="assets/notebook-intro.css?v=20260915-highlights">
 <script src="assets/notebook-intro.js?v=20260915-swap39"></script>
 <script src="assets/notebook-cover.js?v=20260915"></script>
+<script src="assets/notebook-highlights.js?v=20260915"></script>
+<link rel="stylesheet" href="assets/notebook-walkthrough.css?v=20260915">
+<script src="assets/notebook-walkthrough.js?v=20260915"></script>
 <script id="embedded-text-state" type="application/json">{}</script>
 <script>
 /* =============== Deck UI Language (i18n) =============== */
@@ -2836,7 +2839,7 @@
   function deckAutosaveDisabled(){
     try {
       const options = JSON.parse(document.getElementById('preview-options')?.textContent || '{}');
-      return options.autosave === false;
+      return options.autosave === false || location.protocol === 'file:' || location.hostname.endsWith('.github.io');
     } catch { return false; }
   }
   let serverSaveAvailable = null;
@@ -3270,6 +3273,7 @@ window.__exitPresentMode = exitPresentMode;
 
 document.addEventListener('keydown', event => {
   if(event.key !== 'Escape' || !isPresentMode()) return;
+  if(document.querySelector('dialog[open]')) return;
   if(document.fullscreenElement){
     document.exitFullscreen?.().catch(error => console.warn('[present fullscreen escape]', error));
     return;
@@ -3973,8 +3977,8 @@ window.__isDeckEditableTextTarget = isDeckEditableTextTarget;
 
 function isDeckInteractiveTarget(target){
   if(!(target instanceof Element)) return false;
-  if(isPresentMode()) return !!target.closest('button,a,[role="button"],#preview-panel,#preview-panel-collapse,#slide-rail');
-  return !!target.closest('button,select,input,textarea,a,#preview-panel,#preview-panel-collapse') ||
+  if(isPresentMode()) return !!target.closest('audio,video,button,a,[role="button"],#preview-panel,#preview-panel-collapse,#slide-rail');
+  return !!target.closest('audio,video,button,select,input,textarea,a,#preview-panel,#preview-panel-collapse') ||
     (canEditDeck() && isDeckFileSlotTarget(target)) ||
     isDeckEditableTextTarget(target);
 }
@@ -3985,7 +3989,7 @@ function blockPresentEditEntrypoint(e){
   const target = e.target instanceof Element ? e.target : null;
   if(!target) return;
   // Gallery and prompt controls display content; they are not editor entry points.
-  if(e.type === 'click' && target.closest('.furniture-slide [data-gallery],.furniture-slide [data-version],.furniture-slide [data-prompt]')) return;
+  if(e.type === 'click' && target.closest('audio,[data-guide-audio],a[href],.furniture-slide [data-gallery],.furniture-slide [data-version],.furniture-slide [data-prompt],[data-guide-step],[data-guide-image],.pca-page [data-case]')) return;
   if(!target.closest('[data-editable-id]') && !isDeckFileSlotTarget(target)) return;
   e.preventDefault();
   e.stopImmediatePropagation();
@@ -3997,6 +4001,7 @@ function syncAmbientGrid(){ }
 function syncVideoActivity(activeSlide=getActiveSlide()){
   slides.forEach(slide => {
     const active = slide === activeSlide && !document.hidden;
+    if(!active) slide.querySelectorAll('audio').forEach(audio => audio.pause());
     slide.querySelectorAll('video').forEach(video => {
       if(active){
         if(video.readyState < 2) video.load?.();
@@ -5860,6 +5865,7 @@ const DECK_PREV_KEYS=new Set(['ArrowLeft','PageUp','ArrowUp']);
 
 function handleDeckKeyNavigation(e,{allowSpace=true}={}){
   if(window.__deckExportLocked){e.preventDefault();return;}
+  if(document.querySelector('dialog[open]')) return;
   if(e.key==='Escape'){
     if(isPresentMode()){
       if(document.fullscreenElement) return;
@@ -7640,8 +7646,7 @@ refreshRailCatalog();
       window.__flushEditableTextState?.();
       window.__syncDeckViewModelFromDom?.();
       throwIfDeckExportCancelled(exportUi);
-      const clone = document.documentElement.cloneNode(true);
-      await prepareSimpleHtmlExportClone(clone, slides);
+      const clone = await window.__prepareCleanDeckExport(slides);
       const html = await serializeHtmlExportClone(clone, exportUi);
       throwIfDeckExportCancelled(exportUi);
       const blob = new Blob(['<!DOCTYPE html>\n' + html], {type: 'text/html;charset=utf-8'});
@@ -7846,7 +7851,8 @@ refreshRailCatalog();
       const dataUrl = await readHtmlExportLocalAssetDataUrl(item.path);
       done += 1;
       updateDeckExport(exportUi, done, refs.length, window.__deckI18n.ui('HTML 打包素材 {done} / {total}', {done: done, total: refs.length}));
-      if(dataUrl) replacements.push({...item, dataUrl});
+      if(!dataUrl) throw new Error('HTML asset missing: '+item.path);
+      replacements.push({...item, dataUrl});
     }));
     replacements.forEach(({variants, dataUrl}) => {
       variants.forEach(ref => {
@@ -7858,7 +7864,7 @@ refreshRailCatalog();
 
   function collectHtmlExportLocalMediaRefs(html){
     const refs = new Map();
-    const pattern = /(?:^|["'`(,;:\s=])((?:\.\/|\/)?(?:assets|images|uploads)\/[^"'`<>)\s\\]+?\.(?:png|jpe?g|webp|gif|svg|avif|mp4|webm|mov)(?:[?#][^"'`<>)\s\\]*)?)/gi;
+    const pattern = /(?:^|["'`(,;:\s=])((?:\.\/|\/)?(?:assets|images|uploads|examples)\/[^"'`<>)\s\\]+?\.(?:png|jpe?g|webp|gif|svg|avif|mp4|webm|mov|m4a|mp3|wav|ogg|woff2?|ttf|otf|txt|zip|pdf|pptx|docx|xlsx|html|json|js|css|md)(?![A-Za-z0-9])(?:[?#][^"'`<>)\s\\]*)?)/gi;
     let match;
     while((match = pattern.exec(html))){
       const raw = match[1];
@@ -7880,16 +7886,14 @@ refreshRailCatalog();
       .split('?')[0]
       .replace(/^\.?\//, '')
       .replace(/^\/+/, '');
-    if(!/^(assets|images|uploads)\//.test(clean)) return '';
-    if(!/\.(?:png|jpe?g|webp|gif|svg|avif|mp4|webm|mov)$/i.test(clean)) return '';
+    if(!/^(assets|images|uploads|examples)\//.test(clean)) return '';
+    if(!/\.(?:png|jpe?g|webp|gif|svg|avif|mp4|webm|mov|m4a|mp3|wav|ogg|woff2?|ttf|otf|txt|zip|pdf|pptx|docx|xlsx|html|json|js|css|md)(?![A-Za-z0-9])$/i.test(clean)) return '';
     return clean;
   }
 
   async function readHtmlExportLocalAssetDataUrl(path){
     try {
-      const response = await fetch(path, {cache:'no-store'});
-      if(!response.ok) return '';
-      return await blobToDataUrl(await response.blob());
+      return await blobToDataUrl(await window.__packDeckExportResource(path));
     } catch {
       return '';
     }
@@ -9188,6 +9192,7 @@ refreshRailCatalog();
 <script src="assets/prompt-difference-focus.js"></script>
 <script src="assets/prompt-difference-copy-final.js?v=20260910-official-copy"></script>
 <script src="assets/prompt-intro-page03-v2.js"></script>
+<script src="assets/deck-export-repair.js?v=20260915"></script>
 <script src="assets/deck-motion-plan.js?v=20260915-notebook-cover"></script>
 <script src="assets/deck-classroom-motion.js?v=20260915-notebook-cover"></script>
 </body>

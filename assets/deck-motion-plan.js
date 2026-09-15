@@ -485,8 +485,56 @@ window.__classroomMotionPlan = [
     "composition": "來源導向工具介紹"
   },
   {
-    "id": "local_skill_opening",
+    "id": "local_notebook_highlights",
     "page": 41,
+    "size": "large",
+    "blocks": "",
+    "mode": "sequence",
+    "ambient": false,
+    "composition": "Notebook三個重點",
+    "titleEffect": "fade",
+    "blockEffect": "fade",
+    "motif": "none"
+  },
+  {
+    "id": "local_notebook_workspace",
+    "page": 42,
+    "size": "large",
+    "blocks": "",
+    "mode": "sequence",
+    "ambient": false,
+    "composition": "Notebook版面導覽",
+    "titleEffect": "fade",
+    "blockEffect": "fade",
+    "motif": "none"
+  },
+  {
+    "id": "local_notebook_steps",
+    "page": 43,
+    "size": "large",
+    "blocks": "",
+    "mode": "sequence",
+    "ambient": false,
+    "composition": "Notebook操作步驟",
+    "titleEffect": "fade",
+    "blockEffect": "fade",
+    "motif": "none"
+  },
+  {
+    "id": "local_notebook_audio",
+    "page": 44,
+    "size": "large",
+    "blocks": "",
+    "mode": "sequence",
+    "ambient": false,
+    "composition": "Notebook操作步驟",
+    "titleEffect": "fade",
+    "blockEffect": "fade",
+    "motif": "none"
+  },
+  {
+    "id": "local_skill_opening",
+    "page": 45,
     "size": "large",
     "blocks": ".fso-kicker, .fso-foot",
     "mode": "sequence",
@@ -498,7 +546,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_definition",
-    "page": 42,
+    "page": 46,
     "size": "medium",
     "blocks": ".sw-grid > article",
     "mode": "sequence",
@@ -510,7 +558,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_storyboard",
-    "page": 43,
+    "page": 47,
     "size": "medium",
     "blocks": ".fsc-card",
     "mode": "sequence",
@@ -522,7 +570,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_roles",
-    "page": 44,
+    "page": 48,
     "size": "medium",
     "blocks": ".sw-grid > article",
     "mode": "sequence",
@@ -534,7 +582,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_ppt_skill_intro",
-    "page": 45,
+    "page": 49,
     "size": "medium",
     "blocks": ".fso2-flow > article",
     "mode": "sequence",
@@ -547,7 +595,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_jobs",
-    "page": 46,
+    "page": 50,
     "size": "medium",
     "blocks": ".sw-grid > article",
     "mode": "sequence",
@@ -559,7 +607,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_use",
-    "page": 47,
+    "page": 51,
     "size": "medium",
     "blocks": ".sw-grid > article",
     "mode": "sequence",
@@ -571,7 +619,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_weekly_chapter_opening",
-    "page": 48,
+    "page": 52,
     "size": "large",
     "blocks": ".dso-paper-back, .dso-report, .dso-stamp",
     "mode": "sequence",
@@ -583,7 +631,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_weekly_setup",
-    "page": 49,
+    "page": 53,
     "size": "small",
     "blocks": "",
     "mode": "sequence",
@@ -596,7 +644,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_ppt_chapter_opening",
-    "page": 50,
+    "page": 54,
     "size": "large",
     "blocks": ".dso-deck-back, .dso-deck-middle, .dso-deck-front",
     "mode": "sequence",
@@ -608,7 +656,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_theme02",
-    "page": 51,
+    "page": 55,
     "size": "medium",
     "blocks": ".pl-application-grid > article",
     "mode": "sequence",
@@ -620,7 +668,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_theme08",
-    "page": 52,
+    "page": 56,
     "size": "medium",
     "blocks": ".pl-method-grid > article",
     "mode": "sequence",
@@ -632,7 +680,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_skill_theme09",
-    "page": 53,
+    "page": 57,
     "size": "small",
     "blocks": ".pl-explain .pl-point",
     "mode": "fade",
@@ -645,7 +693,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_practice_marketing_deck",
-    "page": 54,
+    "page": 58,
     "size": "small",
     "blocks": ".pl-explain .pl-point",
     "mode": "fade",
@@ -658,7 +706,7 @@ window.__classroomMotionPlan = [
   },
   {
     "id": "local_apple_result_demo",
-    "page": 55,
+    "page": 59,
     "size": "medium",
     "blocks": ".pl-result-grid > figure",
     "mode": "gallery",
