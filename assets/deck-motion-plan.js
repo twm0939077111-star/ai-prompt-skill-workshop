@@ -799,5 +799,89 @@ window.__classroomMotionPlan = [
     "titleEffect": "zoom",
     "blockEffect": "gallery",
     "motif": "frame"
+  },
+  {
+    "id": "local_prompt_review",
+    "page": 67,
+    "size": "large",
+    "blocks": ".rc-top, .rc-sticker, .rc-steps",
+    "mode": "sequence",
+    "ambient": false,
+    "composition": "複習篇封面呼應",
+    "titleEffect": "stamp",
+    "blockEffect": "spread",
+    "motif": "none"
+  },
+  {
+    "id": "local_prompt_recap_key",
+    "page": 68,
+    "size": "large",
+    "blocks": "",
+    "mode": "sequence",
+    "ambient": false,
+    "composition": "Prompt複習講解",
+    "titleEffect": "fade",
+    "blockEffect": "fade",
+    "motif": "none"
+  },
+  {
+    "id": "local_prompt_recap_uses",
+    "page": 69,
+    "size": "large",
+    "blocks": "",
+    "mode": "sequence",
+    "ambient": false,
+    "composition": "Prompt複習講解",
+    "titleEffect": "fade",
+    "blockEffect": "fade",
+    "motif": "none"
+  },
+  {
+    "id": "local_prompt_recap_make",
+    "page": 70,
+    "size": "large",
+    "blocks": "",
+    "mode": "sequence",
+    "ambient": false,
+    "composition": "Prompt複習講解",
+    "titleEffect": "fade",
+    "blockEffect": "fade",
+    "motif": "none"
+  },
+  {
+    "id": "local_skill_recap_key",
+    "page": 71,
+    "size": "large",
+    "blocks": "",
+    "mode": "sequence",
+    "ambient": false,
+    "composition": "Skill複習講解",
+    "titleEffect": "fade",
+    "blockEffect": "fade",
+    "motif": "none"
+  },
+  {
+    "id": "local_skill_recap_uses",
+    "page": 72,
+    "size": "large",
+    "blocks": "",
+    "mode": "sequence",
+    "ambient": false,
+    "composition": "Skill複習講解",
+    "titleEffect": "fade",
+    "blockEffect": "fade",
+    "motif": "none"
+  },
+  {
+    "id": "local_skill_recap_use",
+    "page": 73,
+    "size": "large",
+    "blocks": "",
+    "mode": "sequence",
+    "ambient": false,
+    "composition": "Skill複習講解",
+    "titleEffect": "fade",
+    "blockEffect": "fade",
+    "motif": "none"
   }
 ];
