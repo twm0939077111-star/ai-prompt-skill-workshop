@@ -19,7 +19,7 @@
           </main>
           <div class="pl-opening-sequence" aria-label="三項實作內容">
             <span><b>01</b>自由廣告圖</span>
-            <span><b>02</b>四品牌競賽</span>
+            <span><b>02</b>套用方法再做一次</span>
             <span><b>03</b>品牌行銷簡報</span>
           </div>
         </section>`,

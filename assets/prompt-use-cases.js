@@ -3,14 +3,14 @@
   const definitions = [
     {
       id: 'local_prompt_use_cases_overview',
-      label: '三種圖片應用',
+      label: '三個圖片練習',
       layout: 'LOCAL-PROMPT-USE-CASES-OVERVIEW',
       html: `
-        <section class="puc-slide puc-overview" aria-label="三種圖片應用">
+        <section class="puc-slide puc-overview" aria-label="三個圖片練習">
           <div class="puc-bg"></div>
           <header class="puc-overview-intro">
             <p class="puc-kicker">PROMPT / THREE WAYS TO CREATE</p>
-            <h2>用 Prompt 完成<br>三種圖片應用</h2>
+            <h2>用 Prompt 完成<br>三個圖片練習</h2>
             <p class="puc-overview-lead">從描述生圖、用照片再創作，再應用到社群圖文。</p>
             <div class="puc-overview-note">
               <b>先記得一件事</b>
@@ -92,6 +92,7 @@
             <p>先替換方括號內的內容，再貼入工具；這些不是自動參數欄位。</p>
           </header>
           <aside class="puc-full-prompt-index" aria-hidden="true"><strong>01</strong><span>FULL PROMPT</span></aside>
+          <div class="puc-copy-actions"><span class="puc-copy-status" role="status" aria-live="polite"></span><button type="button" data-puc-copy>複製提示詞</button></div>
           <article class="puc-full-prompt-copy">
             <p>創作一張電影級編輯風格的人像攝影作品，主角為 <code>[一位年輕女性]</code>，她正靜止站在黃金時刻溫暖光影下的繁忙城市街道中央。她留著 <code>[柔和棕色]</code> 的頭髮，隨意紮起，細碎的髮絲捕捉著邊緣光，擁有淺榛綠色的雙眸、自然妝容、小珍珠耳釘，神情冷靜且帶著一絲惆悵，直視鏡頭。她穿著 <code>[黑色]</code> 外套或西裝外套，以垂直 4:5 的構圖呈現半身像。</p>
             <p>在她周圍精確配置 9 位呈現動態模糊的行人：1 位左前方側影、1 位左下方身著柔和紅色的局部人物、1 位左上方局部臉部、1 位上方中央的金髮人物、1 位上方中央的深髮色人物、1 位右上方男性、1 位右側中間盤髮女性、1 位右側遠處的深色身影，以及 1 位右前方深色肩膀剪影。對人群使用強烈的動態模糊效果，同時保持女性臉部的清晰對焦，營造出時間在她身邊慢下來的感覺。</p>
@@ -134,8 +135,8 @@
                 <li><b>01</b><span>每張照片單獨輸出，採 3:4 直式構圖</span></li>
                 <li><b>02</b><span>上半保留原始照片與自然光影</span></li>
                 <li><b>03</b><span>下半重構為極簡紙感手繪封面插畫</span></li>
-                <li><b>04</b><span>主體約占 10%–20%，四周保留大量留白</span></li>
-                <li><b>05</b><span>配色不超過 4 種，避免 3D 與厚重油畫感</span></li>
+                <li><b>04</b><span>插畫主體約占下半區 10%–20%，四周留白</span></li>
+                <li><b>05</b><span>下半插畫以不超過 4 種主要顏色呈現</span></li>
               </ol>
               <p>這裡呈現的是完整指令的重點摘錄。</p>
             </aside>
@@ -155,6 +156,7 @@
             <p>先替換方括號內容；原圖保留與精確比例仍須檢查。</p>
           </header>
           <aside class="puc-full-prompt-index" aria-hidden="true"><strong>02</strong><span>FULL PROMPT</span></aside>
+          <div class="puc-copy-actions"><span class="puc-copy-status" role="status" aria-live="polite"></span><button type="button" data-puc-copy>複製提示詞</button></div>
           <article class="puc-full-prompt-copy">
             <p>請將我上傳的每一張照片分別製作成一張獨立的高級設計海報，不多圖拼接，每張照片單獨輸出。整體採用<code>[3:4]</code>直式構圖，上下兩個區域高度嚴格1:1，各占畫面50%。</p>
             <p>上半部分保留原始照片，保持主體結構、真實質感、自然光影和原有色彩氛圍，僅進行輕微高級攝影調色，使其具有雜誌攝影和藝術出版物質感。為適配畫幅，可自然擴展天空、地面或環境背景，但不得拉伸、扭曲或改變主體。</p>
@@ -255,5 +257,22 @@
     return true;
   }
 
+  document.addEventListener('click', async (event) => {
+    const button=event.target.closest('#deck [data-puc-copy]');
+    if(!button)return;
+    event.preventDefault();event.stopPropagation();
+    const section=button.closest('.puc-full-prompt');
+    const content=section.querySelector('.puc-full-prompt-copy');
+    const text=[...content.querySelectorAll('p')].map(p=>p.textContent.trim()).join('\n\n');
+    const status=section.querySelector('.puc-copy-status');
+    let copied=false;
+    try{await navigator.clipboard.writeText(text);copied=true;}catch{
+      const input=document.createElement('textarea');input.value=text;
+      input.style.cssText='position:fixed;left:-9999px;top:0';document.body.append(input);
+      try{input.select();copied=document.execCommand('copy');}catch{}finally{input.remove();button.focus({preventScroll:true});}
+    }
+    status.textContent=copied?'已複製完整提示詞':'請選取提示詞後按 Ctrl+C 複製';
+    if(!copied){const range=document.createRange();range.selectNodeContents(content);const selection=getSelection();selection.removeAllRanges();selection.addRange(range);}
+  });
   install();
 })();

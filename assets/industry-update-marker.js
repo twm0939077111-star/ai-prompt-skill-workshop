@@ -1,0 +1,6 @@
+(() => {
+ const ids=["theme01_page020-10","local_eyewear_prompts","local_prompt_core_eyewear","local_furniture_results","local_furniture_prompts","local_furniture_analysis"];
+ const note="重要：第26–31頁為每次課後必須更新的產業案例區，依下一次授課公司的產業／職業與工作情境調整。更換時需成套更新成果圖片、完整Prompt（含複製與下載）、核心分析及相關素材，避免只換圖片。更新前保留上一場版本。以穩定ID辨識這六頁，頁序變動時同步修正頁碼標示。";
+ const style=document.createElement('style');style.id='industry-update-marker-style';style.textContent='#deck > .slide .industry-update-marker{position:absolute;top:.3%;right:2%;z-index:100;margin:0;padding:.18em .7em;border:1px solid #bda6db;border-radius:999px;background:#f7f1ff;color:#61348a;font:600 clamp(8px,.78cqw,16px)/1.35 sans-serif;letter-spacing:.02em;pointer-events:none;max-width:90%;white-space:nowrap}';document.head.append(style);
+ for(const id of ids){const slide=document.querySelector('#deck > [data-vm-slide-id="'+id+'"]');if(!slide)continue;slide.dataset.courseUpdateCycle='after-every-class';slide.dataset.courseUpdateScope='industry-and-occupation';slide.dataset.courseUpdateNote=note;const marker=document.createElement('aside');marker.className='industry-update-marker';marker.textContent='課後必更新｜依授課公司產業／職業調整';marker.setAttribute('aria-label',note);slide.append(marker);}
+})();

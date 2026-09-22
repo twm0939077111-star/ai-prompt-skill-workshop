@@ -9,10 +9,10 @@
         <div class="ts-bg" aria-hidden="true"><i></i><i></i><i></i></div>
         <header class="ts-head">
           <p class="ts-kicker">BEFORE WE START / APP SETUP</p>
-          <h2>上課前，先把<br><em>今天會用的工具</em>準備好</h2>
-          <p>先開啟官方網頁並登入；功能與額度依帳號而異，操作前先確認。</p>
+          <h2>上課前，先把<br><em>前兩天的工具</em>準備好</h2>
+          <p>第 3、4 天另備 Google 帳號、Gemini Notebook 與 Codex；先確認能開啟課堂專案。</p>
         </header>
-        <main class="ts-tools" aria-label="今天使用的兩個工具">
+        <main class="ts-tools" aria-label="第一、二天使用的工具">
           <article class="ts-tool ts-tool--chatgpt">
             <span class="ts-no">01</span>
             <span class="ts-watermark" aria-hidden="true">GPT</span>

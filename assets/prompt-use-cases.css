@@ -624,3 +624,10 @@
   from { opacity: 0; transform: translateY(1cqw); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* Full prompt copy actions, outside the copied content. */
+.puc-copy-actions{position:absolute;z-index:3;right:5.4cqw;top:8.6cqw;display:flex;align-items:center;gap:.85cqw}
+.puc-copy-actions button{border:0;border-radius:.65cqw;background:#7655cb;color:white;padding:.65cqw 1.15cqw;font:800 1.15cqw/1.4 "Microsoft JhengHei",sans-serif;cursor:pointer;box-shadow:0 .3cqw .8cqw #7655cb24}
+.puc-full-prompt--illustration .puc-copy-actions button{background:#268f8b}
+.puc-copy-actions button:focus-visible{outline:.2cqw solid #40345e;outline-offset:.2cqw}
+.puc-copy-status{font-size:.95cqw;color:#5f6470}

@@ -3,3 +3,13 @@
 
 /* Restore dialog centering after the global margin reset. */
 .fm-prompt-modal,.fur-lightbox{inset:0;margin:auto}
+
+/* Four supplied hardware/auto cases; preserve the existing slide IDs. */
+[data-vm-slide-id="local_furniture_prompts"] .p67-prompt-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+[data-vm-slide-id="local_furniture_prompts"] .p67-card-type{display:none}
+[data-vm-slide-id="local_furniture_prompts"] .p67-card-top{grid-template-columns:2.8cqw minmax(0,1fr)}
+[data-vm-slide-id="local_furniture_prompts"] .p67-card-title b{font-size:1.6cqw}
+[data-vm-slide-id="local_furniture_prompts"] .p67-card-lead{font-size:1.4cqw;margin:.7cqw 0 .55cqw}
+[data-vm-slide-id="local_furniture_prompts"] .p67-card-summary{font-size:1.15cqw}
+[data-vm-slide-id="local_furniture_prompts"] .p67-chip-row{display:none}
+[data-vm-slide-id="local_furniture_results"] header p{font-size:1.55cqw}

@@ -51,3 +51,15 @@
     #f8faf9;
   background-size: auto, auto, 3.5cqw 3.5cqw, 3.5cqw 3.5cqw, auto;
 }
+
+/* Page 27: concise food case subheads, scoped to this lesson. */
+.p08-eye-page .p67-card-lead {
+ margin:1cqw 0 .8cqw;
+ padding:.18cqw 0 .18cqw .75cqw;
+ border-left:.22cqw solid var(--accent);
+ color:var(--accent);
+ font-size:1.28cqw;
+ font-weight:800;
+ letter-spacing:.035em;
+ line-height:1.45;
+}
