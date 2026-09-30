@@ -3208,6 +3208,7 @@ var overviewGrid=null;
 let adjacentPreloadTimer=null;
 const deckDiagnosticFlags={disableThumbGeneration:false,disableAdjacentPreload:false};
 const CURRENT_SLIDE_STORE='dashi-ppt-current-slide';
+let readingPositionReady=false;
 const DECK_ASPECT_W=16;
 const DECK_ASPECT_H=9;
 document.body.dataset.mode=deckMode;
@@ -3372,26 +3373,36 @@ function syncDeckPageNumberSlot(slot, state){
 }
 
 function currentSlideStoreKey(){
-  const signature = window.__deckViewModel?.model?.state?.__deckSignature || location.pathname || 'deck';
-  return `${CURRENT_SLIDE_STORE}:${signature}`;
+  // Keep the reading position across content updates and version query strings.
+  const path = location.pathname.replace(/\/index\.html$/, '/');
+  return `${CURRENT_SLIDE_STORE}:workshop:${path}`;
 }
 
 function readStoredSlideIndex(){
   try {
-    const raw = localStorage.getItem(currentSlideStoreKey());
+    const signature = window.__deckViewModel?.model?.state?.__deckSignature || location.pathname || 'deck';
+    const raw = localStorage.getItem(currentSlideStoreKey())
+      || localStorage.getItem(`${CURRENT_SLIDE_STORE}:${signature}`);
     if(!raw) return null;
     const saved = JSON.parse(raw);
+    const slides = getVisibleSlides();
+    if(saved?.slideId){
+      const found = slides.findIndex(slide => slide.dataset.vmSlideId === saved.slideId);
+      if(found >= 0) return found;
+    }
     const value = typeof saved === 'number' ? saved : saved?.index;
-    return Number.isFinite(Number(value)) ? Number(value) : null;
+    return Number.isInteger(value) && value >= 0 ? Math.min(value, Math.max(0, slides.length - 1)) : null;
   } catch {
     return null;
   }
 }
 
 function writeStoredSlideIndex(index){
+  if(!readingPositionReady) return;
   try {
     localStorage.setItem(currentSlideStoreKey(), JSON.stringify({
       index,
+      slideId: getVisibleSlides()[index]?.dataset.vmSlideId || '',
       updatedAt: new Date().toISOString(),
     }));
   } catch {}
@@ -5954,10 +5965,13 @@ addEventListener('touchend',e=>{
   }
 },{passive:true});
 
-const initialSlideParam = new URLSearchParams(location.search).get(VIEW_PARAM_PAGE);
-const storedSlide = readStoredSlideIndex();
-const initialSlide = initialSlideParam ? Number(initialSlideParam) - 1 : (storedSlide ?? 0);
+const initialViewParams = new URLSearchParams(location.search);
+const initialSlideParam = initialViewParams.get(VIEW_PARAM_PAGE);
+const storedSlide = initialViewParams.get('resume') === '0' ? null : readStoredSlideIndex();
+const linkedPage = Number(initialSlideParam);
+const initialSlide = storedSlide ?? (Number.isInteger(linkedPage) && linkedPage > 0 ? linkedPage - 1 : 0);
 layoutDeck();
+readingPositionReady=true;
 go(Number.isFinite(initialSlide) ? initialSlide : 0, {animate:false, skipThumbPause:true});
 refreshRailCatalog();
 
