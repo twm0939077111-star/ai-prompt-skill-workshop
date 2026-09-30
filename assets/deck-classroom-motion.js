@@ -1,9 +1,9 @@
 (function () {
   'use strict';
   const plans = new Map((window.__classroomMotionPlan || []).map(p => [p.id, p]));
-  const openingIds = new Set(['theme01_page004-1','local_practice_opening','theme01_page047-4','local_practice_method_opening','local_grok_opening','local_notebook_opening','local_skill_opening','local_weekly_chapter_opening','local_ppt_chapter_opening','local_prompt_review']);
+  const openingIds = new Set(['theme01_page004-1','local_practice_opening','theme01_page047-4','local_practice_method_opening','local_grok_opening','local_notebook_opening','local_skill_opening','local_weekly_chapter_opening','local_game_opening','local_ppt_chapter_opening','local_prompt_review']);
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  const ambientNames = /^(cover-orb-[abcd]|fso-orbit-drift|dso-gentle-float)$/;
+  const ambientNames = /^(cover-orb-[abcd]|fso-orbit-drift|dso-gentle-float|gm-float)$/;
   const owned = new Set();
   const ambient = new Set();
   const decorations = new Set();
@@ -222,3 +222,4 @@
   document.querySelectorAll('#deck > .slide').forEach(s => {s.toggleAttribute('data-classroom-static',!openingIds.has(s.dataset.vmSlideId));settleNative(s, false);});
   schedule();
 })();
+
