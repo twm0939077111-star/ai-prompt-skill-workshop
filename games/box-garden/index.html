@@ -5,9 +5,12 @@
 @media(min-width:900px){.dpad{grid-template-columns:repeat(3,42px);grid-template-rows:repeat(2,34px);margin-top:12px}canvas{aspect-ratio:1.15}}
 @media(max-width:760px){header{padding:16px 18px}.edition{letter-spacing:1px;font-size:9px}main{display:block;padding:0 16px;margin-top:8px}.eyebrow,.intro,.rules{display:none}h1{font-size:25px;margin:0 0 12px}h1 br{display:none}.levels{display:flex;gap:7px;margin:0 0 20px}.level{flex:1;padding:10px 7px;gap:7px;border-radius:12px}.level .num{font-size:15px}.level strong{font-size:12px}.level small{font-size:9px}.badge{display:none}.topline h2{font-size:16px}.stat b{font-size:20px}.stats{gap:12px}.board-wrap{padding:9px;border-radius:20px}canvas{max-height:46vh}.message{margin-top:22px;font-size:12px;min-height:30px}.toolbar button{padding:9px 14px}.dpad{margin-top:12px}.footer{margin-bottom:env(safe-area-inset-bottom,10px)}.win{inset:9px}.win h3{font-size:24px}.win .flower{font-size:36px}.win p{margin:8px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.random-button{width:100%;min-height:46px;margin:0 0 20px;background:#eaf0de;border-color:#9eb692;font-weight:bold}.levels{margin-bottom:12px}
+@media(max-width:760px){.levels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-bottom:10px}.random-button{margin-bottom:16px}.level{min-height:48px}}
 </style></head><body>
 <header><div class="brand"><span>▧</span>箱子小花園</div><div class="edition">A LITTLE PUZZLE BREAK</div></header>
-<main><aside><div class="eyebrow">PUSH · THINK · BLOOM</div><h1>慢慢推，<br>剛剛好。</h1><p class="intro">把散落的木箱送回金色標記。<br>動手之前，先想好下一步。</p><nav class="levels" aria-label="選擇關卡"></nav><div class="rules"><b>小小規則，大大學問</b><br>① 將所有木箱推到金色圓圈。<br>② 一次只能推一箱，不能拉回。<br>③ 卡住了？復原一步，再試一次。<br><br><b>鍵盤</b>　方向鍵 / WASD<br><b>快捷鍵</b>　Z 復原 · R 重來<br><b>手機</b>　下方方向按鈕 / 棋盤滑動</div></aside>
+<main><aside><div class="eyebrow">PUSH · THINK · BLOOM</div><h1>慢慢推，<br>剛剛好。</h1><p class="intro">每一關，都是新的小花園。<br>把木箱送回金色標記，繼續闖關。</p><nav class="levels" aria-label="選擇關卡"></nav><button class="random-button" id="random">⚄ 換一關，全新地圖</button><div class="rules"><b>小小規則，大大學問</b><br>① 將所有木箱推到金色圓圈。<br>② 一次只能推一箱，不能拉回。<br>③ 卡住了？復原一步，再試一次。<br><br><b>鍵盤</b>　方向鍵 / WASD<br><b>快捷鍵</b>　Z 復原 · R 重來<br><b>手機</b>　下方方向按鈕 / 棋盤滑動</div></aside>
 <section class="play-area"><div class="topline"><h2 id="level-title"></h2><div class="stats"><div class="stat">步數<b id="moves">0</b></div><div class="stat">已歸位<b id="goals">0 / 1</b></div></div></div><div class="board-wrap"><canvas id="board" width="720" height="720" role="img" aria-label="推箱子棋盤：使用方向鍵或下方按鈕操作"></canvas><div class="win" id="win" hidden><div><div class="flower">🌼</div><div class="eyebrow">NICELY DONE</div><h3 id="win-title">每一箱，都剛剛好。</h3><p id="win-copy"></p><button id="next">下一個小挑戰 →</button><br><button class="secondary" id="replay">再挑戰一次</button></div></div></div><div class="legend"><span><i></i>木箱</span><span><i class="goal"></i>目的地</span><span>● 綠帽小園丁</span></div><div class="message" id="message" role="status" aria-live="polite"></div><div class="toolbar"><button id="undo">↶ 復原一步</button><button id="restart">↻ 重新開始</button><button id="hint">✧ 提示</button></div><div class="dpad" aria-label="移動方向"><button data-dir="U" aria-label="向上">↑</button><button data-dir="L" aria-label="向左">←</button><button data-dir="D" aria-label="向下">↓</button><button data-dir="R" aria-label="向右">→</button></div><div class="footer">沒有倒數，按照自己的步調來。<span id="best"></span></div></section></main>
 <script id="model">
 const LEVELS=[
@@ -16,25 +19,71 @@ const LEVELS=[
 {name:'花園小迷宮',sub:'03 · 想好再推',hint:'先把右邊的箱子往上送，再繞到左箱下方。小心別把箱子推進角落。',map:['########','#  . . #','#  #   #','# $  $ #','#   #  #','#  @   #','#      #','########']}
 ];
 const DIR={U:[0,-1],D:[0,1],L:[-1,0],R:[1,0]};
-function createState(level){const walls=[],goals=[],boxes=[];let player;level.map.forEach((row,y)=>[...row].forEach((c,x)=>{const p=y*row.length+x;if(c==='#')walls.push(p);if(c==='.')goals.push(p);if(c==='$')boxes.push(p);if(c==='@')player=p}));return {width:level.map[0].length,height:level.map.length,walls,goals,boxes,player,moves:0};}
+function createState(level){const walls=[],goals=[],boxes=[];let player;level.map.forEach((row,y)=>[...row].forEach((c,x)=>{const p=y*row.length+x;if(c==='#')walls.push(p);if('.+*'.includes(c))goals.push(p);if('$*'.includes(c))boxes.push(p);if('@+'.includes(c))player=p}));return {width:level.map[0].length,height:level.map.length,walls,goals,boxes,player,moves:0};}
 function won(s){return s.boxes.every(p=>s.goals.includes(p));}
 function advance(s,dir){if(won(s))return null;const [dx,dy]=DIR[dir],x=s.player%s.width,y=Math.floor(s.player/s.width),nx=x+dx,ny=y+dy;if(nx<0||nx>=s.width||ny<0||ny>=s.height)return null;const n=ny*s.width+nx;if(s.walls.includes(n))return null;const boxes=[...s.boxes];if(boxes.includes(n)){const bx=nx+dx,by=ny+dy,b=by*s.width+bx;if(bx<0||bx>=s.width||by<0||by>=s.height||s.walls.includes(b)||boxes.includes(b))return null;boxes[boxes.indexOf(n)]=b;}return {...s,player:n,boxes,moves:s.moves+1};}
+
+// Start solved and pull boxes backwards. Reversing the recorded moves is a legal solution.
+function generateLevel(seed){
+ seed=seed>>>0;let rng=seed;
+ const random=()=>{rng+=0x6D2B79F5;let t=rng;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return ((t^t>>>14)>>>0)/4294967296};
+ const pick=a=>a[Math.floor(random()*a.length)], opposite={U:'D',D:'U',L:'R',R:'L'};
+ for(let attempt=0;attempt<80;attempt++){
+  const width=8,walls=new Set(),floor=[];
+  for(let p=0;p<64;p++){const x=p%8,y=Math.floor(p/8);if(!x||x===7||!y||y===7)walls.add(p);else floor.push(p)}
+  // Interior obstacles vary the routes; reject disconnected layouts.
+  for(let n=0;n<4;n++)walls.add(pick(floor));
+  const free=floor.filter(p=>!walls.has(p)),seen=new Set([free[0]]),queue=[free[0]];
+  for(const p of queue)for(const d of [-8,8,-1,1])if(!walls.has(p+d)&&!seen.has(p+d)){seen.add(p+d);queue.push(p+d)}
+  if(seen.size!==free.length)continue;
+  const candidates=free.filter(p=>p%8>1&&p%8<6&&p>15&&p<48);
+  if(candidates.length<3)continue;
+  const goals=[];while(goals.length<3){const p=pick(candidates);if(!goals.includes(p))goals.push(p)}
+  const boxes=[...goals];let player=pick(free.filter(p=>!boxes.includes(p))),pulls=0;const trace=[];
+  for(let step=0;step<1200;step++){
+   const moves=Object.keys(DIR).filter(d=>{const [x,y]=DIR[d],n=player+x+y*width;return !walls.has(n)&&!boxes.includes(n)});
+   if(!moves.length)break;
+   const pulling=moves.filter(d=>{const [x,y]=DIR[d];return boxes.includes(player-x-y*width)});
+   const d=pick(pulling.length&&random()<0.8?pulling:moves),[dx,dy]=DIR[d],delta=dx+dy*width,b=boxes.indexOf(player-delta);
+   if(b>=0){boxes[b]=player;pulls++}player+=delta;trace.push(opposite[d]);
+  }
+  if(pulls<12||boxes.some(p=>goals.includes(p)))continue;
+  const map=Array.from({length:8},(_,y)=>Array.from({length:8},(_,x)=>{const p=y*8+x;return walls.has(p)?'#':p===player?(goals.includes(p)?'+':'@'):boxes.includes(p)?(goals.includes(p)?'*':'$'):goals.includes(p)?'.':' '}).join(''));
+  return {name:'隨機小花園',sub:'隨機 · 三箱挑戰',hint:`關卡編號 ${seed} · 三個木箱都有路可到達目的地，先觀察再推。`,seed,map,solution:trace.reverse()};
+ }
+ // Bounded fallback: three boxes each one push below their goals, always solvable.
+ return {name:'隨機小花園',sub:'隨機 · 三箱挑戰',seed,hint:`關卡編號 ${seed} · 從箱子下方往上推。`,map:['########','# . . .#','# $ $ $#','# @    #','#      #','#      #','#      #','########'],solution:['U','D','R','R','U','D','R','R','U']};
+}
 </script>
-<script>
-let current=0,state,history=[],records={};try{records=JSON.parse(localStorage.getItem('box-garden-v1')||'{}')||{}}catch{}
-const $=id=>document.getElementById(id),canvas=$('board'),ctx=canvas.getContext('2d');
-function rounded(x,y,w,h,r,fill){ctx.fillStyle=fill;ctx.beginPath();ctx.roundRect(x,y,w,h,r);ctx.fill();}
+<script>function rounded(x,y,w,h,r,fill){ctx.fillStyle=fill;ctx.beginPath();ctx.roundRect(x,y,w,h,r);ctx.fill();}
 function draw(){const W=720,H=720;ctx.clearRect(0,0,W,H);ctx.fillStyle='#e4ebd8';ctx.fillRect(0,0,W,H);const t=Math.min(680/state.width,680/state.height),ox=(W-state.width*t)/2,oy=(H-state.height*t)/2;for(let y=0;y<state.height;y++)for(let x=0;x<state.width;x++){const p=y*state.width+x,X=ox+x*t,Y=oy+y*t;if(state.walls.includes(p)){rounded(X+3,Y+9,t-6,t-10,12,'#799a70');rounded(X+3,Y+2,t-6,t-12,12,'#a3bc8c');rounded(X+9,Y+5,t-18,5,3,'#b9cda6');ctx.fillStyle='#8eac7c';ctx.beginPath();ctx.arc(X+t*.67,Y+t*.54,4,0,7);ctx.fill();}else{rounded(X+2,Y+2,t-4,t-4,9,(x+y)%2?'#f3f0df':'#f8f5e7');if(state.goals.includes(p)){ctx.strokeStyle='#d0a45e';ctx.lineWidth=3;ctx.setLineDash([5,5]);ctx.beginPath();ctx.arc(X+t/2,Y+t/2,t*.27,0,7);ctx.stroke();ctx.setLineDash([]);ctx.fillStyle='#d7b471';ctx.beginPath();ctx.arc(X+t/2,Y+t/2,5,0,7);ctx.fill();}}}
 state.boxes.forEach(p=>{const x=ox+p%state.width*t,y=oy+Math.floor(p/state.width)*t,g=state.goals.includes(p);rounded(x+10,y+16,t-20,t-20,9,g?'#60895b':'#bc7f43');rounded(x+10,y+9,t-20,t-20,8,g?'#93b479':'#e6b575');ctx.strokeStyle=g?'#638c52':'#bd874f';ctx.lineWidth=4;ctx.strokeRect(x+18,y+17,t-36,t-36);ctx.beginPath();ctx.moveTo(x+20,y+19);ctx.lineTo(x+t-20,y+t-21);ctx.moveTo(x+t-20,y+19);ctx.lineTo(x+20,y+t-21);ctx.stroke();if(g){rounded(x+t/2-12,y+t/2-12,24,24,12,'#fbf7d7');ctx.fillStyle='#4b7446';ctx.font='bold 19px sans-serif';ctx.textAlign='center';ctx.fillText('✓',x+t/2,y+t/2+7);}});
 const px=ox+state.player%state.width*t+t/2,py=oy+Math.floor(state.player/state.width)*t+t/2;ctx.fillStyle='#344f3220';ctx.beginPath();ctx.ellipse(px,py+t*.3,t*.27,t*.1,0,0,7);ctx.fill();rounded(px-t*.2,py,t*.4,t*.32,12,'#45795b');rounded(px-t*.23,py-t*.24,t*.46,t*.4,14,'#f2c69e');ctx.fillStyle='#243f33';for(const d of [-1,1]){ctx.beginPath();ctx.arc(px+d*t*.09,py-t*.03,2.5,0,7);ctx.fill();}rounded(px-t*.25,py-t*.37,t*.5,t*.2,12,'#477355');rounded(px-t*.34,py-t*.23,t*.68,t*.09,4,'#345a43');rounded(px+t*.12,py-t*.35,t*.08,t*.08,2,'#ecd37e');}
-function nav(){document.querySelector('.levels').innerHTML=LEVELS.map((l,i)=>`<button class="level ${current===i?'active':''}" data-level="${i}" aria-current="${current===i?'step':'false'}"><span class="num">0${i+1}</span><span><strong>${l.name}</strong><small>${l.sub.split(' · ')[1]}</small></span><span class="badge">${records[i]?'✓':'↗'}</span></button>`).join('');document.querySelectorAll('[data-level]').forEach(b=>b.onclick=()=>load(+b.dataset.level));}
-function render(){draw();$('moves').textContent=state.moves;$('goals').textContent=state.boxes.filter(p=>state.goals.includes(p)).length+' / '+state.goals.length;$('undo').disabled=!history.length;$('level-title').textContent=LEVELS[current].name;$('best').textContent=records[current]?' 最佳：'+records[current]+' 步':'';$('win').hidden=!won(state);nav();}
+
+
+let current=0,state,history=[],records={};try{records=JSON.parse(localStorage.getItem('box-garden-v1')||'{}')||{}}catch{}
+const $=id=>document.getElementById(id),canvas=$('board'),ctx=canvas.getContext('2d');
+function recordKey(i=current){return LEVELS[i].seed===undefined?i:'random-'+LEVELS[i].seed;}
+const seenMaps=new Set();let challengeNumber=0;
+function randomLevel(){
+ const a=new Uint32Array(1);
+ for(let attempt=0;attempt<100;attempt++){
+  crypto.getRandomValues(a);const level=generateLevel(a[0]),fingerprint=level.map.join('\n');
+  if(seenMaps.has(fingerprint))continue;
+  seenMaps.add(fingerprint);challengeNumber++;
+  level.name=`第 ${challengeNumber} 關 · 小花園`;level.sub='挑戰 · 每關不同';
+  LEVELS[3]=level;load(3);return;
+ }
+ $('message').textContent='暫時未產生新的布局，請再按一次換關。';
+}
+function nav(){document.querySelector('.levels').innerHTML=[3,0,1,2].filter(i=>LEVELS[i]).map(i=>{const l=LEVELS[i];return `<button class="level ${current===i?'active':''}" data-level="${i}" aria-current="${current===i?'step':'false'}"><span class="num">${i===3?'∞':i+1}</span><span><strong>${i===3?'隨機闖關':'練習 '+(i+1)}</strong><small>${i===3?'第 '+challengeNumber+' 關':l.name}</small></span><span class="badge">${records[recordKey(i)]?'✓':'↗'}</span></button>`}).join('');document.querySelectorAll('[data-level]').forEach(b=>b.onclick=()=>load(+b.dataset.level));}
+function render(){draw();$('moves').textContent=state.moves;$('goals').textContent=state.boxes.filter(p=>state.goals.includes(p)).length+' / '+state.goals.length;$('undo').disabled=!history.length;$('level-title').textContent=LEVELS[current].name;$('best').textContent=records[recordKey()]?' 最佳：'+records[recordKey()]+' 步':'';$('win').hidden=!won(state);nav();}
 function load(i){current=i;state=createState(LEVELS[i]);history=[];$('message').textContent=LEVELS[i].hint;render();}
-function move(d){const next=advance(state,d);if(!next){if(!won(state))$('message').textContent='這邊推不動，試試另一個方向。';return;}history.push(state);state=next;$('message').textContent='把每個木箱，送回它的位置。';const trapped=state.boxes.some(p=>!state.goals.includes(p)&&(state.walls.includes(p-1)||state.walls.includes(p+1))&&(state.walls.includes(p-state.width)||state.walls.includes(p+state.width)));if(trapped)$('message').textContent='木箱卡進角落了！按「復原一步」就能救回來。';if(won(state)){records[current]=Math.min(records[current]||Infinity,state.moves);try{localStorage.setItem('box-garden-v1',JSON.stringify(records))}catch{}$('win-title').textContent=current===2?'花園整理完成！':'每一箱，都剛剛好。';$('win-copy').textContent=`用了 ${state.moves} 步，完成 ${state.goals.length} 個木箱歸位。`;$('next').textContent=current===2?'回到第一關 →':'下一個小挑戰 →';$('message').textContent='過關！也可以復原一步，繼續研究更短的路線。';}render();}
+function move(d){const next=advance(state,d);if(!next){if(!won(state))$('message').textContent='這邊推不動，試試另一個方向。';return;}history.push(state);state=next;$('message').textContent='把每個木箱，送回它的位置。';const trapped=state.boxes.some(p=>!state.goals.includes(p)&&(state.walls.includes(p-1)||state.walls.includes(p+1))&&(state.walls.includes(p-state.width)||state.walls.includes(p+state.width)));if(trapped)$('message').textContent='木箱卡進角落了！按「復原一步」就能救回來。';if(won(state)){records[recordKey()]=Math.min(records[recordKey()]||Infinity,state.moves);try{localStorage.setItem('box-garden-v1',JSON.stringify(records))}catch{}$('win-title').textContent=current===2?'花園整理完成！':'每一箱，都剛剛好。';$('win-copy').textContent=`用了 ${state.moves} 步，完成 ${state.goals.length} 個木箱歸位。`;$('next').textContent='下一關 · 全新地圖 →';$('message').textContent='過關！也可以復原一步，繼續研究更短的路線。';}render();}
 function undo(){if(history.length){state=history.pop();$('message').textContent='回到上一步，換個想法再試。';render();}}
-$('undo').onclick=undo;$('restart').onclick=()=>load(current);$('replay').onclick=()=>load(current);$('next').onclick=()=>load((current+1)%LEVELS.length);$('hint').onclick=()=>{$('message').textContent=LEVELS[current].hint};document.querySelectorAll('[data-dir]').forEach(b=>b.onclick=()=>move(b.dataset.dir));
+$('undo').onclick=undo;$('restart').onclick=()=>load(current);$('replay').onclick=()=>load(current);$('random').onclick=randomLevel;$('next').onclick=randomLevel;$('hint').onclick=()=>{$('message').textContent=LEVELS[current].hint};document.querySelectorAll('[data-dir]').forEach(b=>b.onclick=()=>move(b.dataset.dir));
 addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey)return;const d={ArrowUp:'U',ArrowDown:'D',ArrowLeft:'L',ArrowRight:'R',w:'U',s:'D',a:'L',d:'R'}[e.key]||{w:'U',s:'D',a:'L',d:'R'}[e.key.toLowerCase()];if(d){e.preventDefault();move(d)}else if(e.key.toLowerCase()==='z'){e.preventDefault();undo()}else if(e.key.toLowerCase()==='r'){e.preventDefault();load(current)}});
 let touchStart=null;canvas.addEventListener('pointerdown',e=>{touchStart={x:e.clientX,y:e.clientY,id:e.pointerId};canvas.setPointerCapture(e.pointerId)});canvas.addEventListener('pointerup',e=>{if(!touchStart||touchStart.id!==e.pointerId)return;const dx=e.clientX-touchStart.x,dy=e.clientY-touchStart.y;touchStart=null;if(Math.max(Math.abs(dx),Math.abs(dy))<18)return;move(Math.abs(dx)>Math.abs(dy)?dx>0?'R':'L':dy>0?'D':'U')});canvas.addEventListener('pointercancel',()=>touchStart=null);
-load(0);
-if(new URLSearchParams(location.search).has('qa'))window.gameQA={read:()=>JSON.parse(JSON.stringify(state)),load,move,undo,levels:LEVELS};
+randomLevel();
+if(new URLSearchParams(location.search).has('qa'))window.gameQA={read:()=>JSON.parse(JSON.stringify(state)),load,move,undo,levels:LEVELS,generateLevel,randomLevel};
 </script></body></html>

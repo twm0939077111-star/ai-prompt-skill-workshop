@@ -885,3 +885,6 @@ window.__classroomMotionPlan = [
     "motif": "none"
   }
 ];
+
+// Game chapter: independent card entrances, authored rotations preserved.
+window.__classroomMotionPlan.push({id:'local_game_opening',page:61,size:'large',blocks:'.dso-intro, .dso-description, .gm-cover-art figure, .gm-cover-art > span, .dso-bottom',mode:'sequence',ambient:true,composition:'遊戲卡片依序展開',titleEffect:'reveal',titleParts:'.gm-title-line',blockEffect:'gallery',motif:'none'});

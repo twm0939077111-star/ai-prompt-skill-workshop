@@ -156,7 +156,9 @@
     const big = plan.size === 'large', small = plan.size === 'small';
     // Read geometry before animating any ancestor/target.
     accent(s,plan,title,blocks);
-    if (title) compose(title,plan.titleEffect,0,1,0,big?750:small?420:580);
+    const titleParts = plan.titleParts ? select(s, plan.titleParts) : [];
+    if (titleParts.length) titleParts.forEach((part,i)=>compose(part,plan.titleEffect,i,titleParts.length,i*150,big?750:580));
+    else if (title) compose(title,plan.titleEffect,0,1,0,big?750:small?420:580);
     blocks.slice(0, 8).forEach((el, i) => {
       const delay = 90 + (plan.mode === 'together' ? 0 : i * 75);
       compose(el,plan.blockEffect,i,blocks.length,delay,small?450:650);
