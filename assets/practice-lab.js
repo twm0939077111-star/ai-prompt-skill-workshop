@@ -1,66 +1,7 @@
 (() => {
-  const EARLY_PRACTICE_ANCHOR_ID = 'local_tool_setup';
   const PRACTICE_ANCHOR_ID = 'local_eyewear_prompts';
   const FINAL_ANCHOR_ID = 'local_skill_theme09';
   const definitions = [
-    {
-      id: 'local_practice_opening',
-      label: '學員實作挑戰',
-      layout: 'LOCAL-PRACTICE-OPENING',
-      html: `
-        <section class="pl-slide pl-opening" aria-label="學員實作挑戰">
-          <p class="pl-opening-ghost" aria-hidden="true">PRACTICE</p>
-          <main class="pl-opening-main">
-            <p class="pl-kicker">YOUR TURN / PRACTICE LAB</p>
-            <h1><span>學員</span><strong>實作挑戰</strong></h1>
-            <div class="pl-opening-rule" aria-hidden="true"><i></i><b>04</b><i></i></div>
-            <p class="pl-opening-lead">我們先來做做看</p>
-            <p class="pl-opening-copy">先完成自己的第一版，課程後面再把學到的方法真正用進作品裡。</p>
-          </main>
-          <div class="pl-opening-sequence" aria-label="三項實作內容">
-            <span><b>01</b>自由廣告圖</span>
-            <span><b>02</b>套用方法再做一次</span>
-            <span><b>03</b>品牌行銷簡報</span>
-          </div>
-        </section>`,
-    },
-    {
-      id: 'local_practice_ad',
-      label: '自由廣告圖',
-      layout: 'LOCAL-PRACTICE-AD',
-      html: `
-        <section class="pl-slide pl-ad" aria-label="自由廣告圖實作">
-          <header class="pl-page-head">
-            <span class="pl-page-no">01</span>
-            <div><p class="pl-kicker">FIRST TRY / NO METHOD YET</p><h2>先照自己的方式，做一張<span class="pl-accent">圖</span></h2><p>先不要套用今天的方法，直接完成你心中的第一版。</p></div>
-          </header>
-          <main class="pl-ad-main">
-            <div class="pl-ad-canvas"><span>YOUR FIRST VERSION</span><strong>?</strong><p>把完成的廣告圖放在這裡</p></div>
-            <aside class="pl-ad-questions">
-              <span>一起判斷</span>
-              <h3>這張圖好看嗎？<br>為什麼？</h3>
-              <ol><li>第一眼看到什麼？</li><li>看得出是哪個品牌嗎？</li><li>哪個地方最想修改？</li></ol>
-            </aside>
-          </main>
-          <footer><strong>請保留第一版。</strong> 後面重新製作時，才能看見方法帶來的差別。</footer>
-        </section>`,
-    },
-    {
-      id: 'local_practice_medical_brief',
-      label: '常見行業廣告實作',
-      layout: 'LOCAL-PRACTICE-MEDICAL-BRIEF',
-      html: `
-        <section class="pl-slide pl-industry" aria-label="常見行業廣告實作題目">
-          <header class="pl-industry-head"><p class="pl-kicker">廣告圖實作</p><h2>選一個熟悉的行業，<span>做廣告圖</span></h2><p>四個行業任選一個，完成你的第一張廣告圖。</p></header>
-          <main class="pl-industry-grid" aria-label="四個行業選項">
-            <article><span>01</span><div><h3>家具業</h3><p>例如：沙發促銷</p></div></article>
-            <article><span>02</span><div><h3>零售業</h3><p>例如：生活用品特賣</p></div></article>
-            <article><span>03</span><div><h3>醫美業</h3><p>例如：醫美診所服務介紹</p></div></article>
-            <article><span>04</span><div><h3>眼鏡業</h3><p>例如：眼鏡新品上市</p></div></article>
-          </main>
-          <footer>店名、商品與優惠內容，可自行設定。</footer>
-        </section>`,
-    },
     {
       id: 'local_practice_method_opening',
       label: '用學到的方法製作圖片',
@@ -117,10 +58,9 @@
   function install() {
     const deck = document.getElementById('deck');
     const modelElement = document.getElementById('deck-view-model');
-    const earlyPracticeAnchor = deck?.querySelector(`[data-vm-slide-id="${EARLY_PRACTICE_ANCHOR_ID}"]`);
     const practiceAnchor = deck?.querySelector(`[data-vm-slide-id="${PRACTICE_ANCHOR_ID}"]`);
     const finalAnchor = deck?.querySelector(`[data-vm-slide-id="${FINAL_ANCHOR_ID}"]`);
-    if (!deck || !earlyPracticeAnchor || !practiceAnchor || !finalAnchor || !modelElement) return false;
+    if (!deck || !practiceAnchor || !finalAnchor || !modelElement) return false;
 
     const placeDefinitions = (anchor, items) => {
       let cursor = anchor;
@@ -138,9 +78,8 @@
       });
     };
 
-    placeDefinitions(earlyPracticeAnchor, definitions.slice(0, 3));
-    placeDefinitions(practiceAnchor, definitions.slice(3, 4));
-    placeDefinitions(finalAnchor, definitions.slice(4));
+    placeDefinitions(practiceAnchor, definitions.slice(0, 1));
+    placeDefinitions(finalAnchor, definitions.slice(1));
 
     [...deck.querySelectorAll(':scope > .slide')].forEach((slide, index) => {
       slide.dataset.vmIndex = String(index);
@@ -159,48 +98,36 @@
       props: {},
       media: {},
     }));
-    const earlyPracticeAnchorIndex = modelSlides.findIndex((slide) => slide.id === EARLY_PRACTICE_ANCHOR_ID);
-    modelSlides.splice(
-      earlyPracticeAnchorIndex >= 0 ? earlyPracticeAnchorIndex + 1 : modelSlides.length,
-      0,
-      ...modelDefinitions.slice(0, 3),
-    );
     const practiceAnchorIndex = modelSlides.findIndex((slide) => slide.id === PRACTICE_ANCHOR_ID);
     modelSlides.splice(
       practiceAnchorIndex >= 0 ? practiceAnchorIndex + 1 : modelSlides.length,
       0,
-      ...modelDefinitions.slice(3, 4),
+      ...modelDefinitions.slice(0, 1),
     );
     const finalAnchorIndex = modelSlides.findIndex((slide) => slide.id === FINAL_ANCHOR_ID);
     modelSlides.splice(
       finalAnchorIndex >= 0 ? finalAnchorIndex + 1 : modelSlides.length,
       0,
-      ...modelDefinitions.slice(4),
+      ...modelDefinitions.slice(1),
     );
     model.slides = modelSlides;
 
     const currentOrder = (model.state?.slideOrder || modelSlides.map((slide) => slide.id))
       .filter((slideId) => !insertedIds.has(slideId));
-    const orderEarlyPracticeAnchorIndex = currentOrder.indexOf(EARLY_PRACTICE_ANCHOR_ID);
-    currentOrder.splice(
-      orderEarlyPracticeAnchorIndex >= 0 ? orderEarlyPracticeAnchorIndex + 1 : currentOrder.length,
-      0,
-      ...definitions.slice(0, 3).map((definition) => definition.id),
-    );
     const orderPracticeAnchorIndex = currentOrder.indexOf(PRACTICE_ANCHOR_ID);
     currentOrder.splice(
       orderPracticeAnchorIndex >= 0 ? orderPracticeAnchorIndex + 1 : currentOrder.length,
       0,
-      ...definitions.slice(3, 4).map((definition) => definition.id),
+      ...definitions.slice(0, 1).map((definition) => definition.id),
     );
     const orderFinalAnchorIndex = currentOrder.indexOf(FINAL_ANCHOR_ID);
     currentOrder.splice(
       orderFinalAnchorIndex >= 0 ? orderFinalAnchorIndex + 1 : currentOrder.length,
       0,
-      definitions[4].id,
+      definitions[1].id,
     );
     model.state = { ...(model.state || {}), slideOrder: currentOrder };
-    model.exportId = 'practice-lab-20260907-v12';
+    model.exportId = 'practice-lab-20261013-remove-7-to-9';
     modelElement.textContent = JSON.stringify(model);
     return true;
   }

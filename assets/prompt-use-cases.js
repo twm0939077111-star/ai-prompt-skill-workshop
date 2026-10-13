@@ -1,4 +1,5 @@
 (() => {
+  const COMIC_PROMPT = "創作一張 1:1 正方形的日系 kawaii Q 版四格漫畫，使用清楚的 2×2 排列，共精確 4 格。\r\n\r\n【隨機創作】\r\n每次隨機創造一位全新的原創 Q 版動漫角色，人物的性別呈現、外貌、髮型、服裝、個性、身份與配件皆自由發揮；同時隨機創作一段全新的四格小故事，題材可以搞笑、可愛、療癒、日常、奇幻、荒謬或意外反轉，不要固定人物、場景、動作或劇情。\r\n\r\n【四格故事】\r\n四格必須前後連貫，具有「開場 → 發展 → 轉折 → 結局」的完整故事感。角色的動作、表情、場景與道具依劇情自然變化。\r\n\r\n每一格都加入簡短、自然且清楚的「繁體中文」漫畫文字，可以是角色對話、內心話、旁白或吐槽。文字必須與當格畫面和劇情直接相關，四格文字串起來能形成完整故事，最後一格最好帶有笑點、反轉或可愛收尾。\r\n\r\n【角色一致性】\r\n第一格產生角色後立即鎖定設計，後三格保持完全相同的臉型、髮型、髮色、服裝、配色與配件，只改變姿勢、表情與劇情狀態。\r\n\r\n【視覺風格】\r\n高品質日系 Q 版動漫插畫，大頭小身、可愛生動表情、乾淨深咖啡色線條、柔和賽璐珞上色、溫暖配色。背景依故事自由生成，可加入愛心、汗滴、速度線、驚嘆號等漫畫效果。\r\n\r\n【限制】\r\n必須只有 4 格、2×2 排列，同一位主角貫穿四格。每格文字保持簡短易讀，使用正確繁體中文。不要加入無關文字、Logo 或浮水印。\r\n\r\n核心效果：每次生成都是「隨機角色 × 隨機場景 × 隨機四格故事 × 繁體中文對話」，像真正有劇情、有台詞、有起承轉合的可愛四格漫畫。";
   const ANCHOR_ID = 'local_prompt_difference_compare';
   const definitions = [
     {
@@ -23,7 +24,7 @@
                 <span class="puc-overview-no">01</span>
                 <div><h3>從零生成圖片</h3><p>文字 → 全新圖片</p></div>
               </div>
-              <blockquote class="puc-use-prompt"><small>PROMPT</small>創作一張電影級編輯風格的人像攝影作品。</blockquote>
+              <blockquote class="puc-use-prompt"><small>PROMPT</small>創作一張 1:1 正方形的日系 Q 版四格漫畫。</blockquote>
             </article>
             <article>
               <div class="puc-use-copy">
@@ -44,61 +45,67 @@
     },
     {
       id: 'local_prompt_text_to_image',
-      label: '第一種｜用 Prompt 從零生成圖片',
+      label: '第一種｜用 Prompt 從零生成四格漫畫',
       layout: 'LOCAL-PROMPT-TEXT-TO-IMAGE',
       html: `
-        <section class="puc-slide puc-text-to-image" aria-label="第一種，用 Prompt 從零生成圖片">
+        <section class="puc-slide puc-text-to-image puc-text-to-image--comic" aria-label="第一種，用 Prompt 從零生成四格漫畫">
           <div class="puc-bg"></div>
           <header>
             <p class="puc-kicker">01 / TEXT TO IMAGE</p>
             <h2>第一種｜用 Prompt <em>從零生成圖片</em></h2>
           </header>
           <main class="puc-visual-prompt-layout">
-            <div class="puc-generated-stage" aria-label="三張圖片生成成果">
+            <div class="puc-generated-stage" aria-label="兩張四格漫畫成果，點圖可放大">
               <figure class="puc-generated-card puc-generated-card--one">
-                <img src="assets/user-media/prompt-use-cases/text-to-image-01.png" alt="電影感人像生成結果一">
-                <figcaption>01</figcaption>
+                <button type="button" data-puc-image aria-label="放大四格漫畫成果一：明天再努力">
+                  <img src="assets/kawaii-comic/comic-01.png" alt="四格漫畫成果一：立志努力、滑手機、驚覺時間流逝，最後決定明天再努力">
+                </button>
+                <figcaption>01｜明天再努力</figcaption>
               </figure>
               <figure class="puc-generated-card puc-generated-card--two">
-                <img src="assets/user-media/prompt-use-cases/text-to-image-02.png" alt="電影感人像生成結果二">
-                <figcaption>02</figcaption>
-              </figure>
-              <figure class="puc-generated-card puc-generated-card--three">
-                <img src="assets/user-media/prompt-use-cases/text-to-image-03.png" alt="電影感人像生成結果三">
-                <figcaption>03</figcaption>
+                <button type="button" data-puc-image aria-label="放大四格漫畫成果二：先獎勵自己">
+                  <img src="assets/kawaii-comic/comic-02.png" alt="四格漫畫成果二：下定決心減重、運動、體重不變，最後決定先獎勵自己">
+                </button>
+                <figcaption>02｜先獎勵自己</figcaption>
               </figure>
             </div>
             <aside class="puc-prompt-panel">
               <div class="puc-prompt-label"><span></span>Prompt 重點摘錄</div>
-              <blockquote class="puc-prompt-main">創作一張<br><em>電影級編輯風格</em>的<br>人像攝影作品</blockquote>
+              <blockquote class="puc-prompt-main">創作一張<br><em>日系 kawaii Q 版</em><br>四格漫畫</blockquote>
               <div class="puc-prompt-breakdown" aria-label="Prompt 關鍵字拆解">
-                <span>電影級</span><span>編輯風格</span><span>人像攝影</span>
+                <span>1:1 正方形</span><span>2×2 四格</span><span>繁體中文</span>
               </div>
-              <p>這是課程示例；完整指令見下一頁，原生成模型與設定未完整記錄。</p>
+              <p>每次隨機創作新角色與故事；同一張四格裡，角色設計保持一致。</p>
+              <p class="puc-comic-hint">點圖放大看台詞 · 完整提示詞見下一頁</p>
             </aside>
           </main>
         </section>`,
     },
     {
       id: 'local_prompt_text_to_image_full_prompt',
-      label: '電影級人像完整提示詞',
+      label: '日系 Q 版四格漫畫完整提示詞',
       layout: 'LOCAL-PROMPT-TEXT-TO-IMAGE-FULL',
       html: `
-        <section class="puc-slide puc-full-prompt puc-full-prompt--portrait" aria-label="電影級人像完整提示詞">
+        <section class="puc-slide puc-full-prompt puc-full-prompt--comic" aria-label="日系 Q 版四格漫畫完整提示詞">
           <div class="puc-bg"></div>
           <header>
             <p class="puc-kicker">01 / TEXT TO IMAGE / FULL PROMPT</p>
-            <h2>電影級人像攝影 <em>完整提示詞</em></h2>
-            <p>先替換方括號內的內容，再貼入工具；這些不是自動參數欄位。</p>
+            <h2>日系 Q 版四格漫畫 <em>完整提示詞</em></h2>
+            <p>直接複製完整原文，讓 AI 隨機創作角色、場景與四格故事。</p>
           </header>
           <aside class="puc-full-prompt-index" aria-hidden="true"><strong>01</strong><span>FULL PROMPT</span></aside>
-          <div class="puc-copy-actions"><span class="puc-copy-status" role="status" aria-live="polite"></span><button type="button" data-puc-copy>複製提示詞</button></div>
+          <div class="puc-copy-actions"><span class="puc-copy-status" role="status" aria-live="polite"></span><a href="assets/kawaii-comic/full-prompt.txt" download="四格漫畫完整提示詞.txt">下載 TXT</a><button type="button" data-puc-copy>複製提示詞</button></div>
           <article class="puc-full-prompt-copy">
-            <p>創作一張電影級編輯風格的人像攝影作品，主角為 <code>[一位年輕女性]</code>，她正靜止站在黃金時刻溫暖光影下的繁忙城市街道中央。她留著 <code>[柔和棕色]</code> 的頭髮，隨意紮起，細碎的髮絲捕捉著邊緣光，擁有淺榛綠色的雙眸、自然妝容、小珍珠耳釘，神情冷靜且帶著一絲惆悵，直視鏡頭。她穿著 <code>[黑色]</code> 外套或西裝外套，以垂直 4:5 的構圖呈現半身像。</p>
-            <p>在她周圍精確配置 9 位呈現動態模糊的行人：1 位左前方側影、1 位左下方身著柔和紅色的局部人物、1 位左上方局部臉部、1 位上方中央的金髮人物、1 位上方中央的深髮色人物、1 位右上方男性、1 位右側中間盤髮女性、1 位右側遠處的深色身影，以及 1 位右前方深色肩膀剪影。對人群使用強烈的動態模糊效果，同時保持女性臉部的清晰對焦，營造出時間在她身邊慢下來的感覺。</p>
-            <p>光線應為黃金時刻的背光與氛圍光，具備柔和的散景、髮絲邊緣的溫暖高光、淺景深、真實的皮膚紋理、自然的臉部比例，以及高端時尚雜誌的編輯風格。採用 <code>[85mm 人像鏡頭]</code> 的視覺效果，結合電影級調色、細膩的底片顆粒感，且不包含任何文字或浮水印。</p>
+            <p>創作一張 1:1 正方形的日系 kawaii Q 版四格漫畫，使用清楚的 2×2 排列，共精確 4 格。</p>
+            <p>【隨機創作】<br>每次隨機創造一位全新的原創 Q 版動漫角色，人物的性別呈現、外貌、髮型、服裝、個性、身份與配件皆自由發揮；同時隨機創作一段全新的四格小故事，題材可以搞笑、可愛、療癒、日常、奇幻、荒謬或意外反轉，不要固定人物、場景、動作或劇情。</p>
+            <p>【四格故事】<br>四格必須前後連貫，具有「開場 → 發展 → 轉折 → 結局」的完整故事感。角色的動作、表情、場景與道具依劇情自然變化。</p>
+            <p>每一格都加入簡短、自然且清楚的「繁體中文」漫畫文字，可以是角色對話、內心話、旁白或吐槽。文字必須與當格畫面和劇情直接相關，四格文字串起來能形成完整故事，最後一格最好帶有笑點、反轉或可愛收尾。</p>
+            <p>【角色一致性】<br>第一格產生角色後立即鎖定設計，後三格保持完全相同的臉型、髮型、髮色、服裝、配色與配件，只改變姿勢、表情與劇情狀態。</p>
+            <p>【視覺風格】<br>高品質日系 Q 版動漫插畫，大頭小身、可愛生動表情、乾淨深咖啡色線條、柔和賽璐珞上色、溫暖配色。背景依故事自由生成，可加入愛心、汗滴、速度線、驚嘆號等漫畫效果。</p>
+            <p>【限制】<br>必須只有 4 格、2×2 排列，同一位主角貫穿四格。每格文字保持簡短易讀，使用正確繁體中文。不要加入無關文字、Logo 或浮水印。</p>
+            <p>核心效果：每次生成都是「隨機角色 × 隨機場景 × 隨機四格故事 × 繁體中文對話」，像真正有劇情、有台詞、有起承轉合的可愛四格漫畫。</p>
           </article>
-          <footer>課程修訂版 · 人數與位置是設計要求，需檢查結果。<a href="https://developers.openai.com/api/docs/guides/image-generation#limitations" target="_blank" rel="noopener noreferrer">官方能力限制</a></footer>
+          <footer>來源：新提供的四格漫畫提示詞原文 · 生成後核對格數、角色一致性與繁體中文。</footer>
         </section>`,
     },
     {
@@ -257,13 +264,34 @@
     return true;
   }
 
+  let comicDialog;
+  document.addEventListener('click', (event) => {
+    const button = event.target.closest('#deck [data-puc-image]');
+    if (!button) return;
+    event.preventDefault(); event.stopPropagation();
+    if (!comicDialog) {
+      comicDialog = document.createElement('dialog');
+      comicDialog.className = 'puc-comic-dialog';
+      comicDialog.setAttribute('aria-label', '四格漫畫放大預覽');
+      comicDialog.innerHTML = '<header><strong>四格漫畫成果</strong><button type="button" autofocus aria-label="關閉放大預覽">關閉 ×</button></header><img alt="">';
+      comicDialog.querySelector('button').addEventListener('click', () => comicDialog.close());
+      comicDialog.addEventListener('click', e => { if (e.target === comicDialog) comicDialog.close(); });
+      document.body.append(comicDialog);
+    }
+    const original = button.querySelector('img');
+    const image = comicDialog.querySelector('img');
+    image.src = original.currentSrc || original.src;
+    image.alt = original.alt;
+    comicDialog.showModal();
+  });
+
   document.addEventListener('click', async (event) => {
     const button=event.target.closest('#deck [data-puc-copy]');
     if(!button)return;
     event.preventDefault();event.stopPropagation();
     const section=button.closest('.puc-full-prompt');
     const content=section.querySelector('.puc-full-prompt-copy');
-    const text=[...content.querySelectorAll('p')].map(p=>p.textContent.trim()).join('\n\n');
+    const text=section.classList.contains('puc-full-prompt--comic') ? COMIC_PROMPT : [...content.querySelectorAll('p')].map(p=>p.textContent.trim()).join('\n\n');
     const status=section.querySelector('.puc-copy-status');
     let copied=false;
     try{await navigator.clipboard.writeText(text);copied=true;}catch{

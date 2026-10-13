@@ -631,3 +631,25 @@
 .puc-full-prompt--illustration .puc-copy-actions button{background:#268f8b}
 .puc-copy-actions button:focus-visible{outline:.2cqw solid #40345e;outline-offset:.2cqw}
 .puc-copy-status{font-size:.95cqw;color:#5f6470}
+
+/* Two complete square comic results; keep panel text uncropped. */
+.puc-text-to-image--comic .puc-visual-prompt-layout {grid-template-columns:minmax(0,2.3fr) minmax(22cqw,1fr);gap:1.6cqw;}
+.puc-text-to-image--comic .puc-generated-stage {grid-template-columns:repeat(2,minmax(0,1fr));padding:1cqw;gap:1cqw;}
+.puc-text-to-image--comic .puc-generated-card {background:#fff8ee;border-width:.3cqw;}
+.puc-text-to-image--comic [data-puc-image] {display:block;width:100%;padding:0;border:0;background:transparent;cursor:zoom-in;}
+.puc-text-to-image--comic [data-puc-image]:focus-visible {outline:.25cqw solid #7655cb;outline-offset:-.3cqw;}
+.puc-text-to-image--comic .puc-generated-card img {aspect-ratio:1;object-fit:contain;}
+.puc-text-to-image--comic .puc-generated-card figcaption {width:auto;height:auto;margin:0;padding:.8cqw .5cqw;border-radius:0;color:#674d70;background:transparent;font-size:1.15cqw;}
+.puc-text-to-image--comic .puc-prompt-panel {padding:2cqw 1.65cqw;}
+.puc-text-to-image--comic .puc-prompt-main {font-size:2.05cqw;margin:2.5cqw 0 2cqw;}
+.puc-text-to-image--comic .puc-prompt-panel p {font-size:1.15cqw;line-height:1.6;}
+.puc-text-to-image--comic .puc-prompt-panel .puc-comic-hint {font-size:.9cqw;color:#d9c8ff;}
+.puc-full-prompt--comic .puc-full-prompt-copy p {font-size:1.35cqw;line-height:1.46;}
+.puc-full-prompt--comic .puc-copy-actions a {border:.1cqw solid #b9a3e9;border-radius:.65cqw;color:#6843b4;background:#fff;padding:.55cqw 1.05cqw;font:800 1.15cqw/1.4 "Microsoft JhengHei",sans-serif;text-decoration:none;}
+.puc-full-prompt--comic .puc-copy-actions a:focus-visible {outline:.2cqw solid #40345e;outline-offset:.2cqw;}
+.puc-comic-dialog {box-sizing:border-box;width:min(92vw,950px);max-width:92vw;max-height:94vh;margin:auto;padding:14px;border:0;border-radius:16px;background:#fff8ee;box-shadow:0 20px 80px #0006;}
+.puc-comic-dialog::backdrop {background:#171020c9;}
+.puc-comic-dialog header {display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:10px;color:#4c3559;font:700 18px/1.4 "Microsoft JhengHei",sans-serif;}
+.puc-comic-dialog button {border:0;border-radius:8px;padding:8px 16px;background:#7655cb;color:white;font:700 16px/1.4 "Microsoft JhengHei",sans-serif;cursor:pointer;}
+.puc-comic-dialog button:focus-visible {outline:3px solid #4c3559;outline-offset:2px;}
+.puc-comic-dialog>img {display:block;width:100%;max-height:calc(94vh - 88px);object-fit:contain;}
