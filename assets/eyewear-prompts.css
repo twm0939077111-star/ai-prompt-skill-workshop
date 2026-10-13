@@ -52,14 +52,6 @@
   background-size: auto, auto, 3.5cqw 3.5cqw, 3.5cqw 3.5cqw, auto;
 }
 
-/* Page 27: concise food case subheads, scoped to this lesson. */
-.p08-eye-page .p67-card-lead {
- margin:1cqw 0 .8cqw;
- padding:.18cqw 0 .18cqw .75cqw;
- border-left:.22cqw solid var(--accent);
- color:var(--accent);
- font-size:1.28cqw;
- font-weight:800;
- letter-spacing:.035em;
- line-height:1.45;
-}
+/* Page 27: four original eyewear cases in the shared 2 x 2 layout. */
+[data-vm-slide-id="local_eyewear_prompts"] .p67-card-lead {color:var(--accent)}
+.eye-download {padding:12px 18px;border-radius:11px;background:var(--accent);color:white;font:900 14px "Microsoft JhengHei",sans-serif;text-decoration:none}
