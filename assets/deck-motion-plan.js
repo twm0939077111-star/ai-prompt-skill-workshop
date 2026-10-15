@@ -473,13 +473,13 @@ window.__classroomMotionPlan = [
     "motif": "none"
   },
   {
-    "id": "local_notebook_practice",
+    "id": "local_notebook_infographic",
     "page": 40,
     "size": "large",
     "blocks": "",
     "mode": "sequence",
     "ambient": false,
-    "composition": "Notebook操作步驟",
+    "composition": "Notebook資訊圖表成果",
     "titleEffect": "fade",
     "blockEffect": "fade",
     "motif": "none"
