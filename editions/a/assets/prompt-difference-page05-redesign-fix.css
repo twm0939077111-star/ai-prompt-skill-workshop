@@ -1,0 +1,25 @@
+/* QA refinement for number metrics and the 08 mini-process. */
+
+[data-vm-slide-id="local_prompt_difference_factors"] .pfl-number {
+  display: inline-block;
+  line-height: 1.14;
+}
+
+[data-vm-slide-id="local_prompt_difference_factors"] .pfl-loop {
+  gap: 0.78cqw;
+}
+
+[data-vm-slide-id="local_prompt_difference_factors"] .pfl-loop span {
+  min-width: 4.15cqw;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+[data-vm-slide-id="local_prompt_difference_factors"] .pfl-connector i {
+  width: 2.75cqw;
+  height: 0.2cqw;
+}
+
+[data-vm-slide-id="local_prompt_difference_factors"] .pfl-connector span {
+  color: #62586f;
+}

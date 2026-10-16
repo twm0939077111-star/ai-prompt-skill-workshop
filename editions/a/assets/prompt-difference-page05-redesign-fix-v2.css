@@ -1,0 +1,11 @@
+[data-vm-slide-id="local_prompt_difference_factors"] .pfl-loop span:not(:last-child) {
+  min-width: 4.8cqw;
+  padding-right: 1.35cqw;
+  text-align: left;
+}
+
+[data-vm-slide-id="local_prompt_difference_factors"] .pfl-loop span:not(:last-child)::after {
+  left: auto;
+  right: 0.22cqw;
+  color: rgba(255, 255, 255, 0.9);
+}

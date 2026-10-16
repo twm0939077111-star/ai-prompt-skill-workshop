@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>NEON RANGE｜機器人射擊靶場</title><link rel="icon" href="data:,"><link rel="stylesheet" href="style.css"></head>
+<body>
+<canvas id="game" aria-label="第一人稱機器人射擊靶場"></canvas>
+<div class="vignette"></div>
+<header><div class="brand"><span class="logo">N<span>R</span></span><div>NEON RANGE<small>機器人射擊靶場 / TRAINING LAB</small></div></div><div class="top-actions"><button id="sound" aria-label="切換音效">音效 開</button><button id="pause">暫停 ESC</button></div></header>
+<div id="hud"><div class="stat"><small>SCORE / 分數</small><strong id="score">0000</strong></div><div class="timer"><small>TIME LEFT</small><strong id="time">60<span>秒</span></strong><div class="track"><i id="timebar"></i></div></div><div class="stat right"><small>ACCURACY / 命中率</small><strong id="accuracy">—</strong></div></div>
+<div id="crosshair"><i></i><b></b></div><div id="hitmarker">×</div><div id="feedback" aria-live="polite"></div>
+<div id="bottom"><div class="hint"><b>W A S D</b> 移動 <em>／</em> 滑鼠 瞄準 <em>／</em> 左鍵 射擊 <em>／</em> R 換彈</div><div class="ammo"><small>PULSE BLASTER</small><strong><span id="ammo">12</span><span> / 12</span></strong><div id="reload-label">能量彈匣</div></div></div>
+<div id="touch-controls"><div id="look-zone" aria-label="滑動瞄準區"><span>滑動瞄準</span></div><div id="joystick" role="group" aria-label="移動搖桿"><i id="stick"></i><span>移動</span></div><button id="touch-reload">換彈</button><button id="touch-fire">射擊</button></div>
+<section id="overlay"><div class="intro"><div class="eyebrow">SKILL PLAYGROUND <span>01 / FPS</span></div><h1 id="title">鎖定目標。<br><span>挑戰你的準度。</span></h1><p id="description">走進霓虹訓練場，用 60 秒擊中機器人靶。<br>瞄準頭部，拿下雙倍分數。</p><div id="results" hidden></div><div id="settings"><div class="choices"><button class="selected" data-mode="basic">經典靶場<small>固定目標 · 輕鬆上手</small></button><button data-mode="moving">進階挑戰<small>移動目標 · 考驗反應</small></button></div><div class="sliders"><label>滑鼠靈敏度 <input id="sensitivity" type="range" min="0.4" max="2" step="0.1" value="1"></label><label>視野 FOV <input id="fov" type="range" min="60" max="100" value="75"></label></div></div><button id="start" class="primary" disabled>正在準備靶場…</button><p id="notice" class="notice">電腦鍵盤＋滑鼠操作 · 點擊開始鎖定游標 · ESC 暫停</p><div class="tags"><span>01 移動與瞄準</span><span>02 命中＋10</span><span>03 頭部＋20</span></div></div><div class="side-title">PRECISION<br>IS A<br><span>SKILL.</span><small>練習 / 專注 / 再試一次</small></div></section>
+<script type="module" src="game.js"></script><script>setTimeout(()=>{if(!window.rangeReady){document.getElementById('notice').textContent='載入較久，請確認網路連線，或使用 Chrome、Edge、Safari 重新開啟。';}},8000)</script>
+</body></html>
