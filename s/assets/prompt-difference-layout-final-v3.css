@@ -1,0 +1,61 @@
+/* Page 04: make the complete A/B images the dominant evidence. */
+
+[data-vm-slide-id="local_prompt_difference_compare"] .pd-focus-compare .pd-compare-card {
+  grid-template-columns: minmax(0, 22.2cqw) minmax(0, 1fr);
+  min-height: 28.8cqw;
+}
+
+[data-vm-slide-id="local_prompt_difference_compare"] .pd-focus-compare .pd-compare-card figure {
+  padding: 0.36cqw;
+}
+
+[data-vm-slide-id="local_prompt_difference_compare"] .pd-focus-compare .pd-compare-card img {
+  width: 100%;
+  height: auto;
+  max-height: 27.9cqw;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+[data-vm-slide-id="local_prompt_difference_compare"] .pd-focus-compare .pd-card-copy {
+  padding: 1.08cqw 0.92cqw 0.9cqw;
+}
+
+[data-vm-slide-id="local_prompt_difference_compare"] .pd-focus-compare .pd-card-copy > span {
+  padding: 0.3cqw 0.46cqw;
+  font-size: 0.66cqw;
+}
+
+[data-vm-slide-id="local_prompt_difference_compare"] .pd-focus-compare .pd-card-copy h3 {
+  margin: 0.54cqw 0 0.36cqw;
+  font-size: 1.28cqw;
+  line-height: 1.18;
+}
+
+[data-vm-slide-id="local_prompt_difference_compare"] .pd-focus-compare .pd-card-copy p {
+  font-size: 0.83cqw;
+  line-height: 1.42;
+}
+
+[data-vm-slide-id="local_prompt_difference_compare"] .pd-focus-compare .pd-card-copy ul {
+  margin-top: 0.58cqw;
+}
+
+[data-vm-slide-id="local_prompt_difference_compare"] .pd-focus-compare .pd-card-copy li {
+  margin: 0.29cqw 0;
+  font-size: 0.82cqw;
+  line-height: 1.33;
+}
+
+[data-vm-slide-id="local_prompt_difference_compare"] .pd-focus-compare .pd-image-tag {
+  left: 0.78cqw;
+  top: 0.78cqw;
+  padding: 0.38cqw 0.58cqw;
+  font-size: 0.68cqw;
+}
+
+@media (max-width: 900px) {
+  [data-vm-slide-id="local_prompt_difference_compare"] .pd-focus-compare .pd-compare-card {
+    grid-template-columns: minmax(0, 21.5cqw) minmax(0, 1fr);
+  }
+}

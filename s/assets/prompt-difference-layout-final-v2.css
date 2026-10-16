@@ -1,0 +1,89 @@
+/* Correct slide targeting and preserve the complete square evidence images. */
+
+[data-vm-slide-id="local_prompt_difference_compare"] .pd-focus-compare .pd-compare-card {
+  grid-template-columns: minmax(0, 18.4cqw) minmax(0, 1fr);
+  min-height: 28.5cqw;
+}
+
+[data-vm-slide-id="local_prompt_difference_compare"] .pd-focus-compare .pd-compare-card figure {
+  min-width: 0;
+  height: 100%;
+  padding: 0.55cqw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, rgba(252, 249, 247, 0.98), rgba(245, 238, 241, 0.92));
+}
+
+[data-vm-slide-id="local_prompt_difference_compare"] .pd-focus-compare .pd-compare-card img {
+  width: 100%;
+  height: auto;
+  max-height: 27.3cqw;
+  aspect-ratio: 1 / 1;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 0.72cqw;
+}
+
+[data-vm-slide-id="local_prompt_difference_compare"] .pd-focus-compare .pd-card-copy {
+  padding: 1.25cqw 1.25cqw 1.05cqw;
+}
+
+[data-vm-slide-id="local_prompt_difference_compare"] .pd-focus-compare .pd-card-copy h3 {
+  margin: 0.62cqw 0 0.4cqw;
+  font-size: 1.48cqw;
+  line-height: 1.2;
+}
+
+[data-vm-slide-id="local_prompt_difference_compare"] .pd-focus-compare .pd-card-copy p {
+  font-size: 0.94cqw;
+  line-height: 1.48;
+}
+
+[data-vm-slide-id="local_prompt_difference_compare"] .pd-focus-compare .pd-card-copy li {
+  margin: 0.34cqw 0;
+  font-size: 0.89cqw;
+  line-height: 1.38;
+}
+
+[data-vm-slide-id="local_prompt_difference_compare"] .pd-focus-compare .pd-compare-card:first-child {
+  filter: saturate(0.76) contrast(0.94);
+  opacity: 0.9;
+}
+
+[data-vm-slide-id="local_prompt_difference_compare"] .pd-focus-compare .pd-compare-card:nth-child(2) {
+  border-color: rgba(216, 75, 136, 0.5);
+  box-shadow: 0 1.15cqw 2.6cqw rgba(194, 62, 120, 0.2);
+}
+
+[data-vm-slide-id="local_prompt_difference_factors"] .pd-focus-factors .pd-factor-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.45cqw;
+}
+
+[data-vm-slide-id="local_prompt_difference_factors"] .pd-focus-factors .pd-factor {
+  min-height: 23.2cqw;
+  padding: 1.5cqw 1.45cqw 3.25cqw;
+}
+
+[data-vm-slide-id="local_prompt_difference_factors"] .pd-focus-factors .pd-factor-verdict {
+  position: absolute;
+  left: 1.45cqw;
+  bottom: 1.25cqw;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.42cqw 0.72cqw;
+  border-radius: 99px;
+  background: color-mix(in srgb, var(--pd-factor) 12%, white);
+  color: var(--pd-factor);
+  font-size: 0.82cqw;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 900px) {
+  [data-vm-slide-id="local_prompt_difference_compare"] .pd-focus-compare .pd-compare-card {
+    grid-template-columns: minmax(0, 17.6cqw) minmax(0, 1fr);
+  }
+}
