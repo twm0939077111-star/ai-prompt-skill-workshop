@@ -1,0 +1,91 @@
+/* Both editions introduce the instructor. Photos remain authentic source photos. */
+.edition-switch{display:flex;border:1px solid #405575;border-radius:6px;padding:3px;gap:2px;white-space:nowrap}
+.edition-switch a{display:grid;place-items:center;min-width:32px;min-height:32px;font-size:10px;padding:4px 8px;color:#8da3c3;border-radius:3px;line-height:1.6}
+.edition-switch a[aria-current=page]{color:#101c31;background:#d8e8ff}
+.desktop-nav{gap:25px;margin-right:22px}.nav-actions{gap:14px}
+.brand-en{font-size:7px;letter-spacing:.1em}
+.hero h1{font-size:clamp(40px,4.6vw,65px)}
+.hero h1>span{font-size:.88em;letter-spacing:-.065em}
+.hero-role{font-size:13px;letter-spacing:.06em}
+.hero-description{max-width:420px;line-height:1.95}
+.intelligence-art{z-index:1}
+.orb-art{opacity:calc(1 - var(--hero-copy-opacity,1) * .6)}
+.instructor-portrait{position:absolute;left:50%;top:49%;width:64%;height:87%;max-height:460px;margin:0;transform:translate(-50%,-50%) rotate(2deg);border:1px solid #a9cfff55;border-radius:18px;overflow:hidden;background:#192424;box-shadow:0 30px 80px #0008;z-index:2}
+.portrait-crop{position:relative;width:100%;height:100%;overflow:hidden}
+.portrait-crop img{position:absolute;display:block;height:380%;width:auto;max-width:none;left:50%;top:-232%;transform:translateX(-50%)}
+.instructor-portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 50%,#06101cbb);pointer-events:none}
+.instructor-portrait figcaption{position:absolute;z-index:1;bottom:23px;left:23px;right:23px;display:flex;align-items:center;justify-content:space-between;color:#fff;font-weight:600;font-size:22px;letter-spacing:.06em}
+.instructor-portrait figcaption small{display:block;font-size:10px;letter-spacing:.1em;color:#d3e7ff;font-weight:400;margin-top:4px}
+.portrait-sign{font:500 9px/1.6 Inter,sans-serif;letter-spacing:.14em;text-align:right;color:#c1d6f5}
+.art-label{z-index:3}.label-design{left:-2%;top:22%}.label-ai{right:-1%;top:39%}.label-output{right:-2%;bottom:13%}
+.scroll-ready[data-motion=on] .instructor-portrait{opacity:var(--hero-copy-opacity,1)}
+.hero-message h2{font-size:clamp(46px,6vw,85px)}
+.hero-message>p:not(.eyebrow){font-size:14px}
+.hero-meta>span:first-child{font-size:10px}
+.ai-heading h2{font-size:clamp(36px,4.6vw,64px)}
+.capability-heading h2{letter-spacing:-.06em}
+.scroll-ready[data-motion=on] .capability h3{font-size:clamp(24px,2.5vw,35px);line-height:1.45}
+.scroll-ready[data-motion=on] .capability p{font-size:15px}
+.conviction-text{font-size:clamp(40px,5.2vw,74px)}
+.about-layout{grid-template-columns:.9fr 1.1fr;gap:90px;align-items:center}
+.about-layout>div:first-child{display:grid;grid-template-columns:1fr}
+.about-portrait{margin:0 0 35px;max-width:360px;width:100%;position:relative}
+.about-portrait>div{position:relative;aspect-ratio:1.05;overflow:hidden;border-radius:12px;background:#13203a}
+.about-portrait img{position:absolute;width:300%;height:300%;max-width:none;left:-200%;top:-108%;object-fit:cover;object-position:center}
+.about-portrait>div::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#07101c99,transparent 40%);pointer-events:none}
+.about-portrait figcaption{font-size:10px;letter-spacing:.1em;color:#8b9fbc;margin-top:13px}
+.about-layout h2{font-size:clamp(30px,3vw,40px);margin-top:20px}
+.about-copy{padding-top:0}.about-copy .lead{font-size:24px;color:#d5e2f5;line-height:1.8}.about-copy p{font-size:16px;line-height:2}
+.about-layout .name-lockup{display:none}
+.experience-layout{grid-template-columns:.88fr 1.12fr;gap:70px}
+.experience-section h2{font-size:clamp(34px,3.8vw,52px)}
+.experience-list summary{font-size:19px}
+@media(max-width:1100px){.desktop-nav{gap:19px;margin-right:10px}.motion-label{display:none}.hero h1{font-size:47px}.hero-description{font-size:13px}.hero-role{font-size:11px}.hero-message h2{font-size:60px}.instructor-portrait{width:69%;height:85%}.about-layout{gap:60px}.about-copy .lead{font-size:22px}.about-copy p{font-size:14px}}
+@media(max-width:800px){
+  .nav-shell{gap:12px}.nav-actions{gap:7px}.brand{font-size:14px;gap:9px}.brand-en{font-size:6px}.brand-mark{width:28px;height:28px}.edition-switch{padding:2px}.edition-switch a{padding:3px 6px;font-size:9px}
+  .hero h1{font-size:40px}.hero h1>span{font-size:.85em}.hero-role{font-size:11px}.hero-description{font-size:13px;line-height:1.85;max-width:450px}
+  .instructor-portrait{width:min(230px,70%);height:94%;max-height:340px;border-radius:12px;top:51%}
+  .instructor-portrait figcaption{bottom:17px;left:16px;right:16px;font-size:18px}.instructor-portrait figcaption small{font-size:9px}.portrait-sign{font-size:7px}
+  .scroll-ready[data-motion=on] .hero-layout{padding-bottom:55px;gap:12px;padding-top:32px}
+  .hero-message h2{font-size:34px}.hero-message>p:not(.eyebrow){font-size:11px;max-width:270px}
+  .scroll-ready[data-motion=on] .capability h3{font-size:24px}.scroll-ready[data-motion=on] .capability p{font-size:13px}
+  .ai-heading h2{font-size:36px}.about-layout{grid-template-columns:1fr;gap:30px}.about-portrait{max-width:100%;width:min(400px,100%)}.about-layout h2{font-size:34px}.about-copy .lead{font-size:20px}.about-copy p{font-size:14px}
+  .conviction-text{font-size:33px}.experience-layout{grid-template-columns:1fr;gap:35px}.experience-section h2{font-size:34px}.hero-meta{display:none}
+}
+@media(max-width:420px){.hero h1{font-size:37px}.hero-role{font-size:10px}.hero-description{font-size:12px}.hero-message h2{font-size:30px}.ai-heading h2{font-size:32px}.scroll-ready[data-motion=on] .capability-heading h2{font-size:26px}.scroll-ready[data-motion=on] .capability h3{font-size:22px}.scroll-ready[data-motion=on] .capability p{font-size:12px}.conviction-text{font-size:30px}.experience-list summary{font-size:17px}}
+
+/* Tech edition: the animated sphere is the hero visual; introduction uses typography. */
+body:not(.creative-edition) .orb-art{opacity:1}
+body:not(.creative-edition) .about-layout{align-items:start}
+
+/* Technology edition: a dedicated, editorial portrait chapter after the hero. */
+.tech-profile-section{position:relative;isolation:isolate;padding-block:104px 90px;background:#070b13;overflow:clip}
+.tech-profile-section::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 10% 24%,#19375945,transparent 48%),radial-gradient(ellipse at 85% 65%,#25235022,transparent 52%);z-index:-1}
+.tech-profile-layout{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(42px,6vw,90px);align-items:center}
+.tech-portrait{margin:0;position:relative;min-width:0}
+.tech-portrait::before{content:"";position:absolute;inset:8% -6% 10%;background:radial-gradient(ellipse,#609ecb32,transparent 68%);filter:blur(28px);z-index:-1}
+.tech-portrait-frame{position:relative;aspect-ratio:4/5;max-height:660px;background:#0f1822;border:1px solid #92badb38;border-radius:4px;box-shadow:0 28px 70px #0005;isolation:isolate}
+.tech-portrait-photo{position:absolute;inset:0;overflow:hidden;border-radius:inherit;background:#111c25}
+.tech-portrait-photo img{position:absolute;display:block;height:400%;width:auto;max-width:none;left:50%;top:-250%;transform:translateX(-50%);filter:grayscale(.8) contrast(1.03) brightness(.9)}
+.tech-portrait-photo::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,#07121c88 0%,transparent 25%,transparent 54%,#07111dde 100%),linear-gradient(100deg,#3f7bb92e,transparent 60%)}
+.portrait-edge{position:absolute;width:50px;height:50px;pointer-events:none;z-index:2;border-color:#bce4fa9c;border-style:solid}
+.portrait-edge.top{left:-1px;top:-1px;border-width:1px 0 0 1px}.portrait-edge.bottom{right:-1px;bottom:-1px;border-width:0 1px 1px 0}
+.portrait-kicker{position:absolute;left:26px;right:26px;top:24px;display:flex;justify-content:space-between;gap:12px;font:500 8px/1.5 Inter,sans-serif;letter-spacing:.17em;color:#d1e7f8}
+.tech-portrait-caption{position:absolute;bottom:30px;left:32px;right:32px;color:#fff;display:flex;flex-direction:column;align-items:flex-start}
+.portrait-caption-line{height:1px;width:38px;background:#bde4ff;box-shadow:0 0 18px #7bc8ff99;margin-bottom:18px}
+.tech-portrait-caption>span:not(.portrait-caption-line){font-size:clamp(24px,2.7vw,36px);font-weight:500;letter-spacing:.04em;line-height:1.45}
+.tech-portrait-caption small{font:500 8px/1.5 Inter,sans-serif;letter-spacing:.18em;color:#acc5dd;margin-top:14px}
+.portrait-footnote{display:flex;justify-content:space-between;align-items:center;color:#7e94ad;margin-top:18px;gap:16px;font-size:11px;letter-spacing:.12em}.portrait-footnote>span:last-child{font:500 8px Inter,sans-serif;letter-spacing:.13em}
+.tech-profile-copy .eyebrow{font-size:10px;display:flex;align-items:center;gap:10px}
+.tech-profile-copy h2{font-size:clamp(32px,3.5vw,48px);line-height:1.4;letter-spacing:-.05em;margin-top:26px}
+.tech-profile-copy h2>span{color:#9fbbdf;background:linear-gradient(110deg,#d9eaff,#94a9ef);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.tech-profile-name{margin-top:26px;padding-bottom:24px;border-bottom:1px solid #7ea4cc29;display:flex;flex-direction:column;gap:5px}.tech-profile-name strong{font-size:22px;letter-spacing:.03em;font-weight:500}.tech-profile-name>span{font-size:11px;color:#819bbd;letter-spacing:.04em}
+.tech-profile-copy .about-copy .lead{font-size:17px;line-height:1.9;font-weight:400;margin-top:23px;margin-bottom:0;color:#c1d0e4}
+.tech-profile-copy .about-copy p{font-size:13px;line-height:1.95;margin-top:14px;color:#8b9fb9}
+.tech-profile-copy .skills{gap:7px;margin-top:23px}.tech-profile-copy .skills span{font-size:9px;padding:4px 9px;border-color:#52749c44;background:#7ea7dd06}
+.profile-course-link{display:flex;justify-content:space-between;align-items:center;max-width:290px;margin-top:26px;padding-bottom:12px;border-bottom:1px solid #6d8eb455;color:#d7e7fc;font-size:12px;letter-spacing:.04em;transition:color .2s,border-color .2s}.profile-course-link span{font-size:18px}.profile-course-link:hover{color:#fff;border-color:#c1e0ff}
+.tech-profile-section .conviction{margin-top:100px;margin-bottom:0;padding-top:70px;padding-bottom:0;border-top:1px solid #88a6d12b;border-bottom:0}
+.tech-profile-section .conviction-text{font-size:clamp(34px,4.4vw,60px)}
+@media(max-width:1100px){.tech-profile-layout{gap:40px}.tech-profile-copy h2{font-size:34px}.tech-profile-copy .about-copy .lead{font-size:16px}.tech-profile-copy .about-copy p{font-size:12px}.tech-portrait-caption{bottom:25px;left:25px;right:25px}}
+@media(max-width:800px){.tech-profile-section{padding-block:66px}.tech-profile-layout{grid-template-columns:1fr;gap:36px}.tech-portrait{width:100%;max-width:480px;margin-inline:auto}.tech-portrait-frame{aspect-ratio:1/1.08;max-height:none}.tech-portrait-photo img{height:425%;top:-267%}.tech-portrait-caption{bottom:24px;left:24px}.tech-portrait-caption>span:not(.portrait-caption-line){font-size:27px}.portrait-kicker{top:20px;left:22px;right:22px;font-size:7px}.tech-profile-copy h2{font-size:36px;margin-top:22px}.tech-profile-name{margin-top:24px}.tech-profile-copy .about-copy .lead{font-size:17px}.tech-profile-copy .about-copy p{font-size:14px}.tech-profile-copy .skills span{font-size:10px}.tech-profile-section .conviction{margin-top:65px;padding-top:45px}.tech-profile-section .conviction-text{font-size:33px}}
+@media(max-width:420px){.tech-profile-copy h2{font-size:30px}.tech-profile-section .conviction-text{font-size:29px}.tech-profile-copy .about-copy .lead{font-size:16px}.tech-portrait-caption>span:not(.portrait-caption-line){font-size:24px}}
